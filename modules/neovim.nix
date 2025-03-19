@@ -26,6 +26,9 @@
 				nix
 				rust
 				python
+				javascript
+				typescript
+				css
 				html
 			]) ++ (with pkgs.vimPlugins; [
 				render-markdown-nvim
@@ -37,16 +40,20 @@
 				{
 				    plugin = blink-cmp;
 					config = ''
+						local lspconfig = require("lspconfig")
+						local blink = require("blink.cmp")
 						local servers = {
 							pyright = {},
-							rust_analyzer = {}
+							rust_analyzer = {},
 						}
-						local lspconfig = require("lspconfig")
-						local blink_cmp = require("blink.cmp")
 						for server, config in pairs(servers) do
-						    	config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
+							config.capabilities = blink.get_lsp_capabilities(config.capabilities)
 							lspconfig[server].setup(config)
 						end
+						blink.setup {
+							keymap = { preset = "enter" },
+							signature = { enabled = true },
+						}
 					'';
 					type = "lua";
 				}
