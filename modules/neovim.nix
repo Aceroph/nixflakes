@@ -18,63 +18,80 @@
 			colorscheme retrobox
 			let mapleader = "\<Space>"
 		'';
-		coc = {
-			enable = true;
-		};
-		plugins = with pkgs.vimPlugins; [
-			coc-pyright
-			coc-eslint
-			coc-rust-analyzer
-			render-markdown-nvim
-			mini-nvim
-			cheatsheet-nvim
-			nvim-lspconfig
-			refactoring-nvim
-			plenary-nvim
-			{
-				plugin = toggleterm-nvim;
-				config = ''
-					require("toggleterm").setup {
-						open_mapping = [[<c-t>]],
-						size = vim.o.columns * 0.4,
-						hide_numbers = true,
-						start_in_insert = true,
-						close_on_exit = true,
-						direction = "vertical",
-					}
-				'';
-				type = "lua";
-			}
-			{
-				plugin = telescope-nvim;
-				config = ''
-					require("telescope").setup {
-						defaults = {
-							file_ignore_patterns = {
-								"node_modules",
-								"target"
+		extraPackages = with pkgs; [
+			pyright
+			rust-analyzer
+		];
+		plugins = (with pkgs.vimPlugins.nvim-treesitter-parsers; [
+				nix
+				rust
+				python
+				html
+			]) ++ (with pkgs.vimPlugins; [
+				render-markdown-nvim
+				mini-nvim
+				cheatsheet-nvim
+				nvim-lspconfig
+				refactoring-nvim
+				plenary-nvim
+				{
+				    plugin = blink-cmp;
+					config = ''
+						local servers = {
+							pyright = {},
+							rust_analyzer = {}
+						}
+						local lspconfig = require("lspconfig")
+						local blink_cmp = require("blink.cmp")
+						for server, config in pairs(servers) do
+						    	config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
+							lspconfig[server].setup(config)
+						end
+					'';
+					type = "lua";
+				}
+				{
+					plugin = toggleterm-nvim;
+					config = ''
+						require("toggleterm").setup {
+							open_mapping = [[<c-t>]],
+							size = vim.o.columns * 0.4,
+							hide_numbers = true,
+							start_in_insert = true,
+							close_on_exit = true,
+							direction = "vertical",
+						}
+					'';
+					type = "lua";
+				}
+				{
+					plugin = telescope-nvim;
+					config = ''
+						require("telescope").setup {
+							defaults = {
+								file_ignore_patterns = {
+									"node_modules",
+									"target"
+								}
 							}
 						}
-					}
-				'';
-				type = "lua";
-			}
-			{
-				plugin = nvim-treesitter;
-				config = ''
-					vim.opt.runtimepath:prepend("~/.local/share/nvim/site/parser/")
-					require("nvim-treesitter.configs").setup {
-						parser_install_dir = "~/.local/share/nvim/site/parser/",
-						auto_install = true,
-						sync_install = false,
-						highlight = {
-							enable = true,
-							additional_vim_regex_hightlighting = false,
-						},
-					}
-				'';
-				type = "lua";
-			}
-		];
+					'';
+					type = "lua";
+				}
+				{
+					plugin = nvim-treesitter;
+					config = ''
+						vim.opt.runtimepath:prepend("~/.local/share/nvim/site/parser/")
+						require("nvim-treesitter.configs").setup {
+							parser_install_dir = "~/.local/share/nvim/site/parser/",
+							highlight = {
+								enable = true,
+								additional_vim_regex_hightlighting = false,
+							},
+						}
+					'';
+					type = "lua";
+				}
+		]);
 	};
 }

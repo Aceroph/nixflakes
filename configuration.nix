@@ -11,16 +11,23 @@
     enable = true;
   };
 
+  # Users
+  users.users.acero = {
+  	isNormalUser = true;
+	initialPassword = "temp123";
+    extraGroups = [ "wheel" ];
+  };
+
   # Use nix flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Networking
   networking.hostName = "nixos"; # Define your hostname.
-
-  # Enable networking
   networking.networkmanager.enable = true;
   
   # Time and localisation
@@ -29,46 +36,6 @@
 
   security.rtkit.enable = true;
 
-  users.users.acero = {
-    isNormalUser = true;
-    description = "Jonathan Pilotte";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-		# Gaming
-		heroic-unwrapped
-		prismlauncher
-		mangohud
-		steam
-			
-		# Entertainement
-		discord
-		gimp
-		spotify
-		libreoffice-qt6-fresh
-		
-		# Peripherals
-		libratbag
-		easyeffects
-		piper
-		
-		# Terminal
-		tmux
-		ghostty
-		fira-code-nerdfont
-
-		# Coding
-		jetbrains-toolbox
-		greenfoot
-	];
-  };
-
-
-  # Exclude built-in packages
-  services.xserver.excludePackages = with pkgs; [
-  	xterm
-  ];
-
-  # Exclude gnome packages
   environment.gnome.excludePackages = with pkgs; [
 	epiphany
 	seahorse
@@ -77,45 +44,14 @@
 	gedit
   ];
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Install gamemode
-  programs.gamemode.enable = true;
-
-  # Noisetorch
-  programs.noisetorch.enable = true;
-
-  # Java with JavaFX
-  programs.java = {
-    enable = true;
-    package = (pkgs.jdk23.override { enableJavaFX = true; });
-  };
-
-  # Install steam
-  programs.steam = {
-  	enable = true;
-	remotePlay.openFirewall = true;
-	dedicatedServer.openFirewall = true;
-	localNetworkGameTransfers.openFirewall = true;
-  };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-
   environment.systemPackages = with pkgs; [
-    wineWowPackages.stable # Wine
+    wineWowPackages.stable
 	nodejs_22
-	direnv
 	unzip
 	ninja
-	xclip # Clipboard provider
+	xclip
 	zip
 	gcc
-	git
 	gh
   ];
 
@@ -127,6 +63,9 @@
 	  xserver.displayManager.gdm.enable = true;
 	  xserver.desktopManager.gnome.enable = true;
   	  xserver.videoDrivers = ["nvidia"];
+	  xserver.excludePackages = with pkgs; [
+		xterm
+	  ];
 	  xserver.xkb = {
 		layout = "us";
 		variant = "";
