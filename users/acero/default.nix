@@ -1,7 +1,11 @@
-{ config, pkgs, ... }:
+{ username, ... }:
 
 {
-  imports = [ ./modules/neovim.nix ];
+  users.users.${username} = {
+    isNormalUser = true;
+    initialPassword = "temp123";
+    extraGroups = [ "wheel" ];
+  };
 
   programs.git = {
     enable = true;

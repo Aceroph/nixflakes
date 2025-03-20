@@ -1,27 +1,16 @@
 {
   config,
-  lib,
   pkgs,
+  lib,
   ...
 }:
 
 {
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+    ./DE
+    ./graphics
+    ./neovim.nix
   ];
-
-  # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-  };
-
-  # Users
-  users.users.acero = {
-    isNormalUser = true;
-    initialPassword = "temp123";
-    extraGroups = [ "wheel" ];
-  };
 
   # Use nix flakes
   nix.settings.experimental-features = [
@@ -34,25 +23,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Nvidia
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-      intelBusId = "PCI:0:1:0";
-      nvidiaBusId = "PCI:0:0:2";
-    };
-  };
-
   # Networking
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -62,14 +32,6 @@
   i18n.defaultLocale = "en_CA.UTF-8";
 
   security.rtkit.enable = true;
-
-  environment.gnome.excludePackages = with pkgs; [
-    epiphany
-    seahorse
-    cheese
-    geary
-    gedit
-  ];
 
   environment.systemPackages = with pkgs; [
     wineWowPackages.stable
@@ -86,10 +48,6 @@
     openssh.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
-    xserver.enable = true;
-    xserver.displayManager.gdm.enable = true;
-    xserver.desktopManager.gnome.enable = true;
-    xserver.videoDrivers = [ "nvidia" ];
     xserver.excludePackages = with pkgs; [
       xterm
     ];

@@ -8,21 +8,47 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     {
       nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.acero = import ./home.nix;
-            }
-          ];
-        };
+        nixos =
+          let
+            system = "x86_64-linux";
+          in
+          nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              username = "acero";
+              hostname = "asus";
+              DE = "gnome";
+              inherit system;
+            };
+            modules = [
+              ./.
+            ];
+          }
+          // inputs;
+
+        nixos-i3 =
+          let
+            system = "x86_64-linux";
+          in
+          nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              username = "acero";
+              host = "asus";
+              DE = "i3";
+              inherit system;
+            };
+            modules = [
+              ./.
+            ];
+          }
+          // inputs;
       };
     };
 }
