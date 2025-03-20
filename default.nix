@@ -2,7 +2,7 @@
 
 {
   imports = [
-    home-manager.nixosModule.home-manager
+    home-manager.nixosModules.home-manager
     ./modules
     ./hosts
     ./users

@@ -26,12 +26,11 @@
               hostname = "asus";
               DE = "gnome";
               inherit system;
-            };
+            } // inputs;
             modules = [
               ./.
             ];
-          }
-          // inputs;
+          };
 
         nixos-i3 =
           let
@@ -43,12 +42,11 @@
               host = "asus";
               DE = "i3";
               inherit system;
-            };
+            } // inputs;
             modules = [
               ./.
             ];
-          }
-          // inputs;
+          };
       };
     };
 }
