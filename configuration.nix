@@ -86,16 +86,28 @@
     openssh.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
-    xserver.enable = true;
-    xserver.displayManager.gdm.enable = true;
-    xserver.desktopManager.gnome.enable = true;
-    xserver.videoDrivers = [ "nvidia" ];
-    xserver.excludePackages = with pkgs; [
-      xterm
-    ];
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
+    xserver = {
+      enable = true;
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          dmenu
+          i3status
+          i3lock
+          i3blocks
+        ];
+      };
+      displayManager = {
+        defaultSession = "none+i3";
+      };
+      desktopManager = {
+        xterm.enable = false;
+      };
+      videoDrivers = [ "nvidia" ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
     pipewire = {
       enable = true;
