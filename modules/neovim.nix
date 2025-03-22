@@ -24,12 +24,14 @@
       			let mapleader = "\<Space>"
       		'';
     extraPackages = with pkgs; [
+      vscode-langservers-extracted
       nixfmt-rfc-style
       pyright
       rust-analyzer
       isort
       black
       rustfmt
+      jsonfmt
       prettierd
       eslint_d
     ];
@@ -53,42 +55,47 @@
         {
           plugin = conform-nvim;
           config = ''
-                        			require("conform").setup {
-                        				format_on_save = {
-                        					timeout_ms = 500,
-                        					lsp_format = "fallback",
-                        				},
-                        				formatters_by_ft = {
-                        					nix = { "nixfmt" },
-                        					python = { "isort", "black" },
-                        					rust = { "rustfmt" },
-                        					javascript = { "eslint_d" },
-            								typescript = { "eslint_d" },
-                        					html = { "prettierd" },
-                        					css = { "prettierd" },
-                        				},
-                        			}
-                        		'';
+                                    			require("conform").setup {
+                                    				format_on_save = {
+                                    					timeout_ms = 500,
+                                    					lsp_format = "fallback",
+                                    				},
+                                    				formatters_by_ft = {
+                                    					nix = { "nixfmt" },
+                                    					python = { "isort", "black" },
+                                    					rust = { "rustfmt" },
+                                    					javascript = { "eslint_d" },
+                        								typescript = { "eslint_d" },
+                                    					html = { "prettierd" },
+                                    					css = { "prettierd" },
+            											json = { "jsonfmt" },
+                                    				},
+                                    			}
+                                    		'';
           type = "lua";
         }
         {
           plugin = blink-cmp;
           config = ''
-            			local lspconfig = require("lspconfig")
-            			local blink = require("blink.cmp")
-            			local servers = {
-            				pyright = {},
-            				rust_analyzer = {},
-            			}
-            			for server, config in pairs(servers) do
-            				config.capabilities = blink.get_lsp_capabilities(config.capabilities)
-            				lspconfig[server].setup(config)
-            			end
-            			blink.setup {
-            				keymap = { preset = "enter" },
-            				signature = { enabled = true },
-            			}
-            		'';
+                        			local lspconfig = require("lspconfig")
+                        			local blink = require("blink.cmp")
+                        			local servers = {
+                        				pyright = {},
+                        				rust_analyzer = {},
+            							cssls = {},
+            							html = {},
+            							jsonls = {},
+            							eslint = {},
+                        			}
+                        			for server, config in pairs(servers) do
+                        				config.capabilities = blink.get_lsp_capabilities(config.capabilities)
+                        				lspconfig[server].setup(config)
+                        			end
+                        			blink.setup {
+                        				keymap = { preset = "enter" },
+                        				signature = { enabled = true },
+                        			}
+                        		'';
           type = "lua";
         }
         {
