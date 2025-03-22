@@ -39,7 +39,7 @@
           nixpkgs.lib.nixosSystem {
             specialArgs = {
               username = "acero";
-              host = "asus";
+              hostname = "asus";
               DE = "i3";
               inherit system;
             } // inputs;
