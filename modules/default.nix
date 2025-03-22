@@ -9,7 +9,7 @@
   imports = [
     ./DE
     ./graphics
-    ./neovim.nix
+    ./neovim
   ];
 
   # Use nix flakes
