@@ -21,6 +21,17 @@
       userEmail = "aos92@proton.me";
     };
 
+    programs.lsd = {
+      enable = true;
+      settings = {
+        layout = "tree";
+        recursion = {
+          enabled = true;
+          depth = 5;
+        };
+      };
+    };
+
     home.packages = with pkgs; [
       # Coding
       nerd-fonts.fira-code
