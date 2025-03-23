@@ -25,8 +25,5 @@
     };
   };
 
-  services = {
-    xserver.enable = true;
-    xserver.videoDrivers = [ "nvidia" ];
-  };
+  services.xserver.videoDrivers = [ "nvidia" ];
 }

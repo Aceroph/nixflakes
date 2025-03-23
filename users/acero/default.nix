@@ -1,9 +1,6 @@
 {
-  home-manager,
   username,
-  config,
   pkgs,
-  lib,
   ...
 }:
 

@@ -1,14 +1,11 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 
 {
   imports = [
     ./DE
-    ./graphics
     ./neovim
   ];
 
