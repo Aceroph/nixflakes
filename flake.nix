@@ -35,19 +35,20 @@
             ];
           };
 
-        nixos-i3 =
+        i3 =
           let
             system = "x86_64-linux";
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
               username = "acero";
-              host = "asus";
+              hostname = "asus";
               DE = "i3";
               inherit system;
             } // inputs;
             modules = [
               ./.
+              ./modules/nvidia
             ];
           };
       };
