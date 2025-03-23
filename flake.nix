@@ -48,6 +48,7 @@
             } // inputs;
             modules = [
               ./.
+              ./modules/nvidia
             ];
           };
       };

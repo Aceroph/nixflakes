@@ -1,5 +1,4 @@
 {
-  home-manager,
   username,
   pkgs,
   ...
@@ -24,7 +23,7 @@
 
       displayManager = {
         defaultSession = "xfce";
-        sddm.enable = true;
+        lightdm.enable = true;
       };
     };
   };
