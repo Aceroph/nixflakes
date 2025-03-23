@@ -35,7 +35,7 @@
             ];
           };
 
-        nixos-i3 =
+        i3 =
           let
             system = "x86_64-linux";
           in
