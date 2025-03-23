@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, ... }:
 
 {
   # Enable OpenGL
@@ -25,8 +25,5 @@
     };
   };
 
-  services = {
-    xserver.enable = true;
-    xserver.videoDrivers = [ "nvidia" ];
-  };
+  services.xserver.videoDrivers = [ "nvidia" ];
 }
