@@ -50,6 +50,11 @@
         plenary-nvim
         mini-nvim
         {
+          plugin = telescope-nvim;
+          config = builtins.readFile ./telescope.lua;
+          type = "lua";
+        }
+        {
           plugin = conform-nvim;
           config = builtins.readFile ./conform.lua;
           type = "lua";
@@ -62,11 +67,6 @@
         {
           plugin = toggleterm-nvim;
           config = builtins.readFile ./toggleterm.lua;
-          type = "lua";
-        }
-        {
-          plugin = telescope-nvim;
-          config = builtins.readFile ./telescope.lua;
           type = "lua";
         }
         {
