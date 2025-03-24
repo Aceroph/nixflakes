@@ -6,5 +6,7 @@
     ./hardware-configuration.nix
   ];
 
-  services.logind.powerKey = "suspend";
+  services.logind.extraConfig = ''
+    		HandlePowerKey=suspend
+  '';
 }
