@@ -81,6 +81,8 @@
               format = " $timestamp.datetime(f:'%a %d/%m %k:%M %p') ";
             }
           ];
+          icons = "awesome5";
+          theme = "gruvbox-dark";
         };
       };
     };
