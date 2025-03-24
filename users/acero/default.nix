@@ -32,6 +32,11 @@
       };
     };
 
+    programs.java = {
+      enable = true;
+      package = pkgs.jetbrains.jdk;
+    };
+
     home.packages = with pkgs; [
       # Coding
       nerd-fonts.fira-code
