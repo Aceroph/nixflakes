@@ -32,6 +32,7 @@
             modules = [
               ./.
               ./modules/nvidia
+              ./modules/bluetooth
             ];
           };
 
@@ -49,6 +50,7 @@
             modules = [
               ./.
               ./modules/nvidia
+              ./modules/bluetooth
             ];
           };
       };

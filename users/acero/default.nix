@@ -8,7 +8,10 @@
   users.users.${username} = {
     isNormalUser = true;
     initialPassword = "temp123";
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "audio"
+    ];
   };
 
   home-manager.users.${username} = {
