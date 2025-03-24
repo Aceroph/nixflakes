@@ -39,6 +39,7 @@
       enable = true;
       package = pkgs.i3-gaps;
       config = {
+        defaultWorkspace = "workspace number 1";
         startup = [
           {
             command = "blueman-applet";
