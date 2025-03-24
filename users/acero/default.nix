@@ -44,7 +44,7 @@
       # Gaming
       heroic-unwrapped
       prismlauncher
-      greenfoot
+      (callPackage ../../packages/greenfoot-3.7.1.nix { })
       mangohud
       gamemode
       steam
