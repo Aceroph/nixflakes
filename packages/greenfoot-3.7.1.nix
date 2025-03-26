@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  openjdk,
+  jdk11,
   glib,
   dpkg,
   wrapGAppsHook3,
@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out
     cp -r usr/* $out
 
-    makeWrapper ${openjdk}/bin/java $out/bin/greenfoot \
+    makeWrapper ${jdk11}/bin/java $out/bin/greenfoot \
       "''${gappsWrapperArgs[@]}" \
       --add-flags "-Dawt.useSystemAAFontSettings=on -Xmx512M \
                    -cp $out/share/greenfoot/boot.jar bluej.Boot \
