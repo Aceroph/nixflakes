@@ -49,11 +49,12 @@
     xserver.excludePackages = with pkgs; [
       xterm
     ];
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
     printing.enable = true;
+    xserver.xkb = {
+      layout = "us,ca";
+      variant = ",multix";
+      options = "grp:alt_shift_toggle";
+    };
   };
 
   system.stateVersion = "25.05";

@@ -62,6 +62,11 @@
             statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-bottom.toml";
           }
         ];
+        fonts = {
+          names = [ "FiraCode Nerd Font" ];
+          style = "Regular";
+          size = 12.0;
+        };
         modifier = "Mod4";
         gaps = {
           inner = 10;
@@ -80,8 +85,11 @@
               interval = 60;
               format = " $timestamp.datetime(f:'%a %d/%m %k:%M %p') ";
             }
+            {
+              block = "keyboard_layout";
+            }
           ];
-          icons = "awesome5";
+          icons = "material-nf";
           theme = "gruvbox-dark";
         };
       };
