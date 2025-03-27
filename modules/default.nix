@@ -20,6 +20,10 @@
   boot.initrd.systemd.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [ "resume_offset=21618688" ];
+  boot.resumeDevice = "/dev/disk/by-uuid/788e5bc3-da21-4625-9c8d-368a5940bfff";
+
+  powerManagement.enable = true;
 
   # Networking
   networking.hostName = "nixos"; # Define your hostname.

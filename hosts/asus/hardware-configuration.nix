@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -41,7 +40,10 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/f2fa7165-637a-4910-9bf2-a819c8532c4f"; }
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
   ];
 
   networking.useDHCP = lib.mkDefault true;
