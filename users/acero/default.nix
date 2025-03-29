@@ -16,6 +16,8 @@
 
   programs.dconf.enable = true;
 
+  programs.gamemode.enable = true;
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -62,7 +64,6 @@
       prismlauncher
       (callPackage ../../packages/greenfoot-3.7.1.nix { })
       mangohud
-      gamemode
 
       # Entertainement
       discord
