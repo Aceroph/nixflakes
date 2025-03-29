@@ -10,11 +10,6 @@
   environment.pathsToLink = [ "/libexec" ];
 
   services = {
-    pipewire.enable = false;
-    pulseaudio = {
-      enable = true;
-      support32Bit = true;
-    };
     xserver = {
       # Xfce dm
       desktopManager = {
