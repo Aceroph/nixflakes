@@ -14,6 +14,15 @@
     ];
   };
 
+  programs.dconf.enable = true;
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+
   home-manager.users.${username} = {
     programs.git = {
       enable = true;
@@ -37,6 +46,8 @@
       package = pkgs.jetbrains.jdk;
     };
 
+    services.easyeffects.enable = true;
+
     home.packages = with pkgs; [
       # Coding
       nerd-fonts.fira-code
@@ -52,7 +63,6 @@
       (callPackage ../../packages/greenfoot-3.7.1.nix { })
       mangohud
       gamemode
-      steam
 
       # Entertainement
       discord
@@ -62,7 +72,6 @@
 
       # Peripherals
       libratbag
-      easyeffects
       piper
       firefox
     ];
