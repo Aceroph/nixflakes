@@ -43,6 +43,7 @@
     unzip
     ninja
     xclip
+    htop
     zip
     gcc
     gh

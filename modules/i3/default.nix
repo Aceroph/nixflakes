@@ -30,6 +30,11 @@
   };
 
   home-manager.users.${username} = {
+    # Remove i3status
+    programs.i3status = {
+      enable = false;
+      package = null;
+    };
     xsession.windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
