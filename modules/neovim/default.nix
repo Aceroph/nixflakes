@@ -49,6 +49,7 @@
         nvim-lspconfig
         plenary-nvim
         mini-nvim
+        yuck-vim
         {
           plugin = telescope-nvim;
           config = builtins.readFile ./telescope.lua;
