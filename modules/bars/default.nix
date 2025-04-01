@@ -1,5 +1,5 @@
 { bar, ... }:
 
 {
-  imports = if bar then [ ./${bar} ] else [ ];
+  imports = if bar != null then [ ./${bar}.nix ] else [ ];
 }

@@ -1,8 +1,8 @@
-{ username, pkgs }:
+{ username, pkgs, ... }:
 
 {
   home-manager.users.${username} = {
-    xsession.windowManager.i3.bars = [
+    xsession.windowManager.i3.config.bars = [
       {
         position = "bottom";
         statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-bottom.toml";
