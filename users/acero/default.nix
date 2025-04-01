@@ -63,7 +63,7 @@
       tmux
 
       # Gaming
-      heroic-unwrapped
+      heroic
       prismlauncher
       (callPackage ../../packages/greenfoot-3.7.1.nix { })
       mangohud
