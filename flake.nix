@@ -45,6 +45,7 @@
               username = "acero";
               hostname = "asus";
               DE = "i3";
+              bar = "i3status-rust";
               inherit system;
             } // inputs;
             modules = [

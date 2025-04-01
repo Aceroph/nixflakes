@@ -7,6 +7,7 @@
 {
   imports = [
     ./${DE}
+    ./bars
     ./neovim
   ];
 
