@@ -1,11 +1,12 @@
 {
   pkgs,
+  DE,
   ...
 }:
 
 {
   imports = [
-    ./DE
+    ./${DE}
     ./neovim
   ];
 

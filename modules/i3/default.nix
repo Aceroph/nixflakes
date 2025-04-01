@@ -11,6 +11,8 @@
 
   services = {
     xserver = {
+      enable = true;
+
       # Xfce dm
       desktopManager = {
         xterm.enable = false;
@@ -22,7 +24,6 @@
       };
       # i3 wm
       windowManager.i3.enable = true;
-
     };
     displayManager = {
       defaultSession = "xfce+i3";
