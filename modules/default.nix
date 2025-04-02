@@ -1,11 +1,19 @@
 {
+  desktop,
+  bar,
   username,
   pkgs,
   ...
 }:
 
 {
-  home-manager.users.${username}.imports = [ ./home ];
+  imports = [ ./nixos ];
+  home-manager = {
+    extraSpecialArgs = { inherit desktop bar; };
+    users.${username} = {
+      imports = [ ./home ];
+    };
+  };
 
   # Use nix flakes
   nix.settings.experimental-features = [

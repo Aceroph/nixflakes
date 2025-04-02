@@ -1,8 +1,8 @@
-{ DE, ... }:
+{ desktop, ... }:
 
 {
   imports = [
-    ./${DE}
+    ./${desktop}
     ./bluetooth
     ./nvidia
   ];

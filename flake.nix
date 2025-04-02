@@ -26,7 +26,7 @@
             specialArgs = {
               username = "acero";
               hostname = "asus";
-              DE = "gnome";
+              desktop = "gnome";
               inherit system;
             } // inputs;
             modules = [
@@ -42,7 +42,7 @@
             specialArgs = {
               username = "acero";
               hostname = "asus";
-              DE = "i3";
+              desktop = "i3";
               bar = "polybar";
               inherit system;
             } // inputs;

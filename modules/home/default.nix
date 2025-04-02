@@ -1,12 +1,14 @@
-{ DE, pkgs, ... }:
+{ desktop, pkgs, ... }:
 
 {
   imports = [
-    ./${DE}
-    ./bars
-    ./neovim
+    ./${desktop}
     ./starship
+    ./neovim
+    ./bars
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   programs.git = {
     enable = true;

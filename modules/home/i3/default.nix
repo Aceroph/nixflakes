@@ -1,5 +1,4 @@
 {
-  username,
   config,
   pkgs,
   lib,
@@ -21,7 +20,7 @@
       ];
       keybindings =
         let
-          modifier = config.home-manager.users.${username}.xsession.windowManager.i3.config.modifier;
+          modifier = config.xsession.windowManager.i3.config.modifier;
         in
         lib.mkOptionDefault {
           "${modifier}+q" = "kill";
