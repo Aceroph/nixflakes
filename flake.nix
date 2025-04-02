@@ -31,8 +31,6 @@
             } // inputs;
             modules = [
               ./.
-              ./modules/nvidia
-              ./modules/bluetooth
             ];
           };
 
@@ -50,8 +48,6 @@
             } // inputs;
             modules = [
               ./.
-              ./modules/nvidia
-              ./modules/bluetooth
             ];
           };
       };

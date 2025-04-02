@@ -1,11 +1,10 @@
 {
   pkgs,
-  username,
   ...
 }:
 
 {
-  home-manager.users.${username}.programs.neovim = {
+  programs.neovim = {
     enable = true;
     defaultEditor = true;
     extraLuaConfig = builtins.readFile ./options.lua;

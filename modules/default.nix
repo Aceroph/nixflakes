@@ -1,15 +1,11 @@
 {
+  username,
   pkgs,
-  DE,
   ...
 }:
 
 {
-  imports = [
-    ./${DE}
-    ./bars
-    ./neovim
-  ];
+  home-manager.users.${username}.imports = [ ./home ];
 
   # Use nix flakes
   nix.settings.experimental-features = [
