@@ -45,7 +45,7 @@
               username = "acero";
               hostname = "asus";
               DE = "i3";
-              bar = "eww";
+              bar = "polybar";
               inherit system;
             } // inputs;
             modules = [

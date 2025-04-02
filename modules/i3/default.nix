@@ -39,6 +39,7 @@
       enable = true;
       package = pkgs.i3-gaps;
       config = {
+        bars = [ ];
         defaultWorkspace = "workspace number 1";
         startup = [
           {

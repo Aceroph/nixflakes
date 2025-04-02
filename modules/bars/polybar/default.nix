@@ -1,17 +1,33 @@
-{ username, ... }:
+{
+  username,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   home-manager.users.${username}.services.polybar = {
     enable = true;
+    package = pkgs.polybar.override {
+      i3Support = true;
+    };
     script = ''
       		polybar-msg cmd quit
-      		polybar bar 2>&1 | tee -a /temp/polybar.log & disown
+      		polybar top 2>&1 | ${lib.getExe' pkgs.coreutils "tee"} -a /tmp/polybar.log & disown
       		'';
     config = {
       "bar/top" = {
         width = "100%";
         height = "30px";
-        modules-center = "date";
+        modules-left = "i3";
+        modules-right = "date tray";
+      };
+      "module/i3" = {
+        type = "internal/i3";
+        pin-workspaces = true;
+        show-urgent = true;
+        index-sort = true;
+        enable-scroll = false;
       };
       "module/date" = {
         type = "internal/date";
@@ -19,6 +35,9 @@
         date = "%d.%m.%y";
         time = "%H:%M";
         label = "%time%  %date%";
+      };
+      "module/tray" = {
+        type = "internal/tray";
       };
     };
   };
