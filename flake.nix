@@ -26,13 +26,11 @@
             specialArgs = {
               username = "acero";
               hostname = "asus";
-              DE = "gnome";
+              desktop = "gnome";
               inherit system;
             } // inputs;
             modules = [
               ./.
-              ./modules/nvidia
-              ./modules/bluetooth
             ];
           };
 
@@ -44,14 +42,12 @@
             specialArgs = {
               username = "acero";
               hostname = "asus";
-              DE = "i3";
+              desktop = "i3";
               bar = "polybar";
               inherit system;
             } // inputs;
             modules = [
               ./.
-              ./modules/nvidia
-              ./modules/bluetooth
             ];
           };
       };

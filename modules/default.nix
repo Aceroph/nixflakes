@@ -1,15 +1,19 @@
 {
+  desktop,
+  bar,
+  username,
   pkgs,
-  DE,
   ...
 }:
 
 {
-  imports = [
-    ./${DE}
-    ./bars
-    ./neovim
-  ];
+  imports = [ ./nixos ];
+  home-manager = {
+    extraSpecialArgs = { inherit desktop bar; };
+    users.${username} = {
+      imports = [ ./home ];
+    };
+  };
 
   # Use nix flakes
   nix.settings.experimental-features = [
