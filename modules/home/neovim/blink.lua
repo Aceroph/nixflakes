@@ -1,7 +1,10 @@
 local lspconfig = require("lspconfig")
 local blink = require("blink.cmp")
 local servers = {
-	rust_analyzer = {},
+	rust_analyzer = {
+		diagnostic = { enable = true },
+		proc_macro = { enable = true },
+	},
 	pyright = {},
 	lua_ls = {},
 	cssls = {},
@@ -9,9 +12,7 @@ local servers = {
 	jsonls = {},
 	volar = {},
 	nil_ls = {},
-	eslint = {
-		filetypes = { "typescript", "javascript" }
-	},
+	eslint = {},
 }
 for server, config in pairs(servers) do
 	config.capabilities = blink.get_lsp_capabilities(config.capabilities)
