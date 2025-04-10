@@ -41,6 +41,7 @@
     jetbrains.idea-ultimate
     jetbrains.webstorm
     jetbrains.clion
+    graphviz-nox
     ghostty
     tmux
 
