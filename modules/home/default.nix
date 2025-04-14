@@ -42,6 +42,7 @@
     jetbrains.webstorm
     jetbrains.clion
     graphviz-nox
+    valgrind
     ghostty
     tmux
 

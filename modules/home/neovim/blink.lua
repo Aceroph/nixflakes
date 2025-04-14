@@ -1,10 +1,7 @@
 local lspconfig = require("lspconfig")
 local blink = require("blink.cmp")
 local servers = {
-	rust_analyzer = {
-		diagnostic = { enable = true },
-		proc_macro = { enable = true },
-	},
+	rust_analyzer = {},
 	pyright = {},
 	lua_ls = {},
 	cssls = {},
