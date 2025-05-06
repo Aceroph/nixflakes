@@ -8,5 +8,5 @@
   ];
 
   # Splash screen
-  programs.plymouth.enable = true;
+  boot.plymouth.enable = true;
 }
