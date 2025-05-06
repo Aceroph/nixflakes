@@ -14,4 +14,14 @@
       pulse.enable = true;
     };
   };
+
+  # Boot splash screen
+  boot = {
+    plymouth.enable = true;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+    ];
+  };
 }

@@ -6,7 +6,4 @@
     ./bluetooth
     ./nvidia
   ];
-
-  # Splash screen
-  boot.plymouth.enable = true;
 }
