@@ -6,4 +6,7 @@
     ./bluetooth
     ./nvidia
   ];
+
+  # Splash screen
+  programs.plymouth.enable = true;
 }
