@@ -1,5 +1,4 @@
 {
-  custompkgs,
   nixos-hardware,
   pkgs,
   ...
@@ -25,9 +24,9 @@
     plymouth = {
       enable = true;
       theme = "minecraft_world_loading";
-      themePackages = [
-        pkgs.nixos-bgrt-plymouth
-        custompkgs.minecraft-plymouth-theme
+      themePackages = with pkgs; [
+        nixos-bgrt-plymouth
+        minecraft-plymouth-theme
       ];
     };
 

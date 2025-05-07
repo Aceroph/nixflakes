@@ -2,8 +2,7 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    custompkgs.url = "github:Aceroph/nixpkgs/main";
+    nixpkgs.url = "github:Aceroph/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -13,7 +12,6 @@
     inputs@{
       self,
       nixpkgs,
-      custompkgs,
       home-manager,
       nixos-hardware,
       ...
