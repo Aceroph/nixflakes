@@ -1,4 +1,9 @@
-{ nixos-hardware, ... }:
+{
+  custompkgs,
+  nixos-hardware,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -17,7 +22,15 @@
 
   # Boot splash screen
   boot = {
-    plymouth.enable = true;
+    plymouth = {
+      enable = true;
+      theme = "minecraft_world_loading";
+      themePackages = [
+        pkgs.nixos-bgrt-plymouth
+        custompkgs.minecraft-plymouth-theme
+      ];
+    };
+
     initrd.verbose = false;
     kernelParams = [
       "quiet"
