@@ -7,7 +7,7 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "Gohu 14 Nerd Font Mono";
+        font-family: "Gohu 14 Nerd Font";
       }
       window#waybar {
         background: #16191C;

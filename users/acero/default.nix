@@ -9,6 +9,7 @@
     isNormalUser = true;
     initialPassword = "temp123";
     extraGroups = [
+      "input"
       "wheel"
       "audio"
     ];
