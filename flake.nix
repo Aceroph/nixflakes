@@ -49,6 +49,8 @@
             } // inputs;
             modules = [
               ./.
+              ./modules/neovim
+              ./modules/bars/polybar
             ];
           };
 
@@ -66,6 +68,9 @@
             } // inputs;
             modules = [
               ./.
+              ./modules/neovim
+              ./modules/nvidia
+              ./modules/bars/waybar
             ];
           };
       };

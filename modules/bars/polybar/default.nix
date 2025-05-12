@@ -1,11 +1,12 @@
 {
+  username,
   lib,
   pkgs,
   ...
 }:
 
 {
-  services.polybar = {
+  home-manager.users.${username}.services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
       i3Support = true;
