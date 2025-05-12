@@ -6,7 +6,7 @@
     settings = {
       font = {
         normal = {
-          family = "GohuFont 11 Nerd Font Mono";
+          family = "GohuFont 14 Nerd Font Mono";
           style = "Regular";
         };
       };

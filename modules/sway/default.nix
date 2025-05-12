@@ -21,11 +21,6 @@
           bars = [
             {
               command = "waybar";
-              fonts = {
-                names = [ "GohuFont 14 Nerd Font Mono" ];
-                style = "Regular";
-                size = 14.0;
-              };
             }
           ];
           keybindings = lib.mkOptionDefault {
