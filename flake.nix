@@ -18,7 +18,7 @@
     }:
     {
       nixosConfigurations = {
-        nixos =
+        gnome =
           let
             system = "x86_64-linux";
           in
@@ -34,7 +34,7 @@
             ];
           };
 
-        i3 =
+        nixos =
           let
             system = "x86_64-linux";
           in
@@ -45,6 +45,22 @@
               desktop = "i3";
               bar = "polybar";
               inherit system;
+            } // inputs;
+            modules = [
+              ./.
+            ];
+          };
+
+        sway =
+          let
+            system = "x86_64-linux";
+          in
+          nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              username = "acero";
+              hostname = "asus";
+              desktop = "sway";
+              bar = "waybar";
             } // inputs;
             modules = [
               ./.
