@@ -51,6 +51,7 @@
               ./.
               ./modules/neovim
               ./modules/bars/polybar
+              ./modules/lightdm
             ];
           };
 
@@ -71,6 +72,7 @@
               ./modules/neovim
               ./modules/nvidia
               ./modules/bars/waybar
+              ./modules/lightdm
             ];
           };
       };
