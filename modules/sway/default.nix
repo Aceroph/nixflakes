@@ -1,4 +1,10 @@
-{ username, pkgs, ... }:
+{
+  username,
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 {
   home-manager.users.${username} = {
@@ -7,8 +13,18 @@
       package = pkgs.swayfx;
       checkConfig = false;
       config = {
-        modifier = "Mod4";
-        terminal = "alacritty";
+        defaultWorkspace = "workspace number 1";
+        bars = [
+          { command = "waybar"; }
+        ];
+        keybinds =
+          let
+            modifier = config.wayland.windowManager.sway.config.modifier;
+          in
+          lib.mkOptionDefault {
+            "${modifier}+q" = "kill";
+          };
+        extraConfig = "corner_radius 15";
       };
     };
   };
