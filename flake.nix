@@ -27,6 +27,7 @@
               username = "acero";
               hostname = "asus";
               desktop = "gnome";
+              bar = null;
               inherit system;
             } // inputs;
             modules = [
