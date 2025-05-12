@@ -22,6 +22,7 @@
     kernelParams = [
       "quiet"
       "splash"
+      "loglevel=3"
     ];
   };
 }
