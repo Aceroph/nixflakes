@@ -24,8 +24,8 @@
           lib.mkOptionDefault {
             "${modifier}+q" = "kill";
           };
-        extraConfig = "corner_radius 15";
       };
+      extraConfig = "corner_radius 15";
     };
   };
 }
