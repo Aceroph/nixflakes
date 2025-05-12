@@ -8,6 +8,7 @@
 {
   imports = [
     ./${desktop}
+    ./alacritty
   ];
   home-manager = {
     users.${username} = {
@@ -43,7 +44,6 @@
         jetbrains.webstorm
         jetbrains.clion
         graphviz-nox
-        alacritty
         valgrind
         tmux
 
