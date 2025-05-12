@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  wayland.windowManager.sway = {
+  options.wayland.windowManager.sway = {
     enable = true;
     package = pkgs.swayfx;
   };
