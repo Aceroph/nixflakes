@@ -61,6 +61,7 @@
               hostname = "asus";
               desktop = "sway";
               bar = "waybar";
+              inherit system;
             } // inputs;
             modules = [
               ./.
