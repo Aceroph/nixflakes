@@ -20,10 +20,10 @@
         in
         {
           gaps = {
-            inner = 7;
-            outer = 12;
+            inner = 10;
+            outer = 8;
           };
-          border = 0;
+          window.border = 0;
           defaultWorkspace = "workspace number 1";
           bars = [
             {
@@ -35,16 +35,16 @@
           };
           colors = {
             focused = {
-              background = "#ff0000";
-              border = "#00ff00";
-              childBorder = "#0000ff";
-              indicator = "#ffff00";
-              text = "#00ffff";
+              background = "#282828";
+              border = "#363636";
+              childBorder = "#282828";
+              indicator = "#282828";
+              text = "#f0f0f0";
             };
           };
           inherit modifier terminal;
         };
-      extraConfig = "corner_radius 15";
+      extraConfig = "corner_radius 10";
     };
   };
 }
