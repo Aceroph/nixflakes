@@ -49,6 +49,7 @@
             } // inputs;
             modules = [
               ./.
+              ./modules/bluetooth
               ./modules/neovim
               ./modules/bars/polybar
             ];
@@ -68,6 +69,7 @@
             } // inputs;
             modules = [
               ./.
+              ./modules/bluetooth
               ./modules/neovim
               ./modules/nvidia
               ./modules/bars/waybar

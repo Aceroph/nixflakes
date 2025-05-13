@@ -110,7 +110,6 @@
   ];
 
   services = {
-    blueman.enable = true;
     openssh.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
