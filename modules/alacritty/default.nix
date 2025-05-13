@@ -6,13 +6,15 @@
     settings = {
       font = {
         normal = {
-          family = "GohuFont 14 Nerd Font Mono";
+          family = "FiraCode 14 Nerd Font Mono";
           style = "Regular";
         };
       };
-      padding.x = 5;
-      opacity = 0.8;
-      blur = true;
+      window = {
+        padding.x = 5;
+        opacity = 0.9;
+        blur = true;
+      };
     };
   };
 }

@@ -39,7 +39,7 @@
 
       home.packages = with pkgs; [
         # Coding
-        nerd-fonts.gohufont
+        nerd-fonts.fira-code
         jetbrains.idea-ultimate
         jetbrains.webstorm
         jetbrains.clion
