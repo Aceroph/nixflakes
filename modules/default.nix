@@ -39,7 +39,7 @@
 
       home.packages = with pkgs; [
         # Coding
-        nerd-fonts.fira-code
+        nerd-fonts.d2coding
         jetbrains.idea-ultimate
         jetbrains.webstorm
         jetbrains.clion
@@ -57,11 +57,11 @@
         gimp
         spotify
         libreoffice-qt6-fresh
+        firefox
 
         # Peripherals
         libratbag
         piper
-        firefox
       ];
       home.stateVersion = "25.05";
     };

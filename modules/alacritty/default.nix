@@ -6,7 +6,7 @@
     settings = {
       font = {
         normal = {
-          family = "FiraCode 14 Nerd Font Mono";
+          family = "D2CodingLigature Nerd Font Mono";
           style = "Regular";
         };
       };
