@@ -35,7 +35,10 @@
         package = pkgs.jetbrains.jdk;
       };
 
-      services.easyeffects.enable = true;
+      services = {
+        easyeffects.enable = true;
+        blueman-applet.enable = true;
+      };
 
       home.packages = with pkgs; [
         # Coding
@@ -107,6 +110,7 @@
   ];
 
   services = {
+    blueman.enable = true;
     openssh.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
