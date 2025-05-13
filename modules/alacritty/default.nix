@@ -10,6 +10,9 @@
           style = "Regular";
         };
       };
+      padding.x = 5;
+      opacity = 0.8;
+      blur = true;
     };
   };
 }
