@@ -7,6 +7,7 @@
   ];
 
   services = {
+    logind.lidSwitch = "hibernate";
     pipewire = {
       enable = true;
       alsa.enable = true;
