@@ -23,6 +23,13 @@
             inner = 10;
             outer = 8;
           };
+          input = {
+            "*" = {
+              xkb_layout = "us,ca";
+              xkb_variant = ",multix";
+              xkb_options = "grp:alt_shift_toggle";
+            };
+          };
           window.border = 0;
           defaultWorkspace = "workspace number 1";
           bars = [
