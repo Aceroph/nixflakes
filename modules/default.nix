@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ./networking
     ./${desktop}
     ./alacritty
   ];
