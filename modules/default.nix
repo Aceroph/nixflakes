@@ -9,7 +9,7 @@
   imports = [
     ./networking
     ./${desktop}
-    ./alacritty
+    ./bars
   ];
   home-manager = {
     users.${username} = {

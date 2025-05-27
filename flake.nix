@@ -51,7 +51,6 @@
               ./.
               ./modules/bluetooth
               ./modules/neovim
-              ./modules/bars/polybar
             ];
           };
 
@@ -69,11 +68,12 @@
             } // inputs;
             modules = [
               ./.
+              ./modules/qutebrowser
               ./modules/bluetooth
               ./modules/neovim
               ./modules/nvidia
-              ./modules/bars/waybar
               ./modules/greetd
+              ./alacritty
             ];
           };
       };
