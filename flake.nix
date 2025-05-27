@@ -69,11 +69,11 @@
             modules = [
               ./.
               ./modules/qutebrowser
+              ./modules/alacritty
               ./modules/bluetooth
               ./modules/neovim
               ./modules/nvidia
               ./modules/greetd
-              ./alacritty
             ];
           };
       };
