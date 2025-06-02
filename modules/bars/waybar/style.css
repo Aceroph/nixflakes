@@ -1,0 +1,55 @@
+* {
+  font-family: D2CodingLigature Nerd Font;
+  font-size: 14px;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: alpha(black, 0.75);
+  border: 2px solid transparent;
+  border-radius: 0 0 15px 15px;
+  padding: 0 8px;
+}
+
+.modules-left {
+  border-bottom-left-radius: 0;
+}
+
+.modules-right {
+  border-bottom-right-radius: 0;
+}
+
+.module {
+  padding: 0 4px;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  color: shade(white, 0.6);
+}
+
+#workspaces button.focused {
+  color: white;
+}
+
+#workspaces button.urgent {
+  color: red;
+}
+
+#workspaces button:hover {
+  padding: 0 4px;
+}
+
+#battery.warning {
+  color: gold;
+}
+
+#battery.critical {
+  color: red;
+}
