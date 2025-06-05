@@ -28,6 +28,7 @@
       stylua
       black
       isort
+      nph
       # Extras
       ripgrep
     ];

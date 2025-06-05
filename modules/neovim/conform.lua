@@ -12,5 +12,6 @@ require("conform").setup {
 		html = { "prettierd" },
 		css = { "prettierd" },
 		json = { "jsonfmt" },
+		nim = { "nph" }
 	},
 }
