@@ -61,6 +61,7 @@
         spotify
         libreoffice-qt6-fresh
         firefox
+        obs-studio
 
         # Peripherals
         libratbag
