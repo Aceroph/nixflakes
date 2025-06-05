@@ -9,6 +9,11 @@
   home-manager.users.${username} = {
     services.swww.enable = true;
 
+    home.packages = with pkgs; [
+      slurp # Screenshot utility
+      grim # Screenshot utility
+    ];
+
     wayland.windowManager.sway = {
       enable = true;
       package = pkgs.swayfx;
@@ -39,6 +44,7 @@
           ];
           keybindings = lib.mkOptionDefault {
             "${modifier}+q" = "kill";
+            "Print" = "grim -g '$(slurp)' | xclip";
           };
           colors = {
             focused = {
