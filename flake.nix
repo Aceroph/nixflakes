@@ -74,6 +74,7 @@
               ./modules/neovim
               ./modules/nvidia
               ./modules/greetd
+              ./modules/obs
             ];
           };
       };
