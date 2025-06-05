@@ -45,7 +45,7 @@
           ];
           keybindings = lib.mkOptionDefault {
             "${modifier}+q" = "kill";
-            "Print" = "grim -g $(slurp) | wl-copy";
+            "Print" = "exec grim -g $(slurp) | wl-copy";
           };
           colors = {
             focused = {
