@@ -10,6 +10,7 @@
     services.swww.enable = true;
 
     home.packages = with pkgs; [
+      wl-clipboard
       slurp # Screenshot utility
       grim # Screenshot utility
     ];
@@ -44,7 +45,7 @@
           ];
           keybindings = lib.mkOptionDefault {
             "${modifier}+q" = "kill";
-            "Print" = "grim -g '$(slurp)' | xclip";
+            "Print" = "grim -g $(slurp) | wl-copy";
           };
           colors = {
             focused = {
