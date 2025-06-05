@@ -17,6 +17,7 @@
       vue-language-server
       rust-analyzer
       pyright
+      nimlsp
       nil
       # FMTs
       nixfmt-rfc-style
@@ -41,6 +42,7 @@
         lua
         css
         vue
+        nim
       ])
       ++ (with pkgs.vimPlugins; [
         render-markdown-nvim
