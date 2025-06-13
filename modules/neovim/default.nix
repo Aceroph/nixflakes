@@ -46,13 +46,13 @@
         nim
       ])
       ++ (with pkgs.vimPlugins; [
-        markdown-preview-nvim
         cheatsheet-nvim
         # refactoring-nvim yet to configure..
         nvim-lspconfig
         plenary-nvim
         mini-nvim
         yuck-vim
+        markdown-preview-nvim
         {
           plugin = telescope-nvim;
           config = builtins.readFile ./telescope.lua;
