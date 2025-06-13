@@ -20,5 +20,5 @@ end
 blink.setup {
     keymap = { preset = "enter" },
     signature = { enabled = true },
-    menu = { documentation = { auto_show = true, auto_show_delay_ms = 500 } },
+    completion = { menu = { documentation = { auto_show = true, auto_show_delay_ms = 500 } } },
 }
