@@ -4,7 +4,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
-vim.g.mkdp_filetypes = { "markdown", "puml" }
+vim.g.mkdp_filetypes = { "markdown", "plantuml" }
 
 -- Keybinds
 vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show error at cursor" })
