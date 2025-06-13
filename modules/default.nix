@@ -87,7 +87,10 @@
 
   powerManagement.enable = true;
 
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
 
   # Networking
   networking.hostName = "nixos"; # Define your hostname.
