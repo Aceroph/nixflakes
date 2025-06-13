@@ -8,6 +8,7 @@
   home-manager.users.${username}.programs.neovim = {
     enable = true;
     defaultEditor = true;
+    withNodeJs = true;
     extraLuaConfig = builtins.readFile ./options.lua;
     extraConfig = builtins.readFile ./options.vim;
     extraPackages = with pkgs; [
