@@ -38,6 +38,7 @@
       services = {
         easyeffects.enable = true;
         blueman-applet.enable = true;
+        flatpak.enable = true;
       };
 
       home.packages = with pkgs; [
