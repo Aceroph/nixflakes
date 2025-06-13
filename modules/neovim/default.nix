@@ -46,7 +46,7 @@
         nim
       ])
       ++ (with pkgs.vimPlugins; [
-        render-markdown-nvim
+        markdown-preview-nvim
         cheatsheet-nvim
         # refactoring-nvim yet to configure..
         nvim-lspconfig

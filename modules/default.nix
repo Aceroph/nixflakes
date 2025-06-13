@@ -89,7 +89,12 @@
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    config = {
+      config.default = "wlr";
+    };
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+    ];
   };
 
   # Networking
