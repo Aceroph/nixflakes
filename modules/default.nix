@@ -38,7 +38,6 @@
       services = {
         easyeffects.enable = true;
         blueman-applet.enable = true;
-        flatpak.enable = true;
       };
 
       home.packages = with pkgs; [
@@ -111,6 +110,7 @@
   ];
 
   services = {
+    flatpak.enable = true;
     openssh.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
