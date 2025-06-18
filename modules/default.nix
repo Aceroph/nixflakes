@@ -51,6 +51,7 @@
         tmux
 
         # Gaming
+        wl-clicker
         heroic
         prismlauncher
         mangohud
