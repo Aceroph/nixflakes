@@ -142,7 +142,13 @@
   #########
   # Shell #
   #########
-  programs.zsh.enable = true; # See home.nix for the actual config
+  programs = {
+    zsh.enable = true; # See home.nix for the actual config
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+  };
   users.defaultUserShell = pkgs.zsh;
 
   #########

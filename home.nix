@@ -74,11 +74,22 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    initContent = lib.mkOrder 600 "zstyle ':omz:alpha:lib:git' async-prompt force";
+    initContent =
+      let
+        async-prompt = lib.mkOrder 500 "zstyle ':omz:alpha:lib:git' async-prompt force";
+        zoxide-init = lib.mkOrder 1000 "eval \"$(zoxide init zsh)\"";
+      in
+      lib.mkMerge [
+        async-prompt
+        zoxide-init
+      ];
     oh-my-zsh = {
       enable = true;
       custom = "$HOME/.oh-my-zsh";
       theme = "custom";
+    };
+    shellAliases = {
+      cd = "z";
     };
   };
 
