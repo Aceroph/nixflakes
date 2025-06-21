@@ -6,7 +6,7 @@
     settings = {
       font = {
         normal = {
-          family = "D2CodingLigature Nerd Font Mono";
+          family = "D2CodingLigature Nerd Font";
           style = "Regular";
         };
       };

@@ -142,14 +142,8 @@
   #########
   # Shell #
   #########
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableLsColors = true;
-    ohMyZsh = {
-      enable = true;
-    };
-  };
+  programs.zsh.enable = true; # See home.nix for the actual config
+  users.defaultUserShell = pkgs.zsh;
 
   #########
   # Users #

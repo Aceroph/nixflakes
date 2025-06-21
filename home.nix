@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
+  ############
+  # Programs #
+  ############
   programs = {
     git = {
       enable = true;
@@ -25,11 +28,17 @@
     };
   };
 
+  ############
+  # Services #
+  ############
   services = {
     easyeffects.enable = true;
     blueman-applet.enable = true;
   };
 
+  ############
+  # Packages #
+  ############
   home.packages = with pkgs; [
     # Coding
     nerd-fonts.d2coding
@@ -57,5 +66,21 @@
     libratbag
     piper
   ];
+
+  #########
+  # Shell #
+  #########
+  home.file.".oh-my-zsh/themes/custom.zsh-theme".text = builtins.readFile ./theme.zsh-theme;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    initContent = lib.mkOrder 600 "zstyle ':omz:alpha:lib:git' async-prompt force";
+    oh-my-zsh = {
+      enable = true;
+      custom = "$HOME/.oh-my-zsh";
+      theme = "custom";
+    };
+  };
+
   home.stateVersion = "25.05";
 }
