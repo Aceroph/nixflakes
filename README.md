@@ -22,4 +22,4 @@ $ sudo nixos-rebuild switch --flake .
 - [ ] Make my own status bar and ditch waybar
 - [ ] Make my own GTK theme
 - [ ] Customize discord (vesktop), steam, firefox & spotify
-- [ ] Setup zsh & zoxide
+- [x] Setup zsh & zoxide
