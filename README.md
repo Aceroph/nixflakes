@@ -1,10 +1,10 @@
-# My NixOS Configurations
-Currently, I have a GNOME configuration and a non-functionning i3 config.
+# My NixOS Configuration
+Currently running SwayFX with waybar as of June 21st, 2025
 
 ## Installation
 1. Clone the project
 ```sh
-$ git clone https://github.com/Aceroph/nixflakes
+$ git clone https://github.com/Aceroph/nixflakes.git
 ```
 2. Step into the cloned directory
 ```sh
@@ -15,12 +15,11 @@ $ cd nixflakes/
 ```sh
 $ sudo nixos-rebuild switch --flake .
 ```
----
-If you do wish to try to fix my i3 config, switch to the `i3` branch
-```sh
-$ git checkout i3
-```
-and run the following
-```sh
-$ sudo nixos-rebuild switch --flake .#nixos-i3
-```
+
+## TODO
+- [ ] Set up a notification daemon (dunst)
+- [ ] Make my own app launcher and ditch dmenu
+- [ ] Make my own status bar and ditch waybar
+- [ ] Make my own GTK theme
+- [ ] Customize discord (vesktop), steam, firefox & spotify
+- [ ] Setup zsh & zoxide
