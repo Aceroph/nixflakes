@@ -140,6 +140,18 @@
   };
 
   #########
+  # Shell #
+  #########
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableLsColors = true;
+    ohMyZsh = {
+      enable = true;
+    };
+  };
+
+  #########
   # Users #
   #########
   users.users.${username} = {
