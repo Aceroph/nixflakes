@@ -1,6 +1,20 @@
-{ lib, pkgs, ... }:
+{
+  lib,
+  pkgs,
+  quickshell,
+  ...
+}:
 
 {
+
+  #######
+  # Gtk #
+  #######
+  gtk = {
+    enable = true;
+    theme = pkgs.gnome-extra-themes;
+  };
+
   ############
   # Programs #
   ############
@@ -63,6 +77,7 @@
     firefox
 
     # Peripherals
+    quickshell.packages.x86_64-linux.default
     libratbag
     piper
   ];
