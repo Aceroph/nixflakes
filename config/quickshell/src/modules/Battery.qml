@@ -1,19 +1,20 @@
-import QtQuick
+import Quickshell.Services.UPower
 import QtQuick.Controls
-
-import "root:/utils"
+import QtQuick
 
 Row {
+    property UPowerDevice device: UPower.displayDevice
+
     spacing: 4
 
     Text {
-        text: (SystemInfo.battery * 100).toFixed()
+        text: (device.percentage * 100).toFixed()
         color: Colors.primary
     }
     
     ProgressBar {
         id: progress
-        value: SystemInfo.battery
+        value: device.percentage
         anchors.verticalCenter: parent.verticalCenter
 
         background: Rectangle {

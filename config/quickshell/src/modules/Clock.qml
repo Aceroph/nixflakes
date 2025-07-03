@@ -1,9 +1,9 @@
 import QtQuick.Controls
 import QtQuick
 
-import "root:/utils"
+import "root:/services"
 
 Text {
-    text: SystemInfo.time
+    text: Time.time
     color: Colors.text
 }
