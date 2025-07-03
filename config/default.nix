@@ -11,6 +11,5 @@
     ./nvidia
     ./obs
     ./sway
-    ./waybar
   ];
 }

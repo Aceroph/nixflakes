@@ -1,18 +1,21 @@
 {
   lib,
   pkgs,
-  quickshell,
   ...
 }:
 
 {
+  imports = [ ./config/quickshell ];
 
   #######
   # Gtk #
   #######
   gtk = {
     enable = true;
-    theme = pkgs.gnome-extra-themes;
+    theme = {
+      package = pkgs.gnome-themes-extra;
+      name = "Adwaita-dark";
+    };
   };
 
   ############
@@ -77,7 +80,6 @@
     firefox
 
     # Peripherals
-    quickshell.packages.x86_64-linux.default
     libratbag
     piper
   ];

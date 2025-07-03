@@ -1,4 +1,5 @@
 {
+  quickshell,
   nixos-hardware,
   home-manager,
   username,
@@ -84,6 +85,7 @@
   # Home manager #
   ################
   home-manager = {
+    extraSpecialArgs = { inherit quickshell username; };
     useGlobalPkgs = true;
     users.${username} = {
       imports = [
@@ -132,6 +134,7 @@
     printing.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
+    upower.enable = true;
     xserver.xkb = {
       layout = "us,ca";
       variant = ",multix";
