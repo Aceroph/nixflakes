@@ -5,7 +5,10 @@
 }:
 
 {
-  imports = [ ./config/quickshell ];
+  imports = [
+    ./config/quickshell
+    ./config/vesktop
+  ];
 
   #######
   # Gtk #
@@ -73,11 +76,12 @@
     mangohud
 
     # Entertainement
-    discord
     gimp
     spotify
     libreoffice-qt6-fresh
     firefox
+    cava
+    neofetch
 
     # Peripherals
     libratbag

@@ -17,6 +17,7 @@ in
     };
     Install.WantedBy = [ "graphical-session.target" ];
     Service = {
+      Environment = [ "PATH=${pkgs.cava}/bin" ];
       ExecStart = "${package}/bin/quickshell";
       Restart = "on-failure";
       RestartSec = "3";

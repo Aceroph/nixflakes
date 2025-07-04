@@ -1,11 +1,14 @@
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Shapes
 import Quickshell
 
 import "modules"
 
 PanelWindow {
     id: root
+
+    property alias notch: dashboard
 
     anchors {
         top: true
@@ -17,6 +20,8 @@ PanelWindow {
     exclusiveZone: 15
 
     color: "transparent"
+
+    BarNotch { bar: dashboard }
 
     Rectangle {
         id: dashboard
@@ -46,6 +51,7 @@ PanelWindow {
             WidgetWrapper { Workspaces {} }
             WidgetWrapper { Clock {} }
             WidgetWrapper { Battery {} }
+            WidgetWrapper { Cava { id: cava } visible: cava.isPlaying }
             WidgetWrapper { Logo {} }
         }
 

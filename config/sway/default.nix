@@ -7,8 +7,6 @@
 
 {
   home-manager.users.${username} = {
-    services.swww.enable = true;
-
     home.packages = with pkgs; [
       wl-clipboard
       slurp # Screenshot utility

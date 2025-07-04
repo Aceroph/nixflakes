@@ -1,6 +1,10 @@
 import Quickshell
+import QtQuick.Shapes
 import QtQuick
 
+import "modules"
+
 ShellRoot {
-    Bar {}
+    Background { bar: bar }
+    Bar { id: bar }
 }
