@@ -19,9 +19,11 @@
       rust-analyzer
       pyright
       nimlsp
+      ccls
       nil
       # FMTs
       nixfmt-rfc-style
+      clang-tools
       prettierd
       eslint_d
       rustfmt
@@ -45,12 +47,12 @@
         css
         vue
         nim
+        c
       ])
       ++ (with pkgs.vimPlugins; [
         markdown-preview-nvim
         plantuml-syntax
-        cheatsheet-nvim
-        # refactoring-nvim yet to configure..
+        refactoring-nvim
         nvim-lspconfig
         plenary-nvim
         mini-nvim
@@ -68,11 +70,6 @@
         {
           plugin = blink-cmp;
           config = builtins.readFile ./blink.lua;
-          type = "lua";
-        }
-        {
-          plugin = toggleterm-nvim;
-          config = builtins.readFile ./toggleterm.lua;
           type = "lua";
         }
         {

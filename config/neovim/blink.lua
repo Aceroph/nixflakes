@@ -11,6 +11,7 @@ local servers = {
     nil_ls = {},
     eslint = {},
     nimls = {},
+    ccls = {},
 }
 for server, config in pairs(servers) do
     config.capabilities = blink.get_lsp_capabilities(config.capabilities)
