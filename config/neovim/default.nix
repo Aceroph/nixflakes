@@ -19,11 +19,9 @@
       rust-analyzer
       pyright
       nimlsp
-      ccls
       nil
       # FMTs
       nixfmt-rfc-style
-      clang-tools
       prettierd
       eslint_d
       rustfmt
@@ -33,6 +31,7 @@
       isort
       nph
       # Extras
+      clang-tools
       ripgrep
     ];
     plugins =
