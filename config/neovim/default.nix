@@ -57,7 +57,11 @@
         plenary-nvim
         mini-nvim
         yuck-vim
-        nvim-dap
+        {
+          plugin = nvim-dap;
+          config = builtins.readFile ./dap.lua;
+          type = "lua";
+        }
         {
           plugin = telescope-nvim;
           config = builtins.readFile ./telescope.lua;
