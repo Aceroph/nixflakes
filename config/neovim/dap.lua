@@ -14,3 +14,8 @@ dap.configurations.c = {
     program = "${workspaceFolder}/main.c"
   }
 }
+dap.adapters.c = {
+  type = 'executable',
+  command = 'gdb',
+  args = { '--quiet', '--interpreter=dap' },
+}

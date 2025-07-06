@@ -33,6 +33,7 @@
       # Extras
       clang-tools
       ripgrep
+      gdb
     ];
     plugins =
       (with pkgs.vimPlugins.nvim-treesitter-parsers; [
