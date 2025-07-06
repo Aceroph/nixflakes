@@ -80,8 +80,6 @@
     spotify
     libreoffice-qt6-fresh
     firefox
-    cava
-    neofetch
 
     # Peripherals
     libratbag

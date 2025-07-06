@@ -52,11 +52,12 @@
       ++ (with pkgs.vimPlugins; [
         markdown-preview-nvim
         plantuml-syntax
-        refactoring-nvim
         nvim-lspconfig
+        which-key-nvim
         plenary-nvim
         mini-nvim
         yuck-vim
+        nvim-dap
         {
           plugin = telescope-nvim;
           config = builtins.readFile ./telescope.lua;
