@@ -21,11 +21,12 @@ end
 blink.setup {
   keymap = { preset = "enter" },
   signature = { enabled = true },
-  completion.documentation = {
-    auto_show = true, 
-    auto_show_delay_ms = 500,
-    ghost_text.enabled = true,
-    menu.auto_show = false,
-    ghost_text.show_with_menu = false
+  completion = {
+    documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 500,
+    },
+    ghost_text = { enabled = true, },
+    keyword = { range = "full", },
   }
 }
