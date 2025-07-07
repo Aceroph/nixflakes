@@ -10,6 +10,5 @@
     ./neovim
     ./nvidia
     ./obs
-    ./sway
   ];
 }

@@ -6,6 +6,7 @@
 
 {
   imports = [
+    ./config/sway
     ./config/quickshell
     ./config/vesktop
   ];
