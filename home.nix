@@ -6,6 +6,7 @@
 
 {
   imports = [
+    ./config/foot
     ./config/sway
     ./config/quickshell
     ./config/vesktop

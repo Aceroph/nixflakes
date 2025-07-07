@@ -46,23 +46,30 @@
           "Print" = "exec grim -g \"$(slurp)\" -  | wl-copy";
           "Shift+Print" = "exec grim - | wl-copy";
         };
-        colors = {
-          focused = {
+        colors =
+          let
+            common = {
+              background = colors.background;
+              indicator = colors.primary;
+              text = colors.text;
+              border = "#00000000";
+            };
+          in
+          {
+            focused = {
+              childBorder = colors.primary;
+            } // common;
+            unfocused = {
+              childBorder = colors.primary-muted;
+            } // common;
+            focusedInactive = {
+              childBorder = colors.primary-muted;
+            } // common;
+            urgent = {
+              childBorder = colors.danger;
+            } // common;
             background = colors.background;
-            border = colors.primary;
-            childBorder = colors.primary;
-            indicator = colors.primary;
-            text = colors.text;
           };
-          unfocused = {
-            background = colors.background;
-            border = colors.primary-muted;
-            childBorder = colors.primary-muted;
-            indicator = colors.primary-muted;
-            text = colors.text;
-          };
-          background = colors.background;
-        };
         inherit modifier terminal;
       };
     extraConfig = "corner_radius 10";
