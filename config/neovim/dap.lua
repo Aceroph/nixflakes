@@ -6,16 +6,10 @@ dap.configurations.c = {
     request = "launch",
     name = "Launch current file",
     program = "${file}"
-  },
-  {
-    type = "c",
-    request = "launch",
-    name = "Launch main file",
-    program = "${workspaceFolder}/main.c"
   }
 }
 dap.adapters.c = {
   type = 'executable',
   command = 'gdb',
-  args = { '--quiet', '--interpreter=dap' },
+  args = { '--quiet', '--eval-command', 'set print pretty on' },
 }

@@ -68,6 +68,7 @@
     graphviz-nox
     valgrind
     tmux
+    gdb
 
     # Gaming
     wl-clicker
