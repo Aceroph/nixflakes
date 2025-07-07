@@ -6,6 +6,7 @@
 
 {
   imports = [
+    ./config/fastfetch
     ./config/foot
     ./config/sway
     ./config/quickshell
