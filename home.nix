@@ -113,6 +113,7 @@
     };
     shellAliases = {
       cd = "z";
+      nixos-rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos";
     };
   };
 

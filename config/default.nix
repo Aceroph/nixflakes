@@ -4,7 +4,6 @@
 
 {
   imports = [
-    ./alacritty
     ./bluetooth
     ./greetd
     ./neovim

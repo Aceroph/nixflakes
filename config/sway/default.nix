@@ -19,7 +19,7 @@
     config =
       let
         modifier = "Mod4";
-        terminal = "alacritty";
+        terminal = "foot";
       in
       {
         gaps = {
@@ -49,26 +49,26 @@
         colors =
           let
             common = {
-              background = colors.background;
-              indicator = colors.primary;
-              text = colors.text;
+              background = "#" + colors.background;
+              indicator = "#" + colors.primary;
+              text = "#" + colors.text;
               border = "#00000000";
             };
           in
           {
             focused = {
-              childBorder = colors.primary;
+              childBorder = "#" + colors.primary;
             } // common;
             unfocused = {
-              childBorder = colors.primary-muted;
+              childBorder = "#" + colors.primary-muted;
             } // common;
             focusedInactive = {
-              childBorder = colors.primary-muted;
+              childBorder = "#" + colors.primary-muted;
             } // common;
             urgent = {
-              childBorder = colors.danger;
+              childBorder = "#" + colors.danger;
             } // common;
-            background = colors.background;
+            background = "#" + colors.background;
           };
         inherit modifier terminal;
       };
