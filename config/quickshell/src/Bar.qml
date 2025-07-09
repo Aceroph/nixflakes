@@ -48,11 +48,11 @@ PanelWindow {
             anchors.verticalCenter: parent.top
             anchors.verticalCenterOffset: this.height / 2 + 5
 
-            WidgetWrapper { Workspaces {} }
-            WidgetWrapper { Clock {} }
-            WidgetWrapper { Battery {} }
-            WidgetWrapper { Cava { id: cava } visible: cava.isPlaying }
-            WidgetWrapper { Logo {} }
+            Workspaces {}
+            Clock {}
+            Battery {}
+            Cava {}
+            Logo {}
         }
 
         MouseArea {

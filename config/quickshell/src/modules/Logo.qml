@@ -1,5 +1,9 @@
 import QtQuick
 
-Image {
-    source: "root:/assets/nixos20.png"
+Module {
+    id: root
+
+    Image {
+        source: "root:/assets/nixos20.png"
+    }
 }
