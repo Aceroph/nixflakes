@@ -13,8 +13,13 @@
   imports = [
     nixos-hardware.nixosModules.asus-fx504gd
     home-manager.nixosModules.home-manager
+    ./config/bluetooth
+    ./config/greetd
+    ./config/neovim
+    ./config/nvidia
+    ./config/obs
+    ./config/tmux
     ./hardware-configuration.nix
-    ./config
   ];
 
   ###########
