@@ -12,18 +12,4 @@ in
     source = ./src;
     recursive = true;
   };
-
-  systemd.user.services.quickshell = {
-    Unit = {
-      Description = "My quickshell widgets";
-      After = [ "graphical-session.target" ];
-    };
-    Install.WantedBy = [ "graphical-session.target" ];
-    Service = {
-      Environment = [ "PATH=${pkgs.cava}/bin" ];
-      ExecStart = "${package}/bin/quickshell";
-      Restart = "on-failure";
-      RestartSec = "3";
-    };
-  };
 }
