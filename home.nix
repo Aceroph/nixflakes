@@ -93,24 +93,21 @@
   #########
   # Shell #
   #########
-  home.file.".oh-my-zsh/themes/custom.zsh-theme".text = builtins.readFile ./theme.zsh-theme;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    initContent =
-      let
-        async-prompt = lib.mkOrder 500 "zstyle ':omz:alpha:lib:git' async-prompt force";
-        zoxide-init = lib.mkOrder 1000 "eval \"$(zoxide init zsh)\"";
-      in
-      lib.mkMerge [
-        async-prompt
-        zoxide-init
-      ];
-    oh-my-zsh = {
-      enable = true;
-      custom = "$HOME/.oh-my-zsh";
-      theme = "custom";
-    };
+    initContent = ''
+      autoload -Uz vcs_info
+      zstyle ':vcs_info:*' enable git
+      precmd() {
+          vcs_info
+      }
+      setopt prompt_subst
+      zstyle ':vcs_info:git*' formats "%F{green}%b%f "
+      PROMPT="%F{black}%~%f ''${vcs_info_msg_0_} %F{blue}->%f "
+
+      eval "$(zoxide init zsh)"
+    '';
     shellAliases = {
       cd = "z";
       nixos-rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos";
