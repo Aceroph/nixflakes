@@ -99,12 +99,16 @@
     initContent = ''
       autoload -Uz vcs_info
       zstyle ':vcs_info:*' enable git
+      zstyle ':vcs_info:git*' check-for-changes true
+      zstyle ':vcs_info:git*' formats 'on %F{red}%b%f %u '
+      zstyle ':vcs_info:git*' stagedstr '%F{green}S%f'
+      zstyle ':vcs_info:git*' unstagedstr '%F{yellow}U%f'
       precmd() {
           vcs_info
       }
+
       setopt prompt_subst
-      zstyle ':vcs_info:git*' formats "%F{green}%b%f "
-      PROMPT="%F{black}%~%f ''${vcs_info_msg_0_} %F{blue}->%f "
+      PROMPT='%F{black}%~%f ''${vcs_info_msg_0_}'
 
       eval "$(zoxide init zsh)"
     '';
