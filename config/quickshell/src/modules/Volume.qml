@@ -17,13 +17,13 @@ Module {
 
         Text {
             anchors.verticalCenter: parent.verticalCenter
-            text: device.audio.muted ? "" : device.audio.volume > 50 ? "" : ""
+            text: device.audio.muted ? "" : device.audio.volume > 0.5 ? "" : ""
             color: Colors.primary
         }
 
         ProgressBar {
             id: progress
-            value: device.audio.volume / 100
+            value: device.audio.volume
             anchors.verticalCenter: parent.verticalCenter
 
             implicitWidth: device.audio.muted ? 0 : 40
@@ -52,8 +52,8 @@ Module {
     IpcHandler {
         target: "volume"
 
-        function toggleMute(): void { device.audio.mute = !device.audio.mute; }
-        function increase(step: int): void { device.audio.volume += step; }
-        function decrease(step: int): void { device.audio.volume -= step; }
+        function toggleMuted(): void { device.audio.muted = !device.audio.muted; }
+        function increase(step: real): void { device.audio.volume = Math.min(1, device.audio.volume + step); }
+        function decrease(step: real): void { device.audio.volume = Math.max(0, device.audio.volume - step); }
     }
 }
