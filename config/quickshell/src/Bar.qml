@@ -17,7 +17,7 @@ PanelWindow {
     }
     mask: Region { item: dashboard }
     implicitHeight: 200
-    exclusiveZone: 15
+    exclusiveZone: modules.height + modules.y - 5
 
     color: "transparent"
 
