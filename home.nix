@@ -87,6 +87,7 @@
 
     # Peripherals
     libratbag
+    sixel
     piper
   ];
 
