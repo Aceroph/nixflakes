@@ -2,23 +2,32 @@ import QtQuick.Shapes
 import QtQuick
 
 Shape {
-    required property Item bar
+    required property Item item
+    property real r: item.height
+    property int p: 5
 
-    anchors.fill: parent
     preferredRendererType: Shape.CurveRenderer
 
     ShapePath {
         id: path
 
-        property double r: bar.height / 2
-
         fillColor: Colors.background
-        strokeColor: "transparent"
-        startX: bar.x - r
+        strokeColor: "gray"
+        startX: item.x - r
         startY: 0
 
-        PathArc { x: bar.x; y: path.r; radiusX: path.r; radiusY: path.r }
-        PathLine { x: bar.x + bar.width; y: path.r }
-        PathArc { x: bar.x + bar.width + path.r; y: 0; radiusX: path.r; radiusY: path.r }
+        PathCubic {
+            x: item.x; y: item.y + item.height + p
+            relativeControl1X: p * 3; relativeControl1Y: p
+            relativeControl2X: p; relativeControl2Y: r + p
+        }
+        PathLine {
+            x: item.x + item.width; y: item.y + item.height + p
+        }
+        PathCubic {
+            x: item.x + item.width + r; y: 0
+            relativeControl1X: p * 3; relativeControl1Y: -p
+            relativeControl2X: p; relativeControl2Y: -r - p
+        }
     }
 }

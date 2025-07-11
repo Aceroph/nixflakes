@@ -21,8 +21,6 @@ PanelWindow {
 
     color: "transparent"
 
-    BarNotch { bar: dashboard }
-
     Rectangle {
         id: dashboard
 
@@ -30,7 +28,7 @@ PanelWindow {
         implicitWidth: modules.width + 10
         anchors.horizontalCenter: parent.horizontalCenter
 
-        color: Colors.background
+        color: Colors.background_darker
         radius: 8
         
         GridLayout {
@@ -41,8 +39,11 @@ PanelWindow {
             Music { Layout.row: 2 }
         }
 
+        BarNotch { item: modules }
+        
         RowLayout {
             id: modules
+
 
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.top
@@ -51,6 +52,7 @@ PanelWindow {
             Workspaces {}
             Clock {}
             Battery {}
+            Volume {}
             Cava {}
             Logo {}
         }
