@@ -12,7 +12,8 @@ Shape {
         id: path
 
         fillColor: Colors.background
-        strokeColor: "gray"
+        strokeColor: Colors.primary_muted
+        strokeWidth: 2
         startX: item.x - r
         startY: 0
 

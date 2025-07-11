@@ -25,6 +25,6 @@ PanelWindow {
         radius: 30
         anchors.fill: parent
 
-        Image { source: "/home/acero/Pictures/Wallpapers/BledLake-Slovenia.png"; anchors.fill: parent }
+        Image { source: "/home/acero/Pictures/Wallpapers/yellow-city.png"; anchors.fill: parent }
     }
 }
