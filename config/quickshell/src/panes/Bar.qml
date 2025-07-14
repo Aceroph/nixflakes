@@ -24,7 +24,6 @@ PanelWindow {
     RowLayout {
         id: modules
 
-
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.top
         anchors.verticalCenterOffset: this.height / 2 + 5
@@ -33,7 +32,6 @@ PanelWindow {
         Clock {}
         Battery {}
         Volume {}
-        Cava {}
         Logo {}
     }
 
