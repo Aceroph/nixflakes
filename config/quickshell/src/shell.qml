@@ -2,9 +2,10 @@ import Quickshell
 import QtQuick.Shapes
 import QtQuick
 
-import "modules"
+import qs.panes
 
 ShellRoot {
-    Background { bar: bar }
-    Bar { id: bar }
+    Launcher {}
+    Background {}
+    Bar {}
 }

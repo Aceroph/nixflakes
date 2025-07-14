@@ -7,8 +7,6 @@ import "modules"
 PanelWindow {
     id: root
 
-    required property var bar
-
     color: "black"
 
     anchors {
