@@ -88,6 +88,7 @@
     # Peripherals
     libratbag
     libsixel
+    cava
     piper
   ];
 
