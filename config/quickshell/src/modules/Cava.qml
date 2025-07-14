@@ -14,7 +14,7 @@ Module {
         property int barSpacing: 5
         property list<int> values: []
 
-        implicitWidth: values.length * (barWidth + barSpacing)
+        implicitWidth: values.length * (barWidth + barSpacing) - barSpacing
         anchors.fill: parent
 
         Process {
@@ -35,10 +35,12 @@ Module {
             ctx.reset();
             ctx.fillStyle = Colors.primary;
 
+            ctx.beginPath();
             for (let i = 0; i < values.length; i++) {
-                let h = values[i] / 100 * img.height
-                ctx.fillRect(i * (barWidth + barSpacing) + barSpacing, (img.height - h) / 2 + 1, barWidth, h);
+                let h = Math.max(1, values[i] / 100 * img.height);
+                ctx.roundedRect(i * (barSpacing + barWidth) + barSpacing, (img.height - h) / 2, barWidth, h, 2, 2);
             }
+            ctx.fill();
         }
     }
 }
