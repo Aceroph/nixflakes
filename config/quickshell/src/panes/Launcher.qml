@@ -47,7 +47,7 @@ PanelWindow {
 
         readonly property Component current: RowLayout {
             Text {
-                text: ToplevelManager.activeToplevel.title
+                text: currentWindow.appId
                 color: Colors.text
                 Layout.margins: 5
                 Layout.rightMargin: currentWindow.title == currentWindow.appId ? Layout.margins * 2 : 0
@@ -55,7 +55,7 @@ PanelWindow {
 
             Text {
                 visible: currentWindow.title != currentWindow.appId
-                text: `(${ToplevelManager.activeToplevel.appId})`
+                text: `(${currentWindow.appId})`
                 color: Colors.text_muted
                 Layout.margins: 5
                 Layout.leftMargin: 0
