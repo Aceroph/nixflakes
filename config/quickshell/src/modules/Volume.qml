@@ -17,16 +17,16 @@ Module {
 
         Text {
             anchors.verticalCenter: parent.verticalCenter
-            text: device.audio.muted ? "" : device.audio.volume > 0.5 ? "" : ""
+            text: device == null || device.audio.muted ? "" : device.audio.volume > 0.5 ? "" : ""
             color: Colors.primary
         }
 
         ProgressBar {
             id: progress
-            value: device.audio.volume
+            value: device == null ? 0 : device.audio.volume
             anchors.verticalCenter: parent.verticalCenter
 
-            implicitWidth: device.audio.muted ? 0 : 40
+            implicitWidth: device == null || device.audio.muted ? 0 : 40
             implicitHeight: 6
             visible: implicitWidth > 0
 

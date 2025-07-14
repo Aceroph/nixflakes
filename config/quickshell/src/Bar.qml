@@ -1,9 +1,9 @@
-import QtQuick
 import QtQuick.Layouts
 import QtQuick.Shapes
 import Quickshell
+import QtQuick
 
-import "modules"
+import qs.modules
 
 PanelWindow {
     id: root
@@ -35,8 +35,6 @@ PanelWindow {
             id: extraModules
             visible: mouseArea.containsMouse
             anchors.bottom: dashboard.bottom
-            
-            Music { Layout.row: 2 }
         }
 
         BarNotch { item: modules }
