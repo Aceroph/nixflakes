@@ -57,6 +57,13 @@
   services = {
     easyeffects.enable = true;
     blueman-applet.enable = true;
+    spotifyd = {
+      enable = true;
+      settings.global = {
+        device_name = "nixos";
+        device_type = "computer";
+      };
+    };
   };
 
   ############
