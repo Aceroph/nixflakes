@@ -4,9 +4,8 @@ let
   package = quickshell.packages.${pkgs.system}.default;
 in
 {
-  home.packages = with pkgs; [
+  home.packages = [
     package
-    libcava
   ];
   home.file.".config/quickshell" = {
     source = ./src;

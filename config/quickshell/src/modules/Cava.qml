@@ -4,8 +4,6 @@ import Quickshell.Io
 import QtQuick
 
 Module {
-    id: root
-
     property bool isPlaying: Mpris.players.values.filter(p => p.isPlaying).length > 0
     visible: isPlaying
 
@@ -23,7 +21,7 @@ Module {
             id: cava
 
             command: [ "sh", "-c", "cava -p $HOME/.config/quickshell/cava.ini" ]
-            running: root.isPlaying
+            running: isPlaying
             stdout: SplitParser {
                 onRead: data => {
                     img.values = data.slice(0, -1).split(";").map(v => parseInt(v, 10));
@@ -39,7 +37,7 @@ Module {
 
             for (let i = 0; i < values.length; i++) {
                 let h = values[i] / 100 * img.height
-                ctx.fillRect((i + 0.5) * (barWidth + barSpacing), (img.height - h) / 2 + 1, barWidth, h);
+                ctx.fillRect(i * (barWidth + barSpacing) + barSpacing, (img.height - h) / 2 + 1, barWidth, h);
             }
         }
     }
