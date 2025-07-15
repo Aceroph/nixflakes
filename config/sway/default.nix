@@ -46,9 +46,9 @@
           "${modifier}+q" = "kill";
           "Print" = "exec grim -g \"$(slurp)\" -  | wl-copy";
           "Shift+Print" = "exec grim - | wl-copy";
-          "Fn+F1" = "exec qs ipc call volume toggleMute";
-          "Fn+F2" = "exec qs ipc call volume decrease 0.05";
-          "Fn+F3" = "exec qs ipc call volume increase 0.05";
+          "XF86AudioMute" = "exec qs ipc call volume toggleMute";
+          "XF86AudioLowerVolume" = "exec qs ipc call volume decrease 0.05";
+          "XF86AudioRaiseVolume" = "exec qs ipc call volume increase 0.05";
         };
         colors =
           let
