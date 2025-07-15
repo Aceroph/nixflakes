@@ -17,9 +17,9 @@ $ sudo nixos-rebuild switch --flake .
 ```
 
 ## TODO
-- [ ] Set up a notification daemon (dunst)
+- [ ] Set up a notification daemon
 - [ ] Make my own app launcher and ditch dmenu
-- [ ] Make my own status bar and ditch waybar
-- [ ] Make my own GTK theme
+- [x] Make my own status bar and ditch waybar
+- [ ] Make my own GTK/Qt theme
 - [ ] Customize discord (vesktop), steam, firefox & spotify
 - [x] Setup zsh & zoxide
