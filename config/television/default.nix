@@ -8,9 +8,9 @@
 
   home.packages = with pkgs; [ nix-search-tv ];
 
-  home.file.".config/television/nix-channels.toml" =
-    (pkgs.formats.toml { }).generate "nix-channels.toml"
-      {
+  home.file.".config/television/nix_channels.toml" =
+    let
+      tv-config = (pkgs.formats.toml { }).generate "nix_channels.toml" {
         cable_channel = [
           {
             name = "nixpkgs";
@@ -19,4 +19,8 @@
           }
         ];
       };
+    in
+    {
+      source = "${tv-config}";
+    };
 }

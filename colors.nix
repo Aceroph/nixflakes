@@ -4,7 +4,8 @@ let
   colorscheme = {
     primary = "ffff66";
     primary-muted = "666629";
-    secondary = "6666ff";
+    secondary = "66b3ff";
+    tertiary = "b366ff";
     danger = "ff6666";
     warning = "ffb366";
     success = "b3ff66";

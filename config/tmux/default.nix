@@ -31,22 +31,22 @@
       bind -n M-Down select-pane -D
 
       # Panes
-      set -g pane-border-style fg=cyan
-      set -g pane-active-border-style fg=black
+      set -g pane-border-style fg=black
+      set -g pane-active-border-style fg=yellow
       set -g pane-border-line simple
 
       # Statusline
       setw -g window-status-current-format ' #W '
       setw -g window-status-format ' #W '
-      setw -g window-status-style fg=cyan
-      setw -g window-status-current-style fg=black
+      setw -g window-status-style fg=black
+      setw -g window-status-current-style fg=yellow
       setw -g window-status-bell-style fg=red
 
-      set -g status-style 'fg=black bg=default'
+      set -g status-style 'fg=yellow bg=default'
       set -g status-left ""
       set -g status-right '%Y-%m-%d %H:%M'
 
-      set -g message-style 'fg=yellow bg=default'
+      set -g message-style 'fg=blue bg=default'
     '';
   };
 }

@@ -118,7 +118,7 @@
       }
 
       setopt prompt_subst
-      PROMPT='%F{black}%~%f ''${vcs_info_msg_0_}'
+      PROMPT='%F{yellow}%~%f ''${vcs_info_msg_0_}'
 
       eval "$(zoxide init zsh)"
     '';

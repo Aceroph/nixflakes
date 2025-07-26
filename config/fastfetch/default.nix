@@ -6,9 +6,10 @@
     settings = {
       logo = {
         source = "~/Pictures/rigby.jpg";
+        type = "sixel";
       };
       display = {
-        color.keys = "black";
+        color.keys = "yellow";
         separator = " ";
       };
       modules = [
