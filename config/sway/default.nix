@@ -74,12 +74,16 @@
             } // common;
             background = "#" + colors.background;
           };
-        startup = [
-          {
-            always = true;
-            command = "${quickshell.packages.x86_64-linux.default}/bin/quickshell";
-          }
-        ];
+        startup =
+          let
+            quickshell = "${quickshell.packages.x86_64-linux.default}/bin/quickshell";
+          in
+          [
+            {
+              always = true;
+              command = "pkill ${quickshell} && ${quickshell}";
+            }
+          ];
         inherit modifier terminal;
       };
     extraConfig = "corner_radius 10";
