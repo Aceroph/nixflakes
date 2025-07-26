@@ -76,12 +76,12 @@
           };
         startup =
           let
-            quickshell = "${quickshell.packages.x86_64-linux.default}/bin/quickshell";
+            quickshell-bin = "${quickshell.packages.x86_64-linux.default}/bin/quickshell";
           in
           [
             {
               always = true;
-              command = "pkill ${quickshell} && ${quickshell}";
+              command = "pkill ${quickshell-bin} && ${quickshell-bin}";
             }
           ];
         inherit modifier terminal;
