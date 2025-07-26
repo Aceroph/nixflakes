@@ -16,7 +16,7 @@
         regular5 = colors.tertiary;
         regular6 = colors.warning;
         regular7 = colors.text;
-        bright0 = colors.background-muted;
+        bright0 = colors.background-darker;
         bright1 = colors.danger-muted;
         bright2 = colors.success-muted;
         bright3 = colors.primary-muted;
