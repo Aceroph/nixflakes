@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   ...
 }:
@@ -91,6 +90,7 @@
     spotify
     libreoffice-qt6-fresh
     firefox
+    blockbench
 
     # Peripherals
     libratbag
