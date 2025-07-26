@@ -9,6 +9,7 @@
     ./config/foot
     ./config/sway
     ./config/quickshell
+    ./config/television
     ./config/vesktop
   ];
 
