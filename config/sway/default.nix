@@ -15,7 +15,11 @@
 
   wayland.windowManager.sway = {
     enable = true;
-    package = pkgs.swayfx;
+    package = pkgs.swayfx.overrideAttrs (
+      finalAttrs: oldAttrs: {
+        patches = (oldAttrs.patches or [ ]) ++ [ ./cursor-movement-ipc.patch ];
+      }
+    );
     checkConfig = false;
     config =
       let
