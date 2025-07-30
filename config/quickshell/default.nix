@@ -1,11 +1,8 @@
-{ quickshell, pkgs, ... }:
+{ quickshell-patched, ... }:
 
-let
-  package = quickshell.packages.${pkgs.system}.default;
-in
 {
   home.packages = [
-    package
+    quickshell-patched
   ];
   home.file.".config/quickshell" = {
     source = ./src;

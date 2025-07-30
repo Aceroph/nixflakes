@@ -17,9 +17,9 @@
   outputs =
     inputs@{
       self,
-      nixpkgs,
       home-manager,
       nixos-hardware,
+      nixpkgs,
       quickshell,
       ...
     }:
@@ -28,13 +28,16 @@
         nixos =
           let
             system = "x86_64-linux";
+            quickshell-patched = quickshell.packages.${system}.default.overrideAttrs (oa: {
+              patches = (oa.patches or [ ]) ++ [ ./config/quickshell/cursor-movement-event.patch ];
+            });
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
               username = "acero";
               hostname = "asus";
               colors = import ./colors.nix { inherit nixpkgs; };
-              inherit system;
+              inherit system quickshell-patched;
             } // inputs;
             modules = [
               ./.

@@ -1,0 +1,54 @@
+From 2446a269c6f1f85f109f67cdb8e7927d55db08ab Mon Sep 17 00:00:00 2001
+From: Aceroph <aos92@proton.me>
+Date: Wed, 30 Jul 2025 01:21:46 -0400
+Subject: [PATCH] Add support for cursor_movement event
+
+---
+ src/x11/i3/ipc/connection.cpp | 4 +++-
+ src/x11/i3/ipc/connection.hpp | 1 +
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/x11/i3/ipc/connection.cpp b/src/x11/i3/ipc/connection.cpp
+index ba010ed..b76bfa9 100644
+--- a/src/x11/i3/ipc/connection.cpp
++++ b/src/x11/i3/ipc/connection.cpp
+@@ -95,7 +95,7 @@ I3Ipc::I3Ipc() {
+ }
+ 
+ void I3Ipc::subscribe() {
+-	auto payload = QByteArray(R"(["workspace","output"])");
++	auto payload = QByteArray(R"(["workspace","output","cursor_movement"])");
+ 	auto message = I3Ipc::buildRequestMessage(EventCode::Subscribe, payload);
+ 
+ 	this->makeRequest(message);
+@@ -346,6 +346,7 @@ void I3Ipc::onEvent(I3IpcEvent* event) {
+ 	case EventCode::GetOutputs: this->handleGetOutputsEvent(event); return;
+ 	case EventCode::GetWorkspaces: this->handleGetWorkspacesEvent(event); return;
+ 	case EventCode::RunCommand: I3Ipc::handleRunCommand(event); return;
++	case EventCode::CursorMovement: return;
+ 	case EventCode::Unknown:
+ 		qCWarning(logI3Ipc) << "Unknown event:" << event->type() << event->data();
+ 		return;
+@@ -529,6 +530,7 @@ QString I3IpcEvent::eventToString(EventCode event) {
+ 	case EventCode::Binding: return "binding"; break;
+ 	case EventCode::Shutdown: return "shutdown"; break;
+ 	case EventCode::Tick: return "tick"; break;
++	case EventCode::CursorMovement: return "cursor_movement"; break;
+ 	case EventCode::BarStateUpdate: return "bar_state_update"; break;
+ 	case EventCode::Input: return "input"; break;
+ 
+diff --git a/src/x11/i3/ipc/connection.hpp b/src/x11/i3/ipc/connection.hpp
+index af480c5..205ee3e 100644
+--- a/src/x11/i3/ipc/connection.hpp
++++ b/src/x11/i3/ipc/connection.hpp
+@@ -42,6 +42,7 @@ enum EventCode {
+ 	Binding = 0x80000005,
+ 	Shutdown = 0x80000006,
+ 	Tick = 0x80000007,
++	CursorMovement = 0x80000008,
+ 	BarStateUpdate = 0x80000014,
+ 	Input = 0x80000015,
+ 	Unknown = 999,
+-- 
+2.49.0
+

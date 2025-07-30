@@ -2,7 +2,7 @@ import Quickshell.Widgets
 import Quickshell
 import QtQuick
 
-import "modules"
+import qs.modules
 
 PanelWindow {
     id: root
@@ -18,6 +18,12 @@ PanelWindow {
 
     exclusionMode: ExclusionMode.Ignore
     aboveWindows: false
+
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.RightButton
+        onClicked: ContextMenu.open()
+    }
 
     ClippingWrapperRectangle {
         radius: 30
