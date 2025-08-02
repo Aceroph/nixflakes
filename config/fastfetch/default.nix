@@ -13,6 +13,7 @@
         separator = " ";
       };
       modules = [
+        "break"
         {
           type = "custom";
           key = "╭─────╮";
