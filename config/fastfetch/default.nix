@@ -20,7 +20,7 @@
         {
           type = "os";
           key = "│ OS  │";
-          format = "{pretty-name} {version}";
+          format = "{pretty-name}";
         }
         {
           type = "uptime";
