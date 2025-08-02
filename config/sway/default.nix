@@ -1,5 +1,5 @@
 {
-  quickshell-patched,
+  quickshell,
   colors,
   pkgs,
   lib,
@@ -84,7 +84,7 @@
             };
           startup =
             let
-              quickshell-bin = "${quickshell-patched}/bin/quickshell";
+              quickshell-bin = "${quickshell}/bin/quickshell";
             in
             [
               {

@@ -1,8 +1,8 @@
-{ quickshell-patched, ... }:
+{ quickshell, ... }:
 
 {
   home.packages = [
-    quickshell-patched
+    quickshell
   ];
   home.file.".config/quickshell" = {
     source = ./src;
