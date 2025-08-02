@@ -16,7 +16,7 @@
   wayland.windowManager.sway =
     let
       swayfx-unwrapped-patched = pkgs.swayfx-unwrapped.overrideAttrs (oa: {
-        patches = oa.patches ++ [ ./cursor-movement-ipc.patch ];
+        patches = oa.patches ++ [ ./get_mouse_ipc_command.patch ];
       });
     in
     {
