@@ -4,7 +4,7 @@
   home.packages = [
     quickshell
   ];
-  home.file.".config/quickshell" = {
+  xdg.configFile."quickshell" = {
     source = ./src;
     recursive = true;
   };
