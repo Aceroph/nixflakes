@@ -1,7 +1,8 @@
 import QtQuick.Controls
 import QtQuick
 
-import "root:/services"
+import qs.services
+import qs.utils
 
 Module {
     id: root

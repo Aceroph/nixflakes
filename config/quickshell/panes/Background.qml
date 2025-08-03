@@ -21,14 +21,6 @@ PanelWindow {
     exclusionMode: ExclusionMode.Ignore
     aboveWindows: false
 
-    MouseArea {
-        anchors.fill: parent
-        acceptedButtons: Qt.RightButton
-        onPressed: menu.open()
-    
-        ContextMenu { id: menu }
-    }
-
     ClippingWrapperRectangle {
         radius: 30
         anchors.fill: parent

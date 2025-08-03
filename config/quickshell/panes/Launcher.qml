@@ -4,7 +4,7 @@ import QtQuick.Shapes
 import Quickshell
 import QtQuick
 
-import qs.modules
+import qs.utils
 
 PanelWindow {
     property real r: launcher.height / 2

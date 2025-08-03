@@ -2,6 +2,8 @@ import Quickshell.Services.UPower
 import QtQuick.Controls
 import QtQuick
 
+import qs.utils
+
 Module {
     id: root
     

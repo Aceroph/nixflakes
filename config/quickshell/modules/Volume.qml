@@ -3,6 +3,8 @@ import Quickshell.Io
 import QtQuick.Controls
 import QtQuick
 
+import qs.utils
+
 Module {
     id: root
 

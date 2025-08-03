@@ -62,7 +62,10 @@ Menu {
 
     Process {
         id: getSelection
-        command: [ "slurp", "-d" ]
+        command: [ "slurp" ]
+        stderr: StdioCollector {
+            onStreamFinished: console.log(this.text);
+        }
         stdout: StdioCollector {
             onStreamFinished: {
                 console.log(this.text);

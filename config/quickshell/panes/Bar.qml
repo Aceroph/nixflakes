@@ -3,24 +3,28 @@ import Quickshell
 import QtQuick
 
 import qs.modules
+import qs.utils
 
 PanelWindow {
     id: root
 
     anchors {
         top: true
-        left: true
-        right: true
     }
 
     color: "transparent"
+    
+    Notch { 
+        id: notch
+        color: Colors.background
+        border: 0
+        radiusBottomLeft: 8; radiusBottomRight: 8
+    }
 
     implicitHeight: modules.height + 10
-    implicitWidth: modules.width + 10
+    implicitWidth: modules.width + 10 + notch.radiusTopLeft + notch.radiusTopRight
     exclusiveZone: modules.height + modules.y - 5
 
-    BarNotch { item: modules }
-    
     RowLayout {
         id: modules
 
