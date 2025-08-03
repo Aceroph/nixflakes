@@ -8,7 +8,6 @@
     ./config/fastfetch
     ./config/foot
     ./config/sway
-    ./config/quickshell
     ./config/television
     ./config/vesktop
   ];
@@ -94,11 +93,20 @@
     blockbench
 
     # Peripherals
+    quickshell
     libratbag
     libsixel
     cava
     piper
   ];
+
+  ##############
+  # Quickshell #
+  ##############
+  xdg.configFile."quickshell" = {
+    source = ./config/quickshell;
+    recursive = true;
+  };
 
   #########
   # Shell #

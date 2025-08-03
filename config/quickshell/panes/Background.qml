@@ -1,8 +1,10 @@
 import Quickshell.Widgets
 import Quickshell
 import QtQuick
+import QtQuick.Controls
 
 import qs.modules
+import qs.panes
 
 PanelWindow {
     id: root
@@ -22,7 +24,9 @@ PanelWindow {
     MouseArea {
         anchors.fill: parent
         acceptedButtons: Qt.RightButton
-        onClicked: ContextMenu.open()
+        onPressed: menu.open()
+    
+        ContextMenu { id: menu }
     }
 
     ClippingWrapperRectangle {

@@ -28,11 +28,11 @@ PanelWindow {
         anchors.verticalCenter: parent.top
         anchors.verticalCenterOffset: this.height / 2 + 5
 
+        Logo {}
         Workspaces {}
         Clock {}
-        Battery {}
         Volume {}
-        Logo {}
+        Battery {}
     }
 
     Behavior on implicitWidth { PropertyAnimation { duration: 100 } }
