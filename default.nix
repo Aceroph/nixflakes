@@ -1,7 +1,7 @@
 {
-  quickshell-patched,
   nixos-hardware,
   home-manager,
+  quickshell,
   username,
   colors,
   pkgs,
@@ -91,7 +91,7 @@
   # Home manager #
   ################
   home-manager = {
-    extraSpecialArgs = { inherit quickshell-patched username colors; };
+    extraSpecialArgs = { inherit quickshell username colors; };
     useGlobalPkgs = true;
     users.${username} = {
       imports = [

@@ -43,7 +43,6 @@
             };
           };
           window.border = 2;
-          window.titlebar = false;
           defaultWorkspace = "workspace number 1";
           bars = [
             {
@@ -58,30 +57,37 @@
             "XF86AudioLowerVolume" = "exec qs ipc call volume decrease 0.05";
             "XF86AudioRaiseVolume" = "exec qs ipc call volume increase 0.05";
           };
-          colors =
-            let
-              common = {
-                background = "#" + colors.background;
-                indicator = "#" + colors.primary;
-                text = "#" + colors.text;
-                border = "#00000000";
-              };
-            in
-            {
-              focused = {
-                childBorder = "#" + colors.primary;
-              } // common;
-              unfocused = {
-                childBorder = "#" + colors.primary-muted;
-              } // common;
-              focusedInactive = {
-                childBorder = "#" + colors.primary-muted;
-              } // common;
-              urgent = {
-                childBorder = "#" + colors.danger;
-              } // common;
-              background = "#" + colors.background;
+          colors = {
+            focused = rec {
+              border = "#" + colors.primary;
+              childBorder = border;
+              background = border;
+              indicator = border;
+              text = "#" + colors.background;
             };
+            unfocused = rec {
+              border = "#" + colors.background;
+              childBorder = border;
+              background = border;
+              indicator = border;
+              text = "#" + colors.text;
+            };
+            focusedInactive = rec {
+              border = "#" + colors.background;
+              childBorder = border;
+              background = border;
+              indicator = border;
+              text = "#" + colors.text;
+            };
+            urgent = rec {
+              border = "#" + colors.danger;
+              childBorder = border;
+              background = border;
+              indicator = border;
+              text = "#" + colors.danger-muted;
+            };
+            background = "#" + colors.background;
+          };
           startup =
             let
               quickshell-bin = "${quickshell}/bin/quickshell";
