@@ -1,11 +1,12 @@
 import Quickshell
 import QtQuick.Shapes
 import QtQuick
+import QtQuick.Controls
 
 import qs.panes
 
 ShellRoot {
-    Launcher {}
     Background {}
     Bar {}
+    Sidebar {}
 }

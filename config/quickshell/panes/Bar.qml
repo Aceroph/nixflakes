@@ -10,20 +10,14 @@ PanelWindow {
 
     anchors {
         top: true
+        left: true
+        right: true
     }
 
-    color: "transparent"
-    
-    Notch { 
-        id: notch
-        color: Colors.background
-        border: 0
-        radiusBottomLeft: 8; radiusBottomRight: 8
-    }
+    color: Colors.background
 
     implicitHeight: modules.height + 10
-    implicitWidth: modules.width + 10 + notch.radiusTopLeft + notch.radiusTopRight
-    exclusiveZone: modules.height + modules.y - 5
+    exclusiveZone: modules.height + 8
 
     RowLayout {
         id: modules
@@ -38,6 +32,4 @@ PanelWindow {
         Volume {}
         Battery {}
     }
-
-    Behavior on implicitWidth { PropertyAnimation { duration: 100 } }
 }
