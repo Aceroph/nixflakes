@@ -101,6 +101,5 @@
             ];
           inherit modifier terminal;
         };
-      extraConfig = "corner_radius 10";
     };
 }
