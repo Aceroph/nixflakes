@@ -38,13 +38,17 @@
     kernelParams = [
       "quiet"
       "splash"
-      "loglevel=3"
+      "loglevel=2"
     ];
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    plymouth.enable = true;
+    plymouth = {
+      enable = true;
+      theme = "nixos";
+      themePackages = [ (pkgs.callPackage ./config/plymouth/default.nix { }) ];
+    };
     resumeDevice = "/dev/disk/by-uuid/788e5bc3-da21-4625-9c8d-368a5940bfff";
   };
 

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=nixos
+Description=A MacOS-like theme for plymouth
+ModuleName=script
+
+[script]
+ImageDir=@OUT@/images
+ScriptFile=@OUT@/script
