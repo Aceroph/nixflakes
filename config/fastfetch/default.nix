@@ -6,14 +6,12 @@
     settings = {
       logo = {
         source = "~/Pictures/rigby.jpg";
-        type = "sixel";
       };
       display = {
         color.keys = "yellow";
         separator = " ";
       };
       modules = [
-        "break"
         {
           type = "custom";
           key = "╭─────╮";
