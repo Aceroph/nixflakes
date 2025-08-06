@@ -88,11 +88,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754508641,
-        "narHash": "sha256-2DpMeDZzV+ctoKSmqnAf7Drsr1PkK2BL8pZ1fK4NeNk=",
+        "lastModified": 1754508860,
+        "narHash": "sha256-4oOSsupL3gPnYgMncLQDYcde9tKAeqe7A5ctIuKN2AQ=",
         "owner": "Aceroph",
         "repo": "steelwm",
-        "rev": "29a248600614adf2edcdb2bdc7237d505a1783b9",
+        "rev": "2d937b107184e81b00d0be1b86c493839c86fd0c",
         "type": "github"
       },
       "original": {
