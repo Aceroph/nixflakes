@@ -12,6 +12,10 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    steelwm = {
+      url = "github:Aceroph/steelwm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -21,6 +25,7 @@
       nixos-hardware,
       nixpkgs,
       quickshell,
+      steelwm,
       ...
     }:
     {
@@ -35,7 +40,8 @@
               hostname = "asus";
               colors = import ./colors.nix { inherit nixpkgs; };
               inherit system;
-            } // inputs;
+            }
+            // inputs;
             modules = [
               ./.
             ];

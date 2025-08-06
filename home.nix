@@ -7,7 +7,7 @@
   imports = [
     ./config/fastfetch
     ./config/foot
-    ./config/sway
+    ./config/steelwm
     ./config/television
     ./config/vesktop
   ];

@@ -1,10 +1,11 @@
 {
-  nixos-hardware,
-  home-manager,
-  quickshell,
-  username,
   colors,
+  home-manager,
+  nixos-hardware,
   pkgs,
+  quickshell,
+  steelwm,
+  username,
   ...
 }:
 
@@ -95,10 +96,18 @@
   # Home manager #
   ################
   home-manager = {
-    extraSpecialArgs = { inherit quickshell username colors; };
+    extraSpecialArgs = {
+      inherit
+        colors
+        quickshell
+        steelwm
+        username
+        ;
+    };
     useGlobalPkgs = true;
     users.${username} = {
       imports = [
+        steelwm.nixosModules.steelwm
         ./home.nix
       ];
     };
