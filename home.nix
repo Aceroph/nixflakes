@@ -6,7 +6,7 @@
 {
   imports = [
     ./config/fastfetch
-    ./config/foot
+    ./config/ghostty
     ./config/television
     ./config/vesktop
   ];
@@ -50,21 +50,6 @@
   };
 
   ############
-  # Services #
-  ############
-  services = {
-    easyeffects.enable = true;
-    blueman-applet.enable = true;
-    spotifyd = {
-      enable = true;
-      settings.global = {
-        device_name = "nixos";
-        device_type = "computer";
-      };
-    };
-  };
-
-  ############
   # Packages #
   ############
   home.packages = with pkgs; [
@@ -104,6 +89,22 @@
   xdg.configFile."quickshell" = {
     source = ./config/quickshell;
     recursive = true;
+  };
+
+  ############
+  # Services #
+  ############
+  services = {
+    blueman-applet.enable = true;
+    easyeffects.enable = true;
+    flameshot.enable = true;
+    spotifyd = {
+      enable = true;
+      settings.global = {
+        device_name = "nixos";
+        device_type = "computer";
+      };
+    };
   };
 
   #########
