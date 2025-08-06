@@ -71,9 +71,6 @@
   home.packages = with pkgs; [
     # Coding
     nerd-fonts.d2coding
-    jetbrains.idea-ultimate
-    jetbrains.webstorm
-    jetbrains.clion
     graphviz-nox
     valgrind
     tmux
