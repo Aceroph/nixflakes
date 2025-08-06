@@ -157,12 +157,10 @@
     ratbagd.enable = true;
     tailscale.enable = true;
     upower.enable = true;
-    xserver = {
-      xkb = {
-        layout = "us,ca";
-        variant = ",multix";
-        options = "grp:alt_shift_toggle";
-      };
+    xserver.xkb = {
+      layout = "us,ca";
+      variant = ",multix";
+      options = "grp:alt_shift_toggle";
     };
   };
 
