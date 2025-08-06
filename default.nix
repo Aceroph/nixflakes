@@ -19,6 +19,7 @@
     ./config/neovim
     ./config/nvidia
     ./config/obs
+    ./config/steelwm
     ./config/tmux
     ./hardware-configuration.nix
   ];
@@ -65,6 +66,8 @@
     zip
     gcc
     gh
+
+    dmenu
   ];
 
   ##########
@@ -154,10 +157,12 @@
     ratbagd.enable = true;
     tailscale.enable = true;
     upower.enable = true;
-    xserver.xkb = {
-      layout = "us,ca";
-      variant = ",multix";
-      options = "grp:alt_shift_toggle";
+    xserver = {
+      xkb = {
+        layout = "us,ca";
+        variant = ",multix";
+        options = "grp:alt_shift_toggle";
+      };
     };
   };
 

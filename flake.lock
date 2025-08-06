@@ -1,0 +1,107 @@
+{
+  "nodes": {
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754495836,
+        "narHash": "sha256-ON5VEr70cAUR0YOHuVgLlgq9HarBqfbWsxknlmHnM+o=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "88913c98fe674e10302bbdb71b4e173f527b69c2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixos-hardware": {
+      "locked": {
+        "lastModified": 1754316476,
+        "narHash": "sha256-Ry1gd1BQrNVJJfT11cpVP0FY8XFMx4DJV2IDp01CH9w=",
+        "owner": "NixOS",
+        "repo": "nixos-hardware",
+        "rev": "9368056b73efb46eb14fd4667b99e0f81b805f28",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixos-hardware",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1754214453,
+        "narHash": "sha256-Q/I2xJn/j1wpkGhWkQnm20nShYnG7TI99foDBpXm1SY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "5b09dc45f24cf32316283e62aec81ffee3c3e376",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753595452,
+        "narHash": "sha256-vqkSDvh7hWhPvNjMjEDV4KbSCv2jyl2Arh73ZXe274k=",
+        "ref": "refs/heads/master",
+        "rev": "a5431dd02dc23d9ef1680e67777fed00fe5f7cda",
+        "revCount": 665,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixos-hardware": "nixos-hardware",
+        "nixpkgs": "nixpkgs",
+        "quickshell": "quickshell",
+        "steelwm": "steelwm"
+      }
+    },
+    "steelwm": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754506539,
+        "narHash": "sha256-OFOKph+l10eNvoMjHTmvoRvsOEvbZJob5W5J0LOBfrM=",
+        "owner": "Aceroph",
+        "repo": "steelwm",
+        "rev": "23ce36ff8ccda7ce38ca4bd98aa00267dfe2dd92",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Aceroph",
+        "repo": "steelwm",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

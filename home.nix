@@ -7,7 +7,6 @@
   imports = [
     ./config/fastfetch
     ./config/foot
-    ./config/steelwm
     ./config/television
     ./config/vesktop
   ];
@@ -95,6 +94,8 @@
     libsixel
     cava
     piper
+
+    xorg.xinit
   ];
 
   ##############
