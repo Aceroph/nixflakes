@@ -131,13 +131,13 @@
       eval "$(zoxide init zsh)"
     '';
     sessionVariables = {
-      LESS_TERMCAP_mb = "\e[1;32m";
-      LESS_TERMCAP_md = "\e[1;32m";
-      LESS_TERMCAP_me = "\e[0m";
-      LESS_TERMCAP_se = "\e[0m";
-      LESS_TERMCAP_so = "\e[01;33m";
-      LESS_TERMCAP_ue = "\e[0m";
-      LESS_TERMCAP_us = "\e[1;4;31m";
+      LESS_TERMCAP_mb = builtins.fromJSON ''"\u001b[1;32m"'';
+      LESS_TERMCAP_md = builtins.fromJSON ''"\u001b[1;32m"'';
+      LESS_TERMCAP_me = builtins.fromJSON ''"\u001b[0m"'';
+      LESS_TERMCAP_se = builtins.fromJSON ''"\u001b[0m"'';
+      LESS_TERMCAP_so = builtins.fromJSON ''"\u001b[01;33m"'';
+      LESS_TERMCAP_ue = builtins.fromJSON ''"\u001b[0m"'';
+      LESS_TERMCAP_us = builtins.fromJSON ''"\u001b[1;4;31m"'';
     };
     shellAliases = {
       cd = "z";
