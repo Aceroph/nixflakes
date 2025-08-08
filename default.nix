@@ -19,7 +19,6 @@
     ./config/neovim
     ./config/nvidia
     ./config/obs
-    ./config/steelwm
     ./config/tmux
     ./hardware-configuration.nix
   ];
@@ -145,6 +144,7 @@
       openFirewall = true;
     };
     flatpak.enable = true;
+    libinput.enable = true;
     logind.lidSwitch = "hibernate";
     openssh.enable = true;
     pipewire = {
@@ -157,10 +157,18 @@
     ratbagd.enable = true;
     tailscale.enable = true;
     upower.enable = true;
-    xserver.xkb = {
-      layout = "us,ca";
-      variant = ",multix";
-      options = "grp:alt_shift_toggle";
+    xserver = {
+      enable = true;
+      display = 0;
+      displayManager.startx = {
+        enable = true;
+        generateScript = true;
+      };
+      xkb = {
+        layout = "us,ca";
+        variant = ",multix";
+        options = "grp:alt_shift_toggle";
+      };
     };
   };
 
