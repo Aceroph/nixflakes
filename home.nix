@@ -6,6 +6,7 @@
 {
   imports = [
     ./config/fastfetch
+    ./config/flameshot
     ./config/ghostty
     ./config/television
     ./config/vesktop
@@ -97,7 +98,6 @@
   services = {
     blueman-applet.enable = true;
     easyeffects.enable = true;
-    flameshot.enable = true;
     spotifyd = {
       enable = true;
       settings.global = {
