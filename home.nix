@@ -63,9 +63,7 @@
     # Coding
     nerd-fonts.d2coding
     graphviz-nox
-    valgrind
     tmux
-    gdb
 
     # Gaming
     wl-clicker

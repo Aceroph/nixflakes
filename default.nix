@@ -58,15 +58,11 @@
   ##########################
   environment.systemPackages = with pkgs; [
     wineWowPackages.stable
-    nodejs_22
-    ninja
     unzip
+    dmenu
     htop
     zip
-    gcc
     gh
-
-    dmenu
   ];
 
   ##########
