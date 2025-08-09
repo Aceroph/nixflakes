@@ -32,6 +32,11 @@
       enable = true;
       userName = "Aceroph";
       userEmail = "aos92@proton.me";
+      extraConfig = {
+        push = {
+          autoSetupRemote = true;
+        };
+      };
     };
 
     lsd = {
