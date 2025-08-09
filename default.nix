@@ -73,6 +73,17 @@
     "flakes"
   ];
 
+  #########
+  # Fonts #
+  #########
+  fonts = {
+    packages = with pkgs; [ (callPackage ./packages/bitmap-fonts/default.nix { inherit pkgs; }) ];
+    fontconfig = {
+      enable = true;
+      allowBitmaps = true;
+    };
+  };
+
   ##########
   # Gaming #
   ##########
