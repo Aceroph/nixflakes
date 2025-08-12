@@ -50,7 +50,7 @@
       theme = "nixos";
       themePackages = [ (pkgs.callPackage ./config/plymouth/default.nix { }) ];
     };
-    resumeDevice = "/dev/disk/by-uuid/788e5bc3-da21-4625-9c8d-368a5940bfff";
+    resumeDevice = "/dev/disk/by-uuid/f2fa7165-637a-4910-9bf2-a819c8532c4";
   };
 
   ##########################
