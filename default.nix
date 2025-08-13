@@ -37,9 +37,11 @@
       verbose = false;
     };
     kernelParams = [
+      "loglevel=2"
+      "mem_sleep_default=deep"
+      "resume_offset=21618688"
       "quiet"
       "splash"
-      "loglevel=2"
     ];
     loader = {
       systemd-boot.enable = true;
@@ -50,7 +52,6 @@
       theme = "nixos";
       themePackages = [ (pkgs.callPackage ./config/plymouth/default.nix { }) ];
     };
-    resumeDevice = "/dev/disk/by-uuid/f2fa7165-637a-4910-9bf2-a819c8532c4";
   };
 
   ##########################
@@ -100,6 +101,17 @@
       ];
     };
   };
+
+  ###############
+  # Hibernation #
+  ###############
+  boot.resumeDevice = "/dev/disk/by-uuid/788e5bc3-da21-4625-9c8d-368a5940bfff";
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
+  ];
 
   ################
   # Home manager #
@@ -152,7 +164,11 @@
     };
     flatpak.enable = true;
     libinput.enable = true;
-    logind.lidSwitch = "hibernate";
+    logind = {
+      lidSwitch = "hibernate";
+      powerKey = "hibernate";
+      powerKeyLongPress = "poweroff";
+    };
     openssh.enable = true;
     pipewire = {
       enable = true;
@@ -160,6 +176,7 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    power-profiles-daemon.enable = true;
     printing.enable = true;
     ratbagd.enable = true;
     tailscale.enable = true;
@@ -190,6 +207,14 @@
     };
   };
   users.defaultUserShell = pkgs.zsh;
+
+  ###########
+  # Systemd #
+  ###########
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=30m
+    SuspendState=mem
+  '';
 
   #########
   # Users #
