@@ -12,13 +12,15 @@
 {
   nixpkgs.config.allowUnfree = true;
   imports = [
-    nixos-hardware.nixosModules.asus-fx504gd
     home-manager.nixosModules.home-manager
+    nixos-hardware.nixosModules.asus-fx504gd
+    steelwm.nixosModules.steelwm
     ./config/bluetooth
-    ./config/greetd
+    ./config/sddm
     ./config/neovim
     ./config/nvidia
     ./config/obs
+    ./config/steelwm
     ./config/tmux
     ./hardware-configuration.nix
   ];
@@ -77,13 +79,7 @@
   #########
   # Fonts #
   #########
-  fonts = {
-    packages = with pkgs; [ (callPackage ./packages/bitmap-fonts/default.nix { inherit pkgs; }) ];
-    fontconfig = {
-      enable = true;
-      allowBitmaps = true;
-    };
-  };
+  fonts.packages = with pkgs; [ scientifica ];
 
   ##########
   # Gaming #
@@ -128,7 +124,6 @@
     useGlobalPkgs = true;
     users.${username} = {
       imports = [
-        steelwm.nixosModules.steelwm
         ./home.nix
       ];
     };
@@ -183,11 +178,6 @@
     upower.enable = true;
     xserver = {
       enable = true;
-      display = 0;
-      displayManager.startx = {
-        enable = true;
-        generateScript = true;
-      };
       xkb = {
         layout = "us,ca";
         variant = ",multix";

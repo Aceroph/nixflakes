@@ -8,7 +8,6 @@
     ./config/fastfetch
     ./config/flameshot
     ./config/ghostty
-    ./config/steelwm
     ./config/television
     ./config/vesktop
   ];

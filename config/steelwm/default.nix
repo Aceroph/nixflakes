@@ -1,3 +1,3 @@
 {
-  xsession.windowManager.steelwm.enable = true;
+  services.xserver.windowManager.steelwm.enable = true;
 }
