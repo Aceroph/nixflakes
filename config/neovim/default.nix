@@ -14,6 +14,7 @@
     extraPackages = with pkgs; [
       # LSPs
       vscode-langservers-extracted
+      angular-language-server
       lua-language-server
       vue-language-server
       rust-analyzer
@@ -38,6 +39,7 @@
       (with pkgs.vimPlugins.nvim-treesitter-parsers; [
         javascript
         typescript
+        angular
         python
         html
         rust
