@@ -62,6 +62,7 @@
     # Coding
     nerd-fonts.d2coding
     graphviz-nox
+    supabase-cli
     postman
     tmux
 
