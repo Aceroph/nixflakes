@@ -157,6 +157,7 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+    dbus.packages = with pkgs; [ pass-secret-service ];
     flatpak.enable = true;
     libinput.enable = true;
     logind = {
@@ -201,10 +202,13 @@
   ###########
   # Systemd #
   ###########
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=30m
-    SuspendState=mem
-  '';
+  systemd = {
+    packages = with pkgs; [ pass-secret-service ];
+    sleep.extraConfig = ''
+      HibernateDelaySec=30m
+      SuspendState=mem
+    '';
+  };
 
   #########
   # Users #
