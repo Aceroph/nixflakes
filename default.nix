@@ -179,6 +179,7 @@
     upower.enable = true;
     xserver = {
       enable = true;
+      enableTearFree = true;
       xkb = {
         layout = "us,ca";
         variant = ",multix";
