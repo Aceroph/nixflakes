@@ -8,6 +8,7 @@
     ./config/fastfetch
     ./config/flameshot
     ./config/ghostty
+    ./config/spotify-player
     ./config/television
     ./config/vesktop
   ];
@@ -63,7 +64,7 @@
     nerd-fonts.d2coding
     graphviz-nox
     supabase-cli
-    postman
+    posting # Postman but TUI
     tmux
 
     # Gaming
