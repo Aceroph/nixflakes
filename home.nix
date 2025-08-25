@@ -78,6 +78,7 @@
     posting # Postman but TUI
     prismlauncher
     quickshell
+    rainfrog # TUI for SQL
     spotify
     supabase-cli
     tmux
