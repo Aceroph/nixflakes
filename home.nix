@@ -113,40 +113,20 @@
   #########
   # Shell #
   #########
-  programs.zsh = {
+  programs.bash = {
     enable = true;
     enableCompletion = true;
-    initContent = ''
-      autoload -Uz vcs_info
-      zstyle ':vcs_info:*' enable git
-      zstyle ':vcs_info:git*' check-for-changes true
-      zstyle ':vcs_info:git*' formats 'on %F{red}%b%f%u%c '
-      zstyle ':vcs_info:git*' stagedstr ' %F{green}S%f'
-      zstyle ':vcs_info:git*' unstagedstr ' %F{yellow}U%f'
-      precmd() {
-          vcs_info
-      }
+    bashrcExtra = ''
+      PS1='%w '
 
-      setopt prompt_subst
-      PROMPT='%F{yellow}%~%f ''${vcs_info_msg_0_}'
-
-
-      eval "$(zoxide init zsh)"
+      eval "$(zoxide init bash)"
     '';
     sessionVariables = {
-      LESS_TERMCAP_mb = builtins.fromJSON ''"\u001b[1;32m"'';
-      LESS_TERMCAP_md = builtins.fromJSON ''"\u001b[1;32m"'';
-      LESS_TERMCAP_me = builtins.fromJSON ''"\u001b[0m"'';
-      LESS_TERMCAP_se = builtins.fromJSON ''"\u001b[0m"'';
-      LESS_TERMCAP_so = builtins.fromJSON ''"\u001b[01;33m"'';
-      LESS_TERMCAP_ue = builtins.fromJSON ''"\u001b[0m"'';
-      LESS_TERMCAP_us = builtins.fromJSON ''"\u001b[1;4;31m"'';
       ISE_EIFFEL = pkgs.callPackage ./packages/eiffel-studio.nix { };
       ISE_PLATFORM = "linux-x86-64";
     };
     shellAliases = {
       cd = "z";
-      fetch = "fastfetch";
       nixos-rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos";
     };
   };

@@ -3,7 +3,7 @@
 {
   programs.ghostty = {
     enable = true;
-    enableZshIntegration = true;
+    enableBashIntegration = true;
     themes = {
       custom = {
         background = colors.background;

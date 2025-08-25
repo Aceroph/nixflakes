@@ -188,17 +188,13 @@
     };
   };
 
-  #########
-  # Shell #
-  #########
-  programs = {
-    zsh.enable = true; # See home.nix for the actual config
-    zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+  ##########
+  # Zoxide #
+  ##########
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
   };
-  users.defaultUserShell = pkgs.zsh;
 
   ###########
   # Systemd #
