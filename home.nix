@@ -68,7 +68,7 @@
     gimp
     graphviz-nox
     heroic
-    jetbrains.idea-ultimate
+    jetbrains.idea-community
     libreoffice-qt6-fresh
     libratbag
     libsixel
