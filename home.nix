@@ -76,6 +76,7 @@
     nerd-fonts.d2coding
     piper
     posting # Postman but TUI
+    postgresql_16
     prismlauncher
     quickshell
     rainfrog # TUI for SQL
