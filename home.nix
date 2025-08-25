@@ -60,33 +60,27 @@
   # Packages #
   ############
   home.packages = with pkgs; [
-    # Coding
-    nerd-fonts.d2coding
-    graphviz-nox
-    supabase-cli
-    posting # Postman but TUI
-    tmux
-
-    # Gaming
-    wl-clicker
-    heroic
-    prismlauncher
-    mangohud
-
-    # Entertainement
-    gimp
-    spotify
-    libreoffice-qt6-fresh
-    firefox
     blockbench
-
-    # Peripherals
-    quickshell
+    cava
+    (callPackage ./packages/eiffel-studio.nix { })
+    fd
+    firefox
+    gimp
+    graphviz-nox
+    heroic
+    libreoffice-qt6-fresh
     libratbag
     libsixel
-    cava
+    mangohud
+    nerd-fonts.d2coding
     piper
-
+    posting # Postman but TUI
+    prismlauncher
+    quickshell
+    spotify
+    supabase-cli
+    tmux
+    wl-clicker
     xorg.xinit
   ];
 
@@ -144,6 +138,8 @@
       LESS_TERMCAP_so = builtins.fromJSON ''"\u001b[01;33m"'';
       LESS_TERMCAP_ue = builtins.fromJSON ''"\u001b[0m"'';
       LESS_TERMCAP_us = builtins.fromJSON ''"\u001b[1;4;31m"'';
+      ISE_EIFFEL = pkgs.callPackage ./packages/eiffel-studio.nix { };
+      ISE_PLATFORM = "linux-x86-64";
     };
     shellAliases = {
       cd = "z";
