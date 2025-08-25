@@ -15,11 +15,3 @@ $ cd nixflakes/
 ```sh
 $ sudo nixos-rebuild switch --flake .
 ```
-
-## TODO
-- [ ] Set up a notification daemon
-- [ ] Make my own app launcher and ditch dmenu
-- [x] Make my own status bar and ditch waybar
-- [ ] Make my own GTK/Qt theme
-- [ ] Customize discord (vesktop), steam, firefox & spotify
-- [x] Setup zsh & zoxide
