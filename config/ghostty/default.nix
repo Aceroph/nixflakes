@@ -18,14 +18,14 @@
           "5=${colors.tertiary}"
           "6=${colors.warning}"
           "7=${colors.text}"
-          "8=${colors.background-darker}"
-          "9=${colors.danger-muted}"
-          "10=${colors.success-muted}"
-          "11=${colors.primary-muted}"
-          "12=${colors.secondary-muted}"
-          "13=${colors.tertiary-muted}"
-          "14=${colors.warning-muted}"
-          "15=${colors.text-muted}"
+          "8=${colors.background}"
+          "9=${colors.danger}"
+          "10=${colors.success}"
+          "11=${colors.primary}"
+          "12=${colors.secondary}"
+          "13=${colors.tertiary}"
+          "14=${colors.warning}"
+          "15=${colors.text}"
         ];
         selection-background = "353749";
         selection-foreground = "cdd6f4";
