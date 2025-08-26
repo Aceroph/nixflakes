@@ -52,7 +52,7 @@
 
     java = {
       enable = true;
-      package = pkgs.jetbrains.jdk;
+      package = pkgs.jdk24;
     };
   };
 
