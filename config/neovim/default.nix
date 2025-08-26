@@ -13,74 +13,79 @@
     extraConfig = builtins.readFile ./options.vim;
     extraPackages = with pkgs; [
       # LSPs
-      vscode-langservers-extracted
       angular-language-server
       lua-language-server
-      vue-language-server
-      rust-analyzer
-      pyright
-      nimlsp
       nil
+      nimlsp
+      pyright
+      rust-analyzer
+      vscode-langservers-extracted
+      vue-language-server
       # FMTs
-      nixfmt-rfc-style
-      prettierd
-      eslint_d
-      rustfmt
-      jsonfmt
-      stylua
       black
+      eslint_d
       isort
+      jsonfmt
+      nixfmt-rfc-style
       nph
+      prettierd
+      rustfmt
+      stylua
       # Extras
       clang-tools
       ripgrep
     ];
     plugins =
       (with pkgs.vimPlugins.nvim-treesitter-parsers; [
-        javascript
-        typescript
         angular
-        python
-        html
-        rust
-        nix
-        lua
-        css
-        vue
-        nim
         c
+        css
+        html
+        javascript
+        lua
+        nim
+        nix
+        python
+        rust
+        typescript
+        vue
       ])
       ++ (with pkgs.vimPlugins; [
-        markdown-preview-nvim
-        plantuml-syntax
         nvim-lspconfig
-        which-key-nvim
-        plenary-nvim
+        markdown-preview-nvim
+        mini-statusline
         mini-nvim
-        yuck-vim
+        plantuml-syntax
+        plenary-nvim
+        which-key-nvim
         {
           plugin = nvim-dap;
-          config = builtins.readFile ./dap.lua;
+          config = builtins.readFile ./plugins/dap.lua;
           type = "lua";
         }
         {
           plugin = telescope-nvim;
-          config = builtins.readFile ./telescope.lua;
+          config = builtins.readFile ./plugins/telescope.lua;
           type = "lua";
         }
         {
           plugin = conform-nvim;
-          config = builtins.readFile ./conform.lua;
+          config = builtins.readFile ./plugins/conform.lua;
           type = "lua";
         }
         {
           plugin = blink-cmp;
-          config = builtins.readFile ./blink.lua;
+          config = builtins.readFile ./plugins/blink.lua;
           type = "lua";
         }
         {
           plugin = nvim-treesitter;
-          config = builtins.readFile ./treesitter.lua;
+          config = builtins.readFile ./plugins/treesitter.lua;
+          type = "lua";
+        }
+        {
+          plugin = mini-statusline;
+          config = builtins.readFile ./plugins/mini-statusline.lua;
           type = "lua";
         }
       ]);
