@@ -60,6 +60,7 @@
   # Packages #
   ############
   home.packages = with pkgs; [
+    android-studio
     blockbench
     cava
     (callPackage ./packages/eiffel-studio.nix { })
