@@ -117,7 +117,17 @@
     enable = true;
     enableCompletion = true;
     bashrcExtra = ''
-      PS1='%w '
+      git_prompt(){
+        branch=$(git branch --show-current 2>/dev/null)
+        if [[ -n "$branch" ]]; then
+            echo -e "on \e[91;1m$branch\e[0m "
+        else
+            echo ""
+        fi
+      }
+        
+      PS1='\[\e[93;1m\]\w\[\e[0m\] '
+      PS1+='$(git_prompt)'
 
       eval "$(zoxide init bash)"
     '';
