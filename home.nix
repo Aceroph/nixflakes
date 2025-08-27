@@ -73,7 +73,7 @@
     android-studio
     blockbench
     cava
-    (callPackage ./packages/eiffel-studio-but-compiled.nix { })
+    (callPackage ./packages/eiffel-studio.nix { })
     fd
     firefox
     gimp
@@ -140,17 +140,21 @@
       git_prompt(){
         branch=$(git branch --show-current 2>/dev/null)
         if [[ -n "$branch" ]]; then
-            up=$(git log origin/$branch..$branch --oneline | wc -l)
-            down=$(git log $branch..origin/$branch --oneline | wc -l)
+            echo -ne "on \e[31;1m$branch\e[0m"
+            export GIT_TERMINAL_PROMPT=0
+            git ls-remote &> /dev/null
+            if [[ "$?" -eq 0 ]]; then
+                up=$(git log origin/$branch..$branch --oneline | wc -l)
+                down=$(git log $branch..origin/$branch --oneline | wc -l)
+                if [[ "$up" -gt 0 ]]; then
+                    echo -ne " \e[32;1m+$up\e[0m"
+                fi
+                if [[ "$down" -gt 0 ]]; then
+                    echo -ne " \e[31;1m-$down\e[0m"
+                fi
+            fi
             untracked=$(git diff --numstat)
             staged=$(git diff --cached --numstat)
-            echo -ne "on \e[31;1m$branch\e[0m"
-            if [[ "$up" -gt 0 ]]; then
-                echo -ne " \e[32m+$up\e[0m"
-            fi
-            if [[ "$down" -gt 0 ]]; then
-                echo -ne " \e[31m-$down\e[0m"
-            fi
             if [[ -n "$untracked" ]]; then
                 echo -ne " \e[36;1mU\e[0m"
             fi
