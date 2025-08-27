@@ -34,6 +34,7 @@
   # Boot #
   ########
   boot = {
+    binfmt.emulatedSystems = [ "armv7l-linux" ];
     initrd = {
       systemd.enable = true;
       verbose = false;

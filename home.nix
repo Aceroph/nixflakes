@@ -79,6 +79,7 @@
     posting # Postman but TUI
     postgresql_16
     prismlauncher
+    qemu-user
     quickshell
     rainfrog # TUI for SQL
     spotify
