@@ -53,7 +53,6 @@
       ++ (with pkgs.vimPlugins; [
         nvim-lspconfig
         markdown-preview-nvim
-        mini-statusline
         mini-nvim
         plantuml-syntax
         plenary-nvim
@@ -81,11 +80,6 @@
         {
           plugin = nvim-treesitter;
           config = builtins.readFile ./plugins/treesitter.lua;
-          type = "lua";
-        }
-        {
-          plugin = mini-statusline;
-          config = builtins.readFile ./plugins/mini-statusline.lua;
           type = "lua";
         }
       ]);
