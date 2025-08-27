@@ -13,6 +13,16 @@
     ./config/vesktop
   ];
 
+  ##########
+  # Direnv #
+  ##########
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+    silent = true;
+  };
+
   #######
   # Gtk #
   #######
@@ -119,6 +129,14 @@
     enable = true;
     enableCompletion = true;
     bashrcExtra = ''
+      direnv_prompt(){
+        if [[ -n "$DIRENV_DIR" ]]; then
+            echo -e "\e[34m(env)\e[0m "
+        else
+            echo ""
+        fi
+      }
+
       git_prompt(){
         branch=$(git branch --show-current 2>/dev/null)
         if [[ -n "$branch" ]]; then
@@ -133,11 +151,13 @@
             echo ""
         fi
       }
-        
-      PS1='\[\e[33;1m\]\w\[\e[0m\] '
+
+      PS1='$(direnv_prompt)'
+      PS1+='\[\e[33;1m\]\w\[\e[0m\] '
       PS1+='$(git_prompt)'
 
       eval "$(zoxide init bash)"
+      eval "$(direnv hook bash)"
     '';
     sessionVariables = {
       ISE_EIFFEL = pkgs.callPackage ./packages/eiffel-studio.nix { };
