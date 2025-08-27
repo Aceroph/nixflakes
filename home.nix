@@ -141,9 +141,7 @@
         branch=$(git branch --show-current 2>/dev/null)
         if [[ -n "$branch" ]]; then
             echo -ne "on \e[31;1m$branch\e[0m"
-            export GIT_TERMINAL_PROMPT=0
-            git ls-remote &> /dev/null
-            if [[ "$?" -eq 0 ]]; then
+            if [[ -d "$PWD/.git/refs/remotes/" ]]; then
                 up=$(git log origin/$branch..$branch --oneline | wc -l)
                 down=$(git log $branch..origin/$branch --oneline | wc -l)
                 if [[ "$up" -gt 0 ]]; then
