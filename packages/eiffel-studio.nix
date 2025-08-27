@@ -24,6 +24,10 @@ stdenv.mkDerivation {
     xorg.libXtst
   ];
 
+  buildInputs = with pkgs; [
+    gnumake
+  ];
+
   installPhase = ''
     runHook preInstall
 
