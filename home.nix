@@ -140,12 +140,24 @@
       git_prompt(){
         branch=$(git branch --show-current 2>/dev/null)
         if [[ -n "$branch" ]]; then
-            echo -ne "on \e[31;1m$branch "
-            git diff --quiet
-            if [[ "$?" -eq 1 ]]; then
-                echo -e "\e[31;1m✗\e[0m "
+            up=$(git log origin/$branch..$branch --oneline | wc -l)
+            down=$(git log $branch..origin/$branch --oneline | wc -l)
+            untracked=$(git diff --numstat)
+            staged=$(git diff --cached --numstat)
+            echo -ne "on \e[31;1m$branch\e[0m"
+            if [[ "$up" -gt 0 ]]; then
+                echo -ne " \e[32m+$up\e[0m"
+            fi
+            if [[ "$down" -gt 0 ]]; then
+                echo -ne " \e[31m-$down\e[0m"
+            fi
+            if [[ -n "$untracked" ]]; then
+                echo -ne " \e[36;1mU\e[0m"
+            fi
+            if [[ -n "$staged" ]]; then
+                echo -e " \e[32;1mS\e[0m "
             else
-                echo -e "\e[32;1m✓\e[0m "
+                echo -e " "
             fi
         else
             echo ""
