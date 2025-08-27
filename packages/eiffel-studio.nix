@@ -24,8 +24,9 @@ stdenv.mkDerivation {
     xorg.libXtst
   ];
 
-  buildInputs = with pkgs; [
+  runtimeDependencies = with pkgs; [
     gnumake
+    gcc
   ];
 
   installPhase = ''

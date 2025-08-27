@@ -62,7 +62,7 @@
 
     java = {
       enable = true;
-      package = pkgs.jdk24;
+      package = (pkgs.jdk23.override { enableJavaFX = true; });
     };
   };
 
@@ -73,7 +73,7 @@
     android-studio
     blockbench
     cava
-    (callPackage ./packages/eiffel-studio.nix { })
+    (callPackage ./packages/eiffel-studio-but-compiled.nix { })
     fd
     firefox
     gimp
