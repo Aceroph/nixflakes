@@ -86,7 +86,7 @@
     mangohud
     nerd-fonts.d2coding
     piper
-    posting # Postman but TUI
+    postman
     postgresql_16
     prismlauncher
     qemu-user
