@@ -20,7 +20,7 @@ let
     bright-aqua = "8ec07c";
     bright-foreground = "ebdbb2";
   };
-  prefixed = builtins.mapAttrs (name: value: "#" + value) colorscheme // colorscheme.theme;
+  prefixed = removeAttrs (builtins.mapAttrs (name: value: "#" + value) colorscheme) [ "theme" ];
 in
 {
   inherit prefixed;

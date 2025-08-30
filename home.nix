@@ -131,7 +131,7 @@
     bashrcExtra = ''
       direnv_prompt(){
         if [[ -n "$DIRENV_DIR" ]]; then
-            echo -e "\e[34m(env)\e[0m "
+            echo -e "\[\e[94m\](env)\[\e[0m\] "
         else
             echo ""
         fi
@@ -140,24 +140,24 @@
       git_prompt(){
         branch=$(git branch --show-current 2>/dev/null)
         if [[ -n "$branch" ]]; then
-            echo -ne "on \e[31;1m$branch\e[0m"
+            echo -ne "on \e[91;1m$branch\e[0m"
             if [[ -d "$PWD/.git/refs/remotes/" ]]; then
                 up=$(git log origin/$branch..$branch --oneline | wc -l)
                 down=$(git log $branch..origin/$branch --oneline | wc -l)
                 if [[ "$up" -gt 0 ]]; then
-                    echo -ne " \e[32;1m+$up\e[0m"
+                    echo -ne " \e[92;1m+$up\e[0m"
                 fi
                 if [[ "$down" -gt 0 ]]; then
-                    echo -ne " \e[31;1m-$down\e[0m"
+                    echo -ne " \e[91;1m-$down\e[0m"
                 fi
             fi
             untracked=$(git diff --numstat)
             staged=$(git diff --cached --numstat)
             if [[ -n "$untracked" ]]; then
-                echo -ne " \e[36;1mU\e[0m"
+                echo -ne " \e[96;1mU\e[0m"
             fi
             if [[ -n "$staged" ]]; then
-                echo -e " \e[32;1mS\e[0m "
+                echo -e " \e[94;1mS\e[0m "
             else
                 echo -e " "
             fi
@@ -167,9 +167,10 @@
       }
 
       PS1='$(direnv_prompt)'
-      PS1+='\[\e[33;1m\]\w\[\e[0m\] '
+      PS1+='\[\e[93;1m\]\w\[\e[0m\] '
       PS1+='$(git_prompt)'
-
+        
+      shopt -s checkwinsize
       eval "$(zoxide init bash)"
       eval "$(direnv hook bash)"
     '';
