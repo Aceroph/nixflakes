@@ -5,8 +5,8 @@
     enable = true;
     settings = {
       General = {
-        uiColor = "#" + colors.background;
-        drawColor = "#" + colors.primary;
+        uiColor = colors.prefixed.background;
+        drawColor = colors.prefixed.yellow;
       };
     };
   };

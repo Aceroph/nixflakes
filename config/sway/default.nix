@@ -60,34 +60,34 @@
           };
           colors = {
             focused = rec {
-              border = "#" + colors.primary;
+              border = colors.prefixed.yellow;
               childBorder = border;
               background = border;
               indicator = border;
-              text = "#" + colors.background;
+              text = colors.prefixed.background;
             };
             unfocused = rec {
-              border = "#" + colors.background;
+              border = colors.prefixed.background;
               childBorder = border;
               background = border;
               indicator = border;
-              text = "#" + colors.text;
+              text = colors.prefixed.bright-foreground;
             };
             focusedInactive = rec {
-              border = "#" + colors.background;
+              border = colors.prefixed.background;
               childBorder = border;
               background = border;
               indicator = border;
-              text = "#" + colors.text;
+              text = colors.prefixed.bright-foreground;
             };
             urgent = rec {
-              border = "#" + colors.danger;
+              border = colors.prefixed.bright-red;
               childBorder = border;
               background = border;
               indicator = border;
-              text = "#" + colors.danger-muted;
+              text = colors.prefixed.red;
             };
-            background = "#" + colors.background;
+            background = colors.prefixed.background;
           };
           startup =
             let

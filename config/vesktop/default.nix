@@ -70,21 +70,13 @@
         :root {
             --colors: on; /* off: discord default colors, on: midnight custom colors */
 
-            /* custom colors */
-            --primary: ${colors.primary};
-            --primary-muted: ${colors.primary-muted};
-            --secondary: ${colors.secondary};
-            --danger: ${colors.danger};
-            --warning: ${colors.warning};
-            --success: ${colors.success};
-            --background: ${colors.background};
-            --background-lighter: ${colors.background-lighter};
-            --background-darker: ${colors.background-darker};
-            --text: ${colors.text};
-            --text-muted: ${colors.text-muted};
+            --primary: ${colors.prefixed.yellow};
+            --background: ${colors.prefixed.background};
+            --text: ${colors.prefixed.bright-foreground};
+            --text-muted ${colors.prefixed.foreground};
 
             /* text colors */
-            --text-0: var(--primary-muted); /* text on colored elements */
+            --text-0: var(--background); /* text on colored elements */
             --text-1: var(--text); /* other normally white text */
             --text-2: var(--text); /* headings and important text */
             --text-3: var(--text); /* normal text */
@@ -92,10 +84,10 @@
             --text-5: var(--text-muted); /* muted channels/chats and timestamps */
 
             /* background and dark colors */
-            --bg-1: var(--background-darker); /* dark buttons when clicked */
-            --bg-2: var(--background-darker); /* dark buttons */
-            --bg-3: var(--background-darker); /* spacing, secondary elements */
-            --bg-4: var(--background); /* main background color */
+            --bg-1: var(--background); /* dark buttons when clicked */
+            --bg-2: var(--background); /* dark buttons */
+            --bg-3: var(--background); /* spacing, secondary elements */
+            --bg-4: ${colors.prefixed.bright-background}; /* main background color */
             --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
             --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
             --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
@@ -114,11 +106,11 @@
             --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
             /* status indicator colors */
-            --online: var(--success); /* change to #40a258 for default */
-            --dnd: var(--danger); /* change to #d83a41 for default */
-            --idle: var(--warning); /* change to #cc954c for default */
-            --streaming: var(--secondary); /* change to ##9147ff for default */
-            --offline: var(--text-muted); /* change to #82838b for default offline color */
+            --online: ${colors.prefixed.green}; /* change to #40a258 for default */
+            --dnd: ${colors.prefixed.red}; /* change to #d83a41 for default */
+            --idle: ${colors.prefixed.yellow}; /* change to #cc954c for default */
+            --streaming: ${colors.prefixed.purple}; /* change to ##9147ff for default */
+            --offline: ${colors.prefixed.bright-background}; /* change to #82838b for default offline color */
 
             /* border colors */
             --border-light: var(--hover); /* general light border color */
