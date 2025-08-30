@@ -1,5 +1,5 @@
 direnv_prompt() {
-  if [[ -n "$DIRENV_DIR" ]]; then
+  if [[ -n "$IN_NIX_SHELL" ]]; then
       echo -ne "\[\e[94m\](env)\[\e[0m\] "
   fi
 }
