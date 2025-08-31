@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754495836,
-        "narHash": "sha256-ON5VEr70cAUR0YOHuVgLlgq9HarBqfbWsxknlmHnM+o=",
+        "lastModified": 1756659230,
+        "narHash": "sha256-RN1iazeBtnZb6nzDkFLeTTaWPzRk0FFTv565A7AP1yg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "88913c98fe674e10302bbdb71b4e173f527b69c2",
+        "rev": "f27974d3b4aa0af533539ce626622c7b6b53c3f5",
         "type": "github"
       },
       "original": {
@@ -22,11 +22,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1754316476,
-        "narHash": "sha256-Ry1gd1BQrNVJJfT11cpVP0FY8XFMx4DJV2IDp01CH9w=",
+        "lastModified": 1756245047,
+        "narHash": "sha256-9bHzrVbjAudbO8q4vYFBWlEkDam31fsz0J7GB8k4AsI=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "9368056b73efb46eb14fd4667b99e0f81b805f28",
+        "rev": "a65b650d6981e23edd1afa1f01eb942f19cdcbb7",
         "type": "github"
       },
       "original": {
@@ -38,16 +38,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1754214453,
-        "narHash": "sha256-Q/I2xJn/j1wpkGhWkQnm20nShYnG7TI99foDBpXm1SY=",
-        "owner": "nixos",
+        "lastModified": 1756667543,
+        "narHash": "sha256-K3locoUdnv59629dXYhK7jv3Ckt6LQjZ7cA8pKSRRWc=",
+        "owner": "Aceroph",
         "repo": "nixpkgs",
-        "rev": "5b09dc45f24cf32316283e62aec81ffee3c3e376",
+        "rev": "2b15f954a890b66c9ab18c4d7b7107e2c215e9ff",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
+        "owner": "Aceroph",
+        "ref": "add-eiffel-game2",
         "repo": "nixpkgs",
         "type": "github"
       }

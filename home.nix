@@ -74,7 +74,9 @@
     android-studio
     blockbench
     cava
-    (callPackage ./packages/eiffel-studio.nix { })
+    (eiffel-studio.override {
+      libraries = [ eiffelPackages.game2 ];
+    })
     fd
     firefox
     gimp
