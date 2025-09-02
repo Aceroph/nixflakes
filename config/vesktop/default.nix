@@ -72,6 +72,15 @@
 
             --primary: ${colors.prefixed.yellow};
             --background: ${colors.prefixed.background};
+            --background-lighter: #${
+              colors.fromRGB (
+                colors.addRGB (colors.toRGB colors.background) {
+                  r = 21;
+                  g = 16;
+                  b = 14;
+                }
+              )
+            };
             --text: ${colors.prefixed.bright-foreground};
             --text-muted ${colors.prefixed.foreground};
 
@@ -86,8 +95,8 @@
             /* background and dark colors */
             --bg-1: var(--background); /* dark buttons when clicked */
             --bg-2: var(--background); /* dark buttons */
-            --bg-3: var(--background); /* spacing, secondary elements */
-            --bg-4: ${colors.prefixed.bright-background}; /* main background color */
+            --bg-3: var(--background-lighter); /* spacing, secondary elements */
+            --bg-4: var(--background); /* main background color */
             --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
             --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
             --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */

@@ -38,7 +38,7 @@
             specialArgs = {
               username = "acero";
               hostname = "asus";
-              colors = import ./colors.nix { inherit nixpkgs; };
+              colors = import ./colors.nix { inherit (nixpkgs) lib; };
               inherit system;
             }
             // inputs;
