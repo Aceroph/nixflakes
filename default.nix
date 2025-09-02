@@ -161,10 +161,10 @@
     dbus.packages = with pkgs; [ pass-secret-service ];
     flatpak.enable = true;
     libinput.enable = true;
-    logind = {
-      lidSwitch = "hibernate";
-      powerKey = "hibernate";
-      powerKeyLongPress = "poweroff";
+    logind.settings.Login = {
+      HandleLidSwitch = "hibernate";
+      HandlePowerKey = "hibernate";
+      HandlePowerKeyLongPress = "poweroff";
     };
     openssh.enable = true;
     pipewire = {
