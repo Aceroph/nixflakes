@@ -49,7 +49,10 @@
         };
       };
     };
-
+    java = {
+      enable = true;
+      package = (pkgs.jdk23.override { enableJavaFX = true; });
+    };
     lsd = {
       enable = true;
       settings = {
@@ -60,10 +63,9 @@
         };
       };
     };
-
-    java = {
+    nix-index = {
       enable = true;
-      package = (pkgs.jdk23.override { enableJavaFX = true; });
+      enableBashIntegration = true;
     };
   };
 
