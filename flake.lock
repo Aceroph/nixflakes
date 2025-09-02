@@ -38,16 +38,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1756667543,
-        "narHash": "sha256-K3locoUdnv59629dXYhK7jv3Ckt6LQjZ7cA8pKSRRWc=",
+        "lastModified": 1756843194,
+        "narHash": "sha256-klTs7r7sadZ8FSKFbDtiO93Cvxmq+xqcSEeQu9mzS+0=",
         "owner": "Aceroph",
         "repo": "nixpkgs",
-        "rev": "2b15f954a890b66c9ab18c4d7b7107e2c215e9ff",
+        "rev": "58a7110f871aebb3be0d8d990217b333e3791b6c",
         "type": "github"
       },
       "original": {
         "owner": "Aceroph",
-        "ref": "add-eiffel-game2",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }

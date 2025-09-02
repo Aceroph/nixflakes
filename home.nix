@@ -76,7 +76,7 @@
     android-studio
     blockbench
     cava
-    (eiffel-studio.override {
+    (eiffel-studio-bin.overrideAttrs {
       libraries = [ eiffelPackages.game2 ];
     })
     fd
@@ -102,6 +102,7 @@
     tmux
     wl-clicker
     xorg.xinit
+    zen-browser
   ];
 
   ##############
