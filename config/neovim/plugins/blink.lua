@@ -1,4 +1,5 @@
 local servers = {
+    angularls = {},
     rust_analyzer = {},
     pyright = {},
     lua_ls = {
