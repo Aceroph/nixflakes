@@ -18,6 +18,8 @@ vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { d
 vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end, { desc = "Debug: Run last" })
 vim.keymap.set({ 'n', 'v' }, '<Leader>dh', function() require('dap.ui.widgets').hover() end, { desc = "" })
 vim.keymap.set({ 'n', 'v' }, '<Leader>dp', function() require('dap.ui.widgets').preview() end, { desc = "" })
+vim.keymap.set('n', '<Leader>df', function() require('dap.ui.widgets').centered_float(widgets.frames) end, { desc = "" })
+vim.keymap.set('n', '<Leader>ds', function() require('dap.ui.widgets').centered_float(widgets.scopes) end, { desc = "" })
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Debug: Continue" })
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Debug: Step over" })
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = "Debug: Step into" })
@@ -96,25 +98,34 @@ local function lsp()
     local warnings = ""
     local hints = ""
     local info = ""
+    local empty = true
 
     if count["errors"] ~= 0 then
-        errors = string.format(" E%s ", count["errors"])
+        errors = string.format(" E%s", count["errors"])
+        empty = false
     end
     if count["warnings"] ~= 0 then
-        warnings = " %#LspDiagnosticsSignWarning# " .. count["warnings"]
+        warnings = string.format(" W%s", count["warnings"])
+        empty = false
     end
     if count["hints"] ~= 0 then
-        hints = " %#LspDiagnosticsSignHint# " .. count["hints"]
+        hints = string.format(" H%s", count["hints"])
+        empty = false
     end
     if count["info"] ~= 0 then
-        info = " %#LspDiagnosticsSignInformation# " .. count["info"]
+        info = string.format(" I%s", count["info"])
+        empty = false
     end
 
-    return errors .. warnings .. hints .. info .. "%#Normal# "
+    if empty then
+        return " :D "
+    end
+
+    return errors .. warnings .. hints .. info .. " "
 end
 
 local function filetype()
-    return string.format(" %s ", vim.bo.filetype)
+    return " " .. (vim.bo.filetype or "void") .. " "
 end
 
 Statusline = {}
@@ -130,6 +141,7 @@ Statusline.active = function()
         filetype(),
         accent,
         lsp(),
+        accent,
     }
 end
 
