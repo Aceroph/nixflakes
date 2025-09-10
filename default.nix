@@ -82,23 +82,6 @@
   #########
   fonts.packages = with pkgs; [ scientifica ];
 
-  ##########
-  # Gaming #
-  ##########
-  programs = {
-    dconf.enable = true;
-    gamemode.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-      extraCompatPackages = with pkgs; [
-        proton-ge-bin
-      ];
-    };
-  };
-
   ###############
   # Hibernation #
   ###############
@@ -142,6 +125,31 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+  };
+
+  ############
+  # Programs #
+  ############
+  programs = {
+    dconf.enable = true;
+    gamemode.enable = true;
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
+      ];
+    };
+    wireshark = {
+      enable = true;
+      dumpcap.enable = true;
+    };
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+    };
   };
 
   ############
@@ -189,14 +197,6 @@
     };
   };
 
-  ##########
-  # Zoxide #
-  ##########
-  programs.zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
   ###########
   # Systemd #
   ###########
@@ -215,9 +215,10 @@
     isNormalUser = true;
     initialPassword = "temp123";
     extraGroups = [
+      "audio"
       "input"
       "wheel"
-      "audio"
+      "wireshark"
     ];
   };
 

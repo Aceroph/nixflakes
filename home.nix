@@ -100,6 +100,7 @@
     spotify
     supabase-cli
     tmux
+    wireshark
     wl-clicker
     xorg.xinit
     zen-browser
