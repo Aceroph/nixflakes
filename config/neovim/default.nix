@@ -16,18 +16,16 @@
       angular-language-server
       lua-language-server
       nil
-      nimlsp
       pyright
       rust-analyzer
+      typescript-language-server
       vscode-langservers-extracted
       vue-language-server
       # FMTs
       black
-      eslint_d
       isort
       jsonfmt
       nixfmt-rfc-style
-      nph
       prettierd
       rustfmt
       stylua
@@ -47,6 +45,7 @@
         nix
         python
         rust
+        scss
         typescript
         vue
       ])

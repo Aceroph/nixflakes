@@ -2,21 +2,13 @@ local servers = {
     angularls = {},
     rust_analyzer = {},
     pyright = {},
-    lua_ls = {
-        settings = {
-            Lua = {
-                diagnostics = {
-                    globals = { "vim" }
-                }
-            }
-        }
-    },
+    lua_ls = {},
     cssls = {},
     html = {},
     jsonls = {},
     volar = {},
     nil_ls = {},
-    eslint = {},
+    ts_ls = {},
     nimls = {},
     clangd = {},
 }
@@ -29,14 +21,17 @@ for server, config in pairs(servers) do
 end
 
 blink.setup {
-    keymap = { preset = "enter" },
-    signature = { enabled = true },
+    cmdline = { enabled = false },
     completion = {
         documentation = {
             auto_show = true,
-            auto_show_delay_ms = 500,
+            auto_show_delay_ms = 150,
         },
-        ghost_text = { enabled = true, },
-        keyword = { range = "full", },
-    }
+        ghost_text = { enabled = true },
+        keyword = { range = "full" },
+        list = { selection = { preselect = false, auto_insert = true } },
+    },
+    keymap = { preset = "enter" },
+    signature = { enabled = true },
+    sources = { default = { 'lsp', 'path', 'snippets' } },
 }

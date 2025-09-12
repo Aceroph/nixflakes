@@ -1,18 +1,17 @@
 require("conform").setup {
     format_on_save = {
-        timeout_ms = 2000,
+        timeout_ms = 4500,
         lsp_format = "fallback",
     },
     formatters_by_ft = {
         nix = { "nixfmt" },
         python = { "isort", "black" },
         rust = { "rustfmt" },
-        javascript = { "eslint_d" },
-        typescript = { "eslint_d" },
+        javascript = { "prettierd" },
+        typescript = { "prettierd" },
         html = { "prettierd" },
         css = { "prettierd" },
         json = { "jsonfmt" },
-        nim = { "nph" },
         c = { "clang-format" }
     },
 }
