@@ -84,6 +84,7 @@
     gimp
     graphviz-nox
     heroic
+    jetbrains.datagrip
     jetbrains.idea-ultimate
     libreoffice-qt6-fresh
     libratbag
