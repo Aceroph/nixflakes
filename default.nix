@@ -1,10 +1,6 @@
 {
-  colors,
-  home-manager,
-  nixos-hardware,
+  inputs,
   pkgs,
-  quickshell,
-  steelwm,
   username,
   ...
 }:
@@ -12,9 +8,8 @@
 {
   nixpkgs.config.allowUnfree = true;
   imports = [
-    home-manager.nixosModules.home-manager
-    nixos-hardware.nixosModules.asus-fx504gd
-    steelwm.nixosModules.steelwm
+    inputs.nixos-hardware.nixosModules.asus-fx504gd
+    inputs.steelwm.nixosModules.steelwm
     ./config/bluetooth
     ./config/sddm
     ./config/neovim
@@ -92,26 +87,6 @@
       size = 16 * 1024;
     }
   ];
-
-  ################
-  # Home manager #
-  ################
-  home-manager = {
-    extraSpecialArgs = {
-      inherit
-        colors
-        quickshell
-        steelwm
-        username
-        ;
-    };
-    useGlobalPkgs = true;
-    users.${username} = {
-      imports = [
-        ./home.nix
-      ];
-    };
-  };
 
   ################
   # Localisation #

@@ -1,10 +1,12 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 
 {
   imports = [
+    inputs.zen-browser.homeModules.beta
     ./config/bash
     ./config/dunst
     ./config/fastfetch
@@ -68,6 +70,7 @@
       enable = true;
       enableBashIntegration = true;
     };
+    zen-browser.enable = true;
   };
 
   ############
@@ -106,16 +109,7 @@
     wireshark
     wl-clicker
     xorg.xinit
-    zen-browser
   ];
-
-  ##############
-  # Quickshell #
-  ##############
-  xdg.configFile."quickshell" = {
-    source = ./config/quickshell;
-    recursive = true;
-  };
 
   ############
   # Services #

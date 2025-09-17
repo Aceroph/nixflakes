@@ -8,12 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     steelwm = {
       url = "github:Aceroph/steelwm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,30 +22,35 @@
     inputs@{
       self,
       home-manager,
-      nixos-hardware,
       nixpkgs,
-      quickshell,
-      steelwm,
       ...
     }:
     {
       nixosConfigurations = {
-        nixos =
-          let
+        nixos = nixpkgs.lib.nixosSystem rec {
+          specialArgs = {
+            hostname = "asus";
+            colors = import ./colors.nix { inherit (nixpkgs) lib; };
+            username = "acero";
             system = "x86_64-linux";
-          in
-          nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              username = "acero";
-              hostname = "asus";
-              colors = import ./colors.nix { inherit (nixpkgs) lib; };
-              inherit system;
-            }
-            // inputs;
-            modules = [
-              ./.
-            ];
+            inherit
+              inputs
+              ;
           };
+          modules = [
+            ./.
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              }
+              // specialArgs;
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users."${specialArgs.username}" = ./home.nix;
+            }
+          ];
+        };
       };
     };
 }
