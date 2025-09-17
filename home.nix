@@ -6,6 +6,7 @@
 {
   imports = [
     ./config/bash
+    ./config/dunst
     ./config/fastfetch
     ./config/flameshot
     ./config/ghostty
@@ -86,6 +87,7 @@
     heroic
     jetbrains.datagrip
     jetbrains.idea-ultimate
+    libnotify
     libreoffice-qt6-fresh
     libratbag
     libsixel
