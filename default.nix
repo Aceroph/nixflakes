@@ -158,6 +158,13 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    postgresql = {
+      enable = true;
+      authentication = pkgs.lib.mkOverride 10 ''
+        #type database  DBuser  auth-method
+        local all       all     trust
+      '';
+    };
     power-profiles-daemon.enable = true;
     printing.enable = true;
     ratbagd.enable = true;
