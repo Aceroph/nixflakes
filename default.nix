@@ -56,12 +56,14 @@
   # Environmental packages #
   ##########################
   environment.systemPackages = with pkgs; [
-    wineWowPackages.stable
-    unzip
     dmenu
-    htop
-    zip
+    gcc
     gh
+    gnumake
+    htop
+    unzip
+    wineWowPackages.stable
+    zip
   ];
 
   ##########
