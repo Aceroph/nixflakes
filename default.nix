@@ -11,10 +11,11 @@
     inputs.nixos-hardware.nixosModules.asus-fx504gd
     inputs.steelwm.nixosModules.steelwm
     ./config/bluetooth
-    ./config/sddm
+    ./config/grub
     ./config/neovim
     ./config/nvidia
     ./config/obs
+    ./config/sddm
     ./config/steelwm
     ./config/tmux
     ./hardware-configuration.nix
@@ -41,10 +42,6 @@
       "quiet"
       "splash"
     ];
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
     plymouth = {
       enable = true;
       theme = "nixos";

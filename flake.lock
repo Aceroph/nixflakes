@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "grub-theme": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758742433,
+        "narHash": "sha256-OToPd2ie6yVuPTcD+c8hJvsNfmVlCBTpBJ/ZdaqlNhc=",
+        "owner": "Aceroph",
+        "repo": "grub-theme",
+        "rev": "cb85411a0ede12e7cae815e7fbad1f9daf126567",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Aceroph",
+        "repo": "grub-theme",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -75,6 +95,7 @@
     },
     "root": {
       "inputs": {
+        "grub-theme": "grub-theme",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
