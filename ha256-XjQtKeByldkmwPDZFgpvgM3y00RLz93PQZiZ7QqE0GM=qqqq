@@ -1,0 +1,1712 @@
+[33mcommit 88922be88fee142acb66d42d3134bc8d4acf87a2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Sep 24 09:33:05 2025 -0400
+
+    feat: replace systemd-boot with grub and apply custom theme
+
+[33mcommit f624c8505e6bc92cf0318bfe713f4826e99380bd[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Sep 22 08:57:41 2025 -0400
+
+    services: Install postgresql
+
+[33mcommit 09860961b4ccbdf58ff1cfd253875e61966e87ff[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Sep 22 08:34:04 2025 -0400
+
+    pkgs: Added make & gcc
+
+[33mcommit f47469ad48acbd593f21e56ad0918bea1ff1b70d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Sep 18 11:04:53 2025 -0400
+
+    nvim: Remove dot folders from showing up in telescope
+
+[33mcommit 83fdd747ce213b2238c51cf1dbd30fb7151804d4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Sep 17 16:17:09 2025 -0400
+
+    flake: Restructure flake
+
+[33mcommit 4f2f48f759ae00576597c2bd1d9fc6b58138db1c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Sep 17 13:59:10 2025 -0400
+
+    dunst: Add a notification daemon, about time
+
+[33mcommit 710c9cccebe469b77e262d406c6773d20e9d4e56[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Sep 15 14:48:15 2025 -0400
+
+    pkgs: Install jetbrains datagrip
+
+[33mcommit 2974e4bef0715d7962e3d57971ca7f584c91fb5c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Sep 14 19:13:34 2025 -0400
+
+    portal: Use the gtk portal
+
+[33mcommit 6a1a665c13b9eafcf9bb924ce913b5d55ff0402a[m[33m ([m[1;32mnvim-colorize[m[33m)[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Sep 12 09:32:41 2025 -0400
+
+    nvim: Add TS lsp and customize blink.cmp settings a bit more
+
+[33mcommit 0788eb1347b2f76286483e1164557d2eb9014631[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Sep 10 09:11:38 2025 -0400
+
+    pks: Add wireshark
+
+[33mcommit a9bce240dd9e95faefda7012176f9eed80a76aa7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Sep 5 17:22:27 2025 -0400
+
+    neovim: Edit statusline to fix rendering issues
+
+[33mcommit 91e081ff76fd1e130f95a5694febe1d50a88d1bc[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Sep 5 10:35:55 2025 -0400
+
+    neovim: Added angularls to blink.cmp
+
+[33mcommit 5a1dac06624d5f1e4e9d8e887c39192b4bc324c6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Sep 2 16:11:19 2025 -0400
+
+    flake: Update inputs
+
+[33mcommit 6bed56e195e5f9b5df410e3e298414d5255d4dea[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Sep 2 16:03:39 2025 -0400
+
+    pkgs: Add zen browser v1.15.2b
+
+[33mcommit d810eb481fd5628e9067189c75cb0fe13cf5daf0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Sep 2 16:01:11 2025 -0400
+
+    flake: Change nixpkgs input to point to nixos-unstable
+
+[33mcommit a2ef044459d7fd81a49c2fd1f3056f757815f6c0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Sep 2 14:42:05 2025 -0400
+
+    nix-index: Enable utility
+
+[33mcommit d1c1089f9a23a958a2cc116f3a84cfc54f8acad0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Sep 1 21:26:13 2025 -0400
+
+    logind: Update deprecated settings
+
+[33mcommit d68394b4016069fb9b064b0c1b30730470db740f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Sep 1 21:10:42 2025 -0400
+
+    colors: Add simple color utility functions & update vesktop colorscheme
+
+[33mcommit 6a4acd7ef3679b7eeaa565dc61aad6eb90ddbac5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 31 15:15:08 2025 -0400
+
+    pkgs: Move eiffel-studio to my nixpkgs fork, clean up ISE session variables
+
+[33mcommit 45ba3c14576091b249840b57c5caf9ee47e54593[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 30 15:29:21 2025 -0400
+
+    bash: Fixed env prompt not showing up
+
+[33mcommit aa1dc62126b62304d1f2eed63f7b4f474dc4589a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 30 14:14:53 2025 -0400
+
+    bash: Added alias for spotify_player
+
+[33mcommit e7292831ad86254bbdff917bf20e229fe38f84b2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 30 14:08:35 2025 -0400
+
+    bash: Fixed prompt wrapping on itself, and moved it into its own file
+
+[33mcommit 93848166062a58a42dad5479a8b8baf6bfcbecbb[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 30 13:50:46 2025 -0400
+
+    spotify-player: Made simple config
+
+[33mcommit d7b08fbea6d30e704edb2ceae6d2ba5096aa0de5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 30 13:46:32 2025 -0400
+
+    colors: Update bash colors and fix prefixed colors set
+
+[33mcommit f8a74891122514931314db08d4f39b6057ed7ab6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 30 13:24:04 2025 -0400
+
+    colors: Updated color system to base16
+
+[33mcommit 2f850548b94586066aeba49db3c3ac0f2a172a67[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Aug 28 10:15:05 2025 -0400
+
+    pkgs: Added postman
+
+[33mcommit a293f4e184c7d3f72e4ab366e7e728e4d0e18a65[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 15:18:24 2025 -0400
+
+    bash: Make git prompt faster
+
+[33mcommit c088eb07fed8ab6336e7c8307e60eb8491f8265b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 15:09:58 2025 -0400
+
+    bash: Don't compare local to remote if remote does not exist
+
+[33mcommit 83bc559bd36105e7e5457b3602b9ad811e52dda2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 14:57:27 2025 -0400
+
+    pkgs: Try to fix eiffel studio's dependencies and update java to v23 with javafx support
+
+[33mcommit ddb3eb51a24ee3a9bd6fc14bff975504177376cf[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 11:13:57 2025 -0400
+
+    pkgs: Use IDEA Ultimate instead of community edition
+
+[33mcommit 45499620a194e9178077751963fa0ab96f76aada[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 10:51:22 2025 -0400
+
+    nvim: Edit statusline
+
+[33mcommit f663e9e926b5f274d05cea73d696da52ef85bcc2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 09:13:58 2025 -0400
+
+    bash: Add staged/untracked indicators & local commit count
+
+[33mcommit 017b5cfcac55d6518c8e6c3165099ef389f7e01a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 08:52:50 2025 -0400
+
+    direnv: Add automatic shell envs
+
+[33mcommit 09dafae81049a734444362711bd601f4748fa01c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 08:26:23 2025 -0400
+
+    estudio: Add make run-time dependency
+
+[33mcommit 2424a0d0da590c6c67b94f5dc02e1f73c3daf8f8[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 27 07:50:09 2025 -0400
+
+    qemu: Add armv7 support
+
+[33mcommit 422ae94b0db4ea262b6c5e772dd77a09e2135edc[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Aug 26 16:13:50 2025 -0400
+
+    neovim: Reorder plugins and add mini.statusline
+
+[33mcommit 7221d61a16dc6bf80e1f6ce04132e02ea7f9d482[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Aug 26 16:05:17 2025 -0400
+
+    bash: Add dirty git indicator to prompt
+
+[33mcommit fe953448688b41585e190130d1a04adeef738be7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Aug 26 16:04:53 2025 -0400
+
+    ghostty: Replace 'bright' colors with regular colors because the bright colors were actually dimmed
+
+[33mcommit e45ae3ad8a80df6fd7b35336b489f1b868d49152[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Aug 26 14:43:18 2025 -0400
+
+    java: Update jdk to v24
+
+[33mcommit 64dfc94b5f3e6d678bbcc1bae092d9a99ee26bc4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Aug 26 14:42:55 2025 -0400
+
+    pkgs: Add the beast.. android studio
+
+[33mcommit ce268ad9a2c739580da63857f7dfa8d4efcfbb2d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Aug 26 14:36:57 2025 -0400
+
+    bash: Configure prompt
+
+[33mcommit ece9ee6c71fcd2782b584361a97cad1b83b7cbf2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 15:11:38 2025 -0400
+
+    bash: Bash ftw
+
+[33mcommit 4595ba997f9896f9e7c91a3df912e723f7ce28c4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 15:11:27 2025 -0400
+
+    repo: Remove TODO from README
+
+[33mcommit 675c93e695881fe683a4e54d7ef259fcaf8fbd93[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 14:23:01 2025 -0400
+
+    nixpkgs: Add postgresql
+
+[33mcommit 6337ac3e69fd3080807dba61e97def74737d381f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 13:21:19 2025 -0400
+
+    pkgs: Switch idea ultimate for idea community edition bc i am poor now
+
+[33mcommit 5868d0bc89f25e1a8f18f0c86273e72f9e24d1ef[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 13:04:47 2025 -0400
+
+    pkgs: Add rainfrog TUI
+
+[33mcommit ea95394a71c4686331478e25323168ad6c7dfc28[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 10:41:51 2025 -0400
+
+    pkgs: Add IDEA Ultimate
+
+[33mcommit 124a6627941dbc9a108e8730b0dd2be0c7d3efde[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 10:32:55 2025 -0400
+
+    pkgs: Add fd & eiffelstudio
+
+[33mcommit ed20e981415284faeab7c4d13619247a80d9b378[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 08:58:33 2025 -0400
+
+    nixpkgs: Add posting & spotify-player
+
+[33mcommit 770a550ff411c48612dbd1c3b4c8be2d113f2dfe[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 25 08:49:08 2025 -0400
+
+    xserver: Enable tear free
+
+[33mcommit 2464acea01c46e56194e3333f43f0f33110b96bd[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Aug 22 09:49:12 2025 -0400
+
+    pkgs: Add supabase
+
+[33mcommit e87a6af6c8c51756e6fed6896925e4be30b23aa0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Aug 22 09:35:15 2025 -0400
+
+    dbus: Add libsecret
+
+[33mcommit 48dfd7facbab840a3f0534f1d39aa555f8d3f979[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Aug 22 08:33:25 2025 -0400
+
+    pkgs: Add postman
+
+[33mcommit bded4802466f7af88cc493eb78346ddc7582451f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Aug 22 08:25:31 2025 -0400
+
+    nvim: Add angular lsp support
+
+[33mcommit be0500616a8125438ebf2f56df20bf1c1b99a959[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Aug 22 08:21:18 2025 -0400
+
+    dump: Change font to scientifica and change DM to sddm
+
+[33mcommit b7cdd8b28381c6498362091000a88b3b2f386aa1[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Aug 14 12:16:07 2025 -0400
+
+    telescope: Exclude .git
+
+[33mcommit acd793add703f8e2bc5bde09e64739efcd4c73f3[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 13 11:29:30 2025 -0400
+
+    power: Fix hibernation
+
+[33mcommit 1d585926a4a6e240f52165ca86c5d8c103a22fd0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 11 20:02:15 2025 -0400
+
+    swap: Update swap file UUID
+
+[33mcommit 727926f390e1f6ee00705e6d17e6e88f91898e4b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 11 19:59:41 2025 -0400
+
+    ghostty: Change theme to a custom & xdg-desktop-portal: Change package
+
+[33mcommit 0e5546129f2c22a916d9badc2fc12059abfd9cb4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 9 13:55:40 2025 -0400
+
+    font: Add bitocra font and apply to terminal
+
+[33mcommit a9bc21092c89f863ba2e432e80845aaa23beec62[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 9 12:54:52 2025 -0400
+
+    pkgs: Remove any compiler or debugger, these things should be in shell environments
+
+[33mcommit 22e1f4345f5e48fd88530637bfbe149f36a6ec04[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 9 12:38:06 2025 -0400
+
+    git: Make remote upstream set up automatically
+
+[33mcommit 241e78948b4e34636a9341cf7b6ea0ba8e906e86[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 9 12:26:52 2025 -0400
+
+    steelwm: Updated to latest
+
+[33mcommit 2723ea1a36bf1083ebb248530e60ee41cc1002d1[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Aug 7 20:30:26 2025 -0400
+
+    steelwm: Finally using my own module
+
+[33mcommit 110fbb3cb2e173636911a73277c85a38c90118dd[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Aug 7 20:00:01 2025 -0400
+
+    flameshot: Rice flameshot
+
+[33mcommit 5c5076d87463a2f4ebf97a29e2f2fbeae0e76099[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 16:12:58 2025 -0400
+
+    steelwm: Fix fullscreen ss command
+
+[33mcommit c2d7106c44bedb9a3175e31dddb5ff0933f066f7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 16:12:26 2025 -0400
+
+    zsh: Fix env variables to make man pages colors
+
+[33mcommit 0a37514d9353d875cf1fbbeb3af343db12747f2c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 16:01:13 2025 -0400
+
+    zsh: Set variables to make man pages colored
+
+[33mcommit 59c3f85b06a36806ba96ce1742c882307db47785[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:55:01 2025 -0400
+
+    zsh: Make man pages colored and add alias for fastfetch -> fetch
+
+[33mcommit ae161898399c004da4065e5087a82e8c503553c4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:54:36 2025 -0400
+
+    fastfetch: Use kitty protocol
+
+[33mcommit abbf8e5ad7c28e271383deee587abfa2810891fd[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:49:44 2025 -0400
+
+    Revert "ghostty: Support images"
+    
+    This reverts commit c74d02358702e9472c00d4c32ff922cb68ab82ce.
+
+[33mcommit c74d02358702e9472c00d4c32ff922cb68ab82ce[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:47:50 2025 -0400
+
+    ghostty: Support images
+
+[33mcommit 19d36517c7bc09c10e384bc7a921a09f87541f5f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:44:31 2025 -0400
+
+    ghostty: Get rid of adwaita and window decoration
+
+[33mcommit 0602abf5baa6bec9d461eb21339330600d1dc525[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:37:41 2025 -0400
+
+    steelwm: Swap xterm for ghostty
+
+[33mcommit dbf145948274c4242cb180b02c8a26f2c0b5f25a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:31:52 2025 -0400
+
+    flake: Update steelwm
+
+[33mcommit 6cf72e2682bacd9dd560dc16b937ef88225197f7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:21:11 2025 -0400
+
+    Add flameshot & ghostty
+
+[33mcommit ee7398d83c832119b69e3d4f48a9a51485a8ba08[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:16:50 2025 -0400
+
+    steelwm: Update keybinds
+
+[33mcommit 4c1a9bb4d0dddb401fe8d4835a521b165ecd957a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 15:06:22 2025 -0400
+
+    steelwm: Update keybinds
+
+[33mcommit 2ce9951b22da65b39bcff0f525d4e631c7940f03[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 14:58:20 2025 -0400
+
+    steelwm: Get the wm working
+
+[33mcommit f116b32b0472946730d53041ab0be443efc307da[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 12:37:40 2025 -0400
+
+    greetd: Change greetd command to start SteelWM
+
+[33mcommit 88502870ccdd74918e45a6935b291b30f19622f0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 12:10:35 2025 -0400
+
+    pkgs: Remove jetbrains IDEs
+
+[33mcommit 80594c9d2b40e5386501144584dad66c8a9f6499[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 12:10:17 2025 -0400
+
+    steelwm: Install SteelWM
+
+[33mcommit 5c56e234c4f831a12af0f3e9f260ea18657023cf[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Aug 6 11:33:03 2025 -0400
+
+    Remove flake.lock & result from git tracking
+
+[33mcommit bcea5203cc7503f784160566682006b98add97fd[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 4 09:25:05 2025 -0400
+
+    swayfx: Add REAME for patch & remove rounded corners
+
+[33mcommit 03cd7aa57809d2afcad8434788f33fe91b985b8e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Aug 4 09:01:28 2025 -0400
+
+    plymouth: Change theme to a MacOS-like theme for nixos
+
+[33mcommit b6cadbbd88facef088ffda2b4f2e9aebfe77af98[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 3 19:58:01 2025 -0400
+
+    qs: Update bar style
+
+[33mcommit f84a8baa5b1d0fbda6bf56ca1ed543db0c638867[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 3 17:22:28 2025 -0400
+
+    qs: Move Colors to utils along with notch
+
+[33mcommit 9063fba412e88c5ca06a7548de2f3534ead4391b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 3 15:37:12 2025 -0400
+
+    qs: Restructure quickshell and add context menu
+
+[33mcommit db2ce4ec359a805a957a546ce58bc1ae89494668[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 3 15:33:31 2025 -0400
+
+    qs: Attempt 1 at fixing quickshell
+
+[33mcommit 05b7eff660ea83ea30ec20ec1639d9a001567c3f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 3 11:32:38 2025 -0400
+
+    swayfx: Add mouse keybind for opening context menu
+
+[33mcommit 3991b310a6f958473258815deffc20dc89ac95f6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Aug 3 11:15:20 2025 -0400
+
+    swayfx: Re-add titlebars & update pkgs
+
+[33mcommit a20794affa88b82afb83dcf74d97636dbe8e4a67[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 2 14:17:19 2025 -0400
+
+    swayfx: Remove unused patch
+
+[33mcommit 40533be459974e55402f887b9a233ad77c5f15c7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 2 14:07:57 2025 -0400
+
+    flake: Update inputs
+
+[33mcommit 563be964039f214226d175f4ad0426e63834d292[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 2 14:07:24 2025 -0400
+
+    qs: Remove patch for cursor movement event
+
+[33mcommit 42c388bcb81b7158bfe629c7753d2a774d300eb2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 2 13:47:33 2025 -0400
+
+    fastfetch: Fix top padding
+
+[33mcommit 74291a8e4b101b76ff41172184427251a230dd12[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 2 13:44:34 2025 -0400
+
+    fastfetch: Fix OS field
+
+[33mcommit 371763cee4f3c5d8f7ff95b3ba2f43c058abf3e3[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Aug 2 13:35:17 2025 -0400
+
+    swayfx: Add GET_MOUSE ipc event
+
+[33mcommit 78333ec16fc84541183f0b23edf5d3c4071493cf[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 30 01:29:52 2025 -0400
+
+    qs: Patch quickshell to support my custom sway event
+
+[33mcommit 37a58d4727034f8723174f9225e9a77d3c1eef8c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Jul 29 23:51:55 2025 -0400
+
+    swayfx: Add patch to make cursor position accessible through ipc
+
+[33mcommit 95a9f0e94dd0392ada1ece7685d907545d6fda87[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 19:41:15 2025 -0400
+
+    sway: Fix infinite recursion
+
+[33mcommit a33e0874773998a555ce9e4c284e50b7aef1f174[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 19:41:15 2025 -0400
+
+    sway: Fix infinite recursion
+
+[33mcommit 0a851056b82055f958482d37663b98ab37b6eafe[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 19:39:12 2025 -0400
+
+    sway: Fix multiple quickshells from launching
+
+[33mcommit db8c525a05fc30ceea88acce94c56d407567883f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 19:38:34 2025 -0400
+
+    foot: Fixed typo
+
+[33mcommit c680e7984e675abc595a5d186b5d414bbb4edca8[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 19:34:47 2025 -0400
+
+    foot: Edited colors to include darker versions
+
+[33mcommit a24ec43820d4f80eeee80ff9e5a2b42b9f018732[m
+Merge: 3e53cde 696768e
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 16:31:10 2025 -0400
+
+    Merge with todo items updated
+
+[33mcommit 3e53cded3cc24ad0091db6d2a9049dcf46b35163[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 16:29:35 2025 -0400
+
+    foot, tmux, zsh, fastfetch: Tweaked colors to follow base16
+
+[33mcommit 0a469b4680c9c6fbc2434ec0a6533ff7f0bac286[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 15:59:08 2025 -0400
+
+    tv: Added television and nixpkgs-search-tv
+
+[33mcommit bc0cd35fda8c18c34fce4e55286be5a3eeba5a8f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jul 26 15:47:25 2025 -0400
+
+    nixpkgs: Added blockbench
+
+[33mcommit 696768eaf3e35457cd7cd39c074a625ad02e3e5e[m
+Author: Sir Aceroph <109217147+Aceroph@users.noreply.github.com>
+Date:   Tue Jul 15 00:58:26 2025 -0400
+
+    todo: Checked status bar goal
+
+[33mcommit ec1857b129a78df2312916e354c782a060b649eb[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 22:06:20 2025 -0400
+
+    sway: Using proper bindings for audio control
+
+[33mcommit a143c854897060556d37ea71b833813966e153fe[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 22:04:06 2025 -0400
+
+    sway: Added fn to function keybinds
+
+[33mcommit df536c791ef7dfd046a2770b6bf320e3c061506e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 18:20:09 2025 -0400
+
+    services: Added spotifyd
+
+[33mcommit e4bd56b1e927ee4d5c452c8199da24fb7a44337b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 18:13:53 2025 -0400
+
+    qs: Cleared launcher code a bit
+
+[33mcommit 5818026bd7b4e5afcbd0439ad9a6b1682301ad60[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 18:07:03 2025 -0400
+
+    qs: Temporarely removed cava module to lower CPU %
+
+[33mcommit 20638bf690356e5c66036c32ed6e9ad539e9195e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 16:47:12 2025 -0400
+
+    qs: Added launcher widget
+
+[33mcommit 91729da07d5ac403ff10efbf01c83b4bbf9a1b49[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 15:15:12 2025 -0400
+
+    qs: Cava module now has rounded rects
+
+[33mcommit 53cb63d53f8aaaef1b08111b1f209172747df2f7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 14:57:13 2025 -0400
+
+    qs: Fixed cava module
+
+[33mcommit 236a3c006ff0204c384aa143c2dc217d48a523c4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 14:57:02 2025 -0400
+
+    pkgs: Fixed cava
+
+[33mcommit cb21061757181515abf3b7287764fbe7c715e886[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 14:42:45 2025 -0400
+
+    pkgs: Added sixel
+
+[33mcommit bf399953d4825b68db430a707da17caaa5dd98ca[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 14 14:42:25 2025 -0400
+
+    qs: Volume widget & removed music module for now
+
+[33mcommit 62e2b0fe2b1d7a30dc75f491bb5ad8e05c43b104[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 11 13:56:23 2025 -0400
+
+    qs: Updated volume range
+
+[33mcommit bf5242d32ad3cfd69258ca0b9a90a6d70c36297f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 11 13:33:01 2025 -0400
+
+    pkgs: Added sixel
+
+[33mcommit b90b4d8f777777c2e116384d7ecc4bda224d0be0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 11 13:18:06 2025 -0400
+
+    sway: Added volume control keybinds
+
+[33mcommit 990b80a6bc415f9c10c7c0cdb3a6ed09b77668b5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 11 13:16:42 2025 -0400
+
+    qs: Updated background wallpaper
+
+[33mcommit 3669d93ad2fda9916b407ca879abfac5e301ba02[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 11 12:46:44 2025 -0400
+
+    qs: Tweaked bar exclusion zone & volume progressbar
+
+[33mcommit 7f42d148023cf06be8ed21465ffa9e2405dd6698[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 11 12:26:17 2025 -0400
+
+    qs: Updated bar notch to use cubic curves
+
+[33mcommit 9be6270a6e240e09525d67a51469c73175704270[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 13:11:55 2025 -0400
+
+    qs: Restructure WidgetWrapper
+
+[33mcommit e9cdeaa1e47d4a9c0288db72fb5b2d8b78491055[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 13:04:17 2025 -0400
+
+    quickshell: Now starts with sway instead of as a systemd unit
+
+[33mcommit 1a92baf4ab91057519647eadfd7097b5be2a37c3[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 12:47:19 2025 -0400
+
+    zsh: Fixed git prompt
+
+[33mcommit 21f4c784ba421e5f9cdaac3e756de2cf305b12b1[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 12:43:41 2025 -0400
+
+    vesktop: Nixified theme
+
+[33mcommit f7f0c9fbabbdabffaf7f5d6b7f5be635ecf84aab[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 12:35:09 2025 -0400
+
+    zsh: Customized prompt
+
+[33mcommit 92898b4184b7c25ae9e5d4e871d538cbfab59cc6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 11:56:28 2025 -0400
+
+    tmux: Riced tmux
+
+[33mcommit 9a0634bc5753b08200b5101e84e522901f82782e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 11:55:16 2025 -0400
+
+    Removed config/default.nix
+
+[33mcommit 608eb806ca3310e0b060dac3857374fed2c8b6b3[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 9 11:54:31 2025 -0400
+
+    zsh: Removed OMZ and changed prompt
+
+[33mcommit 26f3248e36ffcc3b1abf762c530dc1a8325cfb62[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 7 20:21:23 2025 -0400
+
+    zsh: Tweaked colors
+
+[33mcommit b3ff9bec7fcefe7b21aebd384e32463c325ce232[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 7 20:19:55 2025 -0400
+
+    Configured fastfetch
+
+[33mcommit 31b02a93117415cc82b78b6fc1eae2eacf40e62d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 7 16:57:03 2025 -0400
+
+    added fastfetch
+
+[33mcommit 6359040be15ab38ee7442395802441399e5ec6ef[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 7 16:56:03 2025 -0400
+
+    added colors and foot
+
+[33mcommit 8de0b9b00be8ee58605bc31f0449cea00069084a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 7 15:27:00 2025 -0400
+
+    sway: Updated look for windows
+
+[33mcommit 825924553655ad363f07a5689027029ed343581b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jul 7 14:55:02 2025 -0400
+
+    updated flakes
+
+[33mcommit fa90f457cd7b6d3903f5d2db4f251d8d4ab5fdac[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 21:51:54 2025 -0400
+
+    nvim: Changed indentation back to 4
+
+[33mcommit cba9e0dd001beb1862baf837affca669a5c3a495[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 18:57:43 2025 -0400
+
+    nvim: Fixed blink config
+
+[33mcommit 2a6945ceb8aae15e61dd83befdc00832ffab2347[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 18:57:31 2025 -0400
+
+    nvim: Added gdb and configured C debug adapter
+
+[33mcommit 18376e99d4cd75da0756699fd5cfa94ec41b5955[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 12:49:38 2025 -0400
+
+    nvim: Replaced ccls by clangd & updated blink.cmp settings
+
+[33mcommit 20d9f144c417219293268a5b4bcc0ee8d0d3477e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 12:29:26 2025 -0400
+
+    nvim: More DAP keybinds & C launch config
+
+[33mcommit 1a7cae38c635a6e66be2ccb22bb806a0c0a1da7d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 12:15:32 2025 -0400
+
+    nvim: Added keybinds for DAP
+
+[33mcommit b2cdeb97156049a6d03857766da0d499f38d4e82[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Jul 6 12:06:22 2025 -0400
+
+    nvim: Added DAP, which-key and renaming symbols
+
+[33mcommit e899a7ab9bb3bc5754b0e27e83e60f0d369aca5f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 4 14:25:44 2025 -0400
+
+    nvim: Added clang-format, ccls, and removed toggleterm & cheatsheet
+
+[33mcommit c85ae3659e0951a702a71e89ffc769c1ff5676c4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jul 4 14:01:20 2025 -0400
+
+    Added Cava module to QS, and installed vesktop
+
+[33mcommit b62d0def3ae1d3d1f0c9ffaf6be5b0111aaa5b03[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jul 3 14:39:44 2025 -0400
+
+    sway: Fixed fullscreen ss keybind
+
+[33mcommit 23ef7d1b54cb30c462fe85c6f434280f9678557b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jul 3 14:37:26 2025 -0400
+
+    sway: Added screenshot keybind for fullscreen
+
+[33mcommit f07087cd7f67b7a2d53b842d73d9d102c3ac668a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jul 3 14:32:40 2025 -0400
+
+    qs: Fixed battery module
+
+[33mcommit 58c30042b12a4127c7dc1623e1a8b09c3f1a33c0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jul 3 14:24:30 2025 -0400
+
+    Quickshell finally works on its own
+
+[33mcommit f178953b0a623ddd290cb73dddb59b47e38efb3a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jul 2 02:58:51 2025 -0400
+
+    Finally quickshelled
+
+[33mcommit 2d44c27bb1c5d9a12455f43532559f010f7ecc07[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jun 21 02:22:52 2025 -0400
+
+    README: Updated TODO
+
+[33mcommit 23fb82f58f52b3a064fc781bd1746a17fea1ec7a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jun 21 02:21:51 2025 -0400
+
+    zoxide: Installed & configured zoxide
+
+[33mcommit 465c64fe188c47f52bcbeedf40ea431e54e4e722[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jun 21 02:09:26 2025 -0400
+
+    zsh: Made my own custom theme
+
+[33mcommit 140b1441665985f4a20b7a7c7cf8db5a63da513c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jun 21 00:36:29 2025 -0400
+
+    zsh: Added zsh
+
+[33mcommit 3b01a7870a44906b27a87e36361ee774242fbcbf[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jun 21 00:24:45 2025 -0400
+
+    Updated flake channel & README
+
+[33mcommit 7cedb48196cc6e191f41d2e08e73cb7a85d2e1cf[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Jun 21 00:13:14 2025 -0400
+
+    Reorganised repo structure
+
+[33mcommit d46f70d05e03bb6170b685da301fcd1bf0947fd6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Jun 17 21:57:02 2025 -0400
+
+    Added wl-clicker
+
+[33mcommit 416e5c316d5f0b6dd1c171e435454bb278b641fe[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jun 13 01:12:46 2025 -0400
+
+    nvim: Changed filetype from puml -> plantuml in mkdp config
+
+[33mcommit 85a48123389250d907c51e05f7598455427b874a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jun 13 01:10:29 2025 -0400
+
+    nvim: Added plantuml syntax
+
+[33mcommit 85bcfc15b9f8fe8e9edd6892080333f0eb5d5864[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jun 13 01:03:30 2025 -0400
+
+    nvim: Configured markdown-preview, for real this time
+
+[33mcommit 93098c36ad718e67846615368eb8c2054b476bdc[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Jun 13 00:44:37 2025 -0400
+
+    nvim: Now built with node
+
+[33mcommit 9462b11b7c5958b85a5532e73e4909b16412ff22[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 23:45:48 2025 -0400
+
+    nvim: Configured markdown-preview plugin
+
+[33mcommit 3b25ca305f5ade00fb67157e294fffaa3b88c075[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 23:35:32 2025 -0400
+
+    nvim: Im going to break it
+
+[33mcommit e4914a844e4e58bdd6bfe4aa8494c706bc5afa44[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 23:32:56 2025 -0400
+
+    nvim: Fixed blink config once again
+
+[33mcommit 0220cc754bf3ee30454e1dc74bad3809fc5187b7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 23:31:05 2025 -0400
+
+    nvim: Fixed blink.lua config
+
+[33mcommit b0390fa874d1b506ede808f1cd638300607b7b5a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 23:27:11 2025 -0400
+
+    nvim: Replaced markdown preview plugin & edited blink config
+
+[33mcommit 5ebcb50f82cd57a5890a73ff33c303339da1daee[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 20:55:26 2025 -0400
+
+    Added xdg-desktop-portal-wlr as package for xdg portal
+
+[33mcommit 6f3f15d0dedada15c7b9169b118341b76a18f992[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 20:53:40 2025 -0400
+
+    Enabled xdg desktop portal
+
+[33mcommit 43d44c3a0ed50a13b782d7b14ce4cf44c43108a3[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 20:52:24 2025 -0400
+
+    Fixed flatpak service path
+
+[33mcommit 5afded25d1c72e10cdca0b1614b657ab56fe21bc[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 12 20:51:09 2025 -0400
+
+    Added flatpak
+
+[33mcommit c4a6b1dd58a81cfa9dd6a60a5ad97c7b638b6d83[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 5 00:31:16 2025 -0400
+
+    nvim: Use spaces instead of tabs
+
+[33mcommit f065a5fdeb6f46c72e92ea322d514b67e0d5e48b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 5 00:14:00 2025 -0400
+
+    neovim: fixed nimlsp server name
+
+[33mcommit 9bcddd427cb7a0f562c2176bceb4e42500b6be63[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Jun 5 00:06:16 2025 -0400
+
+    Added fmt for nim and blink support
+
+[33mcommit 5ddc42456481ef671480eb30de6669e0a42b3006[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 23:59:17 2025 -0400
+
+    Nim lsp and treesitter
+
+[33mcommit 93d8f39f105afd328760aff617050a9483d664ee[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 23:16:51 2025 -0400
+
+    Removed basic obs nixpkg
+
+[33mcommit ea147131a3925a0b102b79798b5b4b9bb48953b0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 23:16:09 2025 -0400
+
+    Added OBS Studio
+
+[33mcommit bd8991486f946963c7257037514d6f5a879ae365[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 22:58:35 2025 -0400
+
+    Added obs studio
+
+[33mcommit b949124bdfb3ae76a7adfe606b35858ab1691c83[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 21:52:18 2025 -0400
+
+    Fixed screenshot command once again
+
+[33mcommit 486543f94202e3490292eb2c2d300506cb95bd32[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 21:35:13 2025 -0400
+
+    Fixed command for ss
+
+[33mcommit 94220faff03b42433fe0359c942c5933085efc99[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 21:33:11 2025 -0400
+
+    Using wl-clipboard instead of xclip
+
+[33mcommit 2fd4072e29ae62fa910b93e27aeffae8e0612ea9[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 21:29:11 2025 -0400
+
+    Added screenshotting
+
+[33mcommit 7da03592397e49d3e643ae22b567d3fde0aee2db[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Jun 4 16:42:19 2025 -0400
+
+    Updated flake channel
+
+[33mcommit 030728dc3c4f22eef48e77768bf9ade624c743f2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jun 2 15:32:58 2025 -0400
+
+    Nvidia: Using offload mode instead of sync
+
+[33mcommit dfe4afb58968210fb4eb124400eb24f73a8945c8[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Jun 2 13:26:38 2025 -0400
+
+    Added waybar config
+
+[33mcommit 292a6f9214d7d742098799662599d91ceacc3404[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 27 13:58:38 2025 -0400
+
+    Removed networking pkg, its useless
+
+[33mcommit 5a7b83f6b49196ba2b5ca6c64f5523dc1e2c8649[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 27 13:22:45 2025 -0400
+
+    Fixed bad path for alacritty
+
+[33mcommit e997fc25f8aff2f1a05653a2af9fbd8d721f824d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 27 13:21:47 2025 -0400
+
+    Added qutebrowser, re-added bars default and moved alacritty
+
+[33mcommit 8703fdb9eeb72d05593c3706790b4166d2564ab0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 27 13:04:04 2025 -0400
+
+    Removed packages folder
+
+[33mcommit 8f8a79c7d656dee70f2268c40ad36bba4fd6efd8[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun May 25 13:56:36 2025 -0400
+
+    Added 8.8.8.8 & 8.8.4.4 DNS servers
+
+[33mcommit 3f9360c675d8d4aabeed7c65a1c7678eb61434df[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri May 16 13:51:01 2025 -0400
+
+    Adds my keyboard configs to sway
+
+[33mcommit aed15074e9e04febf2cc76f588bb72066adb31c0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 13 16:54:51 2025 -0400
+
+    Hibernate when lid is closed
+
+[33mcommit f272164e3649862c0ed2c4a9a5e6644674b5858f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 13 08:00:20 2025 -0400
+
+    Re-added bluetooth
+
+[33mcommit 60e9a92b64f827553a0cc5ecc2051d0cf8c6c4db[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 13 07:54:58 2025 -0400
+
+    Added blueman for bluetooth management
+
+[33mcommit 01da079467716caef0fc8a8dc1305820246aa68e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue May 13 07:53:00 2025 -0400
+
+    Changed font to D2Coding NF
+
+[33mcommit 69df3ed7df566fa9779156592cd8b5ff0cd96b0d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 21:23:07 2025 -0400
+
+    Alacritty: changed font to firacode & changed opacity to 90%
+
+[33mcommit 29e9230c8c31faf8aaa2c2560b3a5941f8d3ab9c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 21:17:32 2025 -0400
+
+    Alacritty: bg opacity & padx
+
+[33mcommit e9fc796780e86b62a3be2068f38b53ceaaeb4809[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 21:17:14 2025 -0400
+
+    Swayfx cfg: windows
+
+[33mcommit 042ad735bbde1540f7a1ff84e19470f14de66ea8[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 20:59:53 2025 -0400
+
+    Added swww, window style & gaps
+
+[33mcommit be7688c767a07f47a3f3839e21864e6dd64cc6c5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:56:19 2025 -0400
+
+    Waybar font no no work
+
+[33mcommit 08b6d6f2abe38e7ca60ea25bc6452d8ce4f19f10[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:51:40 2025 -0400
+
+    Changed waybar font to non-mono and added user to input group
+
+[33mcommit f3f8d4842fe0355dea35cf822b36c6eff1ae7509[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:46:31 2025 -0400
+
+    Fixed CSS font-family for waybar
+
+[33mcommit 4006e3aa844d8d3fbd5f45e2348192b590a3420b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:43:40 2025 -0400
+
+    Edited fonts for waybar and alacritty
+
+[33mcommit baeafb84c19dc72a7b43278d9142150703c48ee2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:39:30 2025 -0400
+
+    Waybar config and more sway
+
+[33mcommit 4f35d635c88a19af4680dec568a842a8b584f7bf[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:29:43 2025 -0400
+
+    Moved sway.config.extraConfig to sway.extraConfig, my bad
+
+[33mcommit 01779dca9e8ff01b84eb4657597f86afec133dd6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:28:45 2025 -0400
+
+    Configures swayfx
+
+[33mcommit 3834b5cb2c6db191a7c6bb6c26599cf0f72e6321[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:08:26 2025 -0400
+
+    Added a greeter and the sway init command because i forgot to
+
+[33mcommit 6078eb504dd9ca33238caadb3f8bfcb5b30f1dd7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 19:02:21 2025 -0400
+
+    Removed ACPI errors from showing up on boot
+
+[33mcommit 1373d88a82a49fbc1893c70a86e0cfce1a27255a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 15:49:55 2025 -0400
+
+    Added alacritty
+
+[33mcommit 4fbe5fb5a8f363a054b3a0f2abed675a90ce879e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 15:40:46 2025 -0400
+
+    Added lightdm
+
+[33mcommit 8531ac931a6cbd650e02ed6c5ca3715207382075[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 14:54:36 2025 -0400
+
+    Refactored whole project once again
+
+[33mcommit d276aeebc2577778d462d75255aa5f7e081ebab6[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 14:20:19 2025 -0400
+
+    Added null bar attribute
+
+[33mcommit 27b623429a7c8c168f20030918e9702ca4c6d6c3[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 11:27:43 2025 -0400
+
+    forgot i needed a file for both
+
+[33mcommit a855acbbe71850746413b2693a8525dc44203128[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 11:26:59 2025 -0400
+
+    Moved nixos/sway to home/sway
+
+[33mcommit 173f5b40c001648e97c00206a3f1e067001a88ff[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 11:25:26 2025 -0400
+
+    Forgot to inherit system
+
+[33mcommit 23c7eef336f313969ccf36dc20b3137fb315904f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 11:23:19 2025 -0400
+
+    Changed wayland to options.wayland for sway config
+
+[33mcommit d145d8f4fe2ca4bde9172df62e6f10e94a69753f[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 12 11:21:58 2025 -0400
+
+    Added sway & waybar
+
+[33mcommit 7a1c2165e0e7d4ae8a4382ace7f132cc83d58947[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 5 22:37:54 2025 -0400
+
+    Added quiet boot and moved plymouth to host config
+
+[33mcommit f352883a82fb6343547ef03a0fceed590de70d74[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 5 22:28:10 2025 -0400
+
+    Used the wrong path for plymouth
+
+[33mcommit e3b3529ba53857dde3a26176e9d9d0a8ff8059f5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon May 5 22:26:54 2025 -0400
+
+    Adds plymouth splash screen
+
+[33mcommit ccf4b258d1549eda6b983be10a8fe7706ab51283[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Apr 14 08:04:14 2025 -0400
+
+    Remove useless rust analyzer config & adds valgrind
+
+[33mcommit 64378c91fef01978631845f86610562d4066ea61[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Apr 10 15:55:58 2025 -0400
+
+    Added plant UML renderer graphiz
+
+[33mcommit 0932c5966eb2cabe005a40927a6746b9b0852311[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Apr 10 14:27:03 2025 -0400
+
+    Updated flake inputs
+
+[33mcommit 9053afa8543cdadfa01ebed678a1a40603f5351c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 8 10:04:54 2025 -0400
+
+    Added rust-analyzer diagnostics and proc_macro
+
+[33mcommit 86f7a46153e34380fce81fef8126cc6fc86b1fa3[m
+Merge: 0313367 3702c90
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Apr 2 09:18:46 2025 -0400
+
+    Merge branch 'restructuring'
+
+[33mcommit 3702c907db6dec8b14ddc582e252e702f929e232[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Apr 2 09:18:30 2025 -0400
+
+    Fixed restructuring, splitted nixos modules and home modules
+
+[33mcommit 0313367961e28b4ca7490e002f1ed1c2c01d0a39[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Apr 2 08:05:58 2025 -0400
+
+    Added live grep keybind
+
+[33mcommit f1c5c91d7da3520872411be7cbaf65e8d777761c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 22:19:38 2025 -0400
+
+    restructured my files
+
+[33mcommit beb2c6721723365f5b88c101e30551aade014ab5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 21:13:51 2025 -0400
+
+    Basic polybar config
+
+[33mcommit 00896b01f822331c2691fb655c49f704731ee374[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 11:33:06 2025 -0400
+
+    Removed eww and installed polybar
+
+[33mcommit 97d822a683e02f231d9ea74e7dd16286d04ccf11[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 09:16:38 2025 -0400
+
+    Added simple eww bar
+
+[33mcommit 8f5393318c7d25114d2a6964bf34dd3963ebbd35[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 09:06:34 2025 -0400
+
+    Fixed issues with new bar attribute
+
+[33mcommit d41417a4fe4c541085381118c45c31f4f865ddeb[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 09:03:37 2025 -0400
+
+    Added missing args in bar default.nix
+
+[33mcommit 8f72e435d727d988157d764fb20dc83af897551e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 09:01:33 2025 -0400
+
+    Added yuck vim
+
+[33mcommit 35e33e5cce5fb95416ecc3f089078d6cfdda23e1[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 08:59:08 2025 -0400
+
+    Added bar attribute
+
+[33mcommit 3abed9433e7f34565ace84b7bb3c8024f91bfd11[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 08:44:05 2025 -0400
+
+    Disbanded the DE sub-directory
+
+[33mcommit 2e00d25942f87c56cfe39099d693f409a51b791d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Apr 1 08:35:33 2025 -0400
+
+    Changed heroic-unwrapped package for the heroic package
+
+[33mcommit ddc93202b51da28f200bf217bbee110bda1744b4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 29 20:12:53 2025 -0400
+
+    Renamed proton package
+
+[33mcommit 729830fe12be7867b0e9fc917c94c41889e49cde[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 29 20:03:32 2025 -0400
+
+    Added proton ge for steam
+
+[33mcommit 4e63ddbd2ed6e127e791e2e740e5db3257f20141[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 29 18:55:09 2025 -0400
+
+    Installed gamemode as a module
+
+[33mcommit 00cc843489b6563ece67b9e058bc40ed237fabd7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 29 18:24:23 2025 -0400
+
+    Installed steam
+
+[33mcommit 2dcfb97c507d1228e8f6a967aa45be44937ee230[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 29 18:24:12 2025 -0400
+
+    Changed pulseaudio for pipewire
+
+[33mcommit 77899a8c8fb2f4d3127071ea494fa009807fedb0[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Mar 27 13:41:02 2025 -0400
+
+    Added hibernation
+
+[33mcommit 3de0fb7eb133f046d69f55023c4d3cd23b9a7740[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Mar 27 13:14:24 2025 -0400
+
+    Now using a monospaced font for the bar
+
+[33mcommit 9f8f03f4dbf3e1cc30c743ae85480ea100804cf7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Mar 27 13:11:47 2025 -0400
+
+    Changed bar config
+
+[33mcommit 546a0ecde3db2a597ea512a153f1ebe3caa60c57[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 26 08:12:59 2025 -0400
+
+    Changed greenfoot jdk version to 11
+
+[33mcommit fd86cd93880344c655df35b083074113f6826bc9[m
+Author: Aceroph <aos92@proton.me>
+Date:   Tue Mar 25 20:32:21 2025 -0400
+
+    Increased conform timeout to 2s
+
+[33mcommit b8bf5ff65ea158dc082429b902704f97e21bdde1[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 14:31:36 2025 -0400
+
+    Themed i3status bar
+
+[33mcommit 459b659e61a5b1e21fdabe0d4425a68af4022207[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 14:10:55 2025 -0400
+
+    Added java
+
+[33mcommit 43f87e03f2149d32c70aca32614884fdd8d4830a[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 13:32:20 2025 -0400
+
+    Made nvidia PRIME use sync mode instead of offload
+
+[33mcommit ddc4cc1735d1a199a4f2de7cbfe895569132684b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 13:29:22 2025 -0400
+
+    Removed power key suspend, xfce takes care of it
+
+[33mcommit 25b00f674dad6e95b39b86eb485d86da8a22c110[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 13:06:23 2025 -0400
+
+    Fixed power key
+
+[33mcommit 64def2b506782de565bc8803a1843ed30b60744b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 10:51:56 2025 -0400
+
+    Added greenfoot-3.7.1 custom pkg
+
+[33mcommit 4998de330ac5838e76d7013320a7876f827c9637[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 09:25:37 2025 -0400
+
+    Default i3 workspace is now 1
+
+[33mcommit 4f69d7d182b73a7351e81f3b08b6bbf320e043ce[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 09:25:25 2025 -0400
+
+    Power button now suspend
+
+[33mcommit 9237c96335f8f7a48e2e1bed261f0a862ddb52f4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Mon Mar 24 09:11:58 2025 -0400
+
+    Made nixos use pipewire and i3 use pulseaudio, also made bluetooth its own module
+
+[33mcommit fc71654d033378ab489abe4581133fb4b1578820[m
+Merge: fe886b7 d8b62b1
+Author: Sir Aceroph <109217147+Aceroph@users.noreply.github.com>
+Date:   Sun Mar 23 17:52:44 2025 -0400
+
+    Merge pull request #4 from Aceroph/i3
+    
+    Merge the working i3 config into main
+
+[33mcommit d8b62b199dc24daeafa601cd3155c2855aa00746[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 17:51:38 2025 -0400
+
+    Why is that still here
+
+[33mcommit 6a70583f6df3fb66ebea76a3c5f3ccc40a984e33[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 17:44:49 2025 -0400
+
+    Renamed nixos-i3 config to i3
+
+[33mcommit 14dd2e468116552e5f4701a8dc4965a8c6a384f1[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 17:44:11 2025 -0400
+
+    Finally fixed i3 config
+
+[33mcommit c542b32451a00f26137785fd6b0a10cbf4716423[m
+Merge: ad94c4f fe886b7
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 16:58:48 2025 -0400
+
+    Merge branch 'main' into i3
+
+[33mcommit fe886b7ae60a1ea416c8841b4cc557eb27366d81[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 16:58:18 2025 -0400
+
+    Added nixos-hardware input & splitted nvidia to its own module
+
+[33mcommit 26b8fb3e5ef40c708f90b50d5c3d308a4ddac9e2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 16:57:43 2025 -0400
+
+    Made telescope-nvim respect git
+
+[33mcommit 41c5a7be1e101c7c6ebda9b520f7caddef637b3e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sun Mar 23 16:56:46 2025 -0400
+
+    Added gitignore
+
+[33mcommit c633d5c9129dc7c586969fe9ae34a68a85e2bb9c[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 22 00:19:24 2025 -0400
+
+    Added README, hope its pretty
+
+[33mcommit 916d70c0d815bceb09587a12f4b0d75cf231be42[m
+Author: Aceroph <aos92@proton.me>
+Date:   Sat Mar 22 00:19:05 2025 -0400
+
+    Added nix lsp, split my neovim config into lua files and added lua lsp/fmt
+
+[33mcommit 393d31e60f5a4501a9c5e0fcc074a78ea0c5c938[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Mar 21 21:31:04 2025 -0400
+
+    Added vue lsp and treesitter support
+
+[33mcommit a7b1ccbe9168ba5855d20fbc3866b52598e14a48[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Mar 21 21:03:37 2025 -0400
+
+    Added lsp support for css, html, js/ts & json
+
+[33mcommit 9c3a5283d047ab1dcf3f5f3c393978b18e9f7cb5[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Mar 21 20:29:12 2025 -0400
+
+    Added linter support for typescript
+
+[33mcommit 46c54e965c1631879d63ae3b6b74f38ade27c7bc[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Mar 21 20:28:54 2025 -0400
+
+    Added lsd
+
+[33mcommit ad94c4f4f37a6f8f735fe3f6df479b28ae737ea2[m
+Author: Aceroph <aos92@proton.me>
+Date:   Fri Mar 21 20:13:10 2025 -0400
+
+    Trying to make i3 work
+
+[33mcommit f4bc0e75696858f7e3a78fa9dfc768b52ff5de0b[m
+Merge: 7b6d0cf 3b2e916
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Mar 20 14:08:51 2025 -0400
+
+    Fixed merge conflicts in modules
+
+[33mcommit 3b2e916fe64ce385edea028293c0c11615703bfc[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Mar 20 14:07:36 2025 -0400
+
+    Config finally works
+
+[33mcommit 6c94fae35d113629e607787bcdea427a511db44b[m
+Author: Aceroph <aos92@proton.me>
+Date:   Thu Mar 20 13:39:34 2025 -0400
+
+    Split my whole config
+
+[33mcommit 7b6d0cfc619a4e3bc490ff33eb09d21a2b23af7e[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 21:53:55 2025 -0400
+
+    i3 setup
+
+[33mcommit df35a92a886c0a5ac58c5548af6dec8e74c17b22[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 19:43:31 2025 -0400
+
+    Adds conform and formatters for nix, python, js, html, rust...
+
+[33mcommit 575b3fb4ef2f06da0df4636ad6d3ec5ac95bd342[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 19:26:01 2025 -0400
+
+    Fixes blink.cmp once and for all, also adds signature completion
+
+[33mcommit 01376818c1854fd796212d06a59a8c6f7e91825d[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 18:55:54 2025 -0400
+
+    Adds blink.cmp and transfer old config over to home.nix
+
+[33mcommit 8fb189731118ca6a960a92c71869517d132b28d7[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 15:10:29 2025 -0400
+
+    Added license
+
+[33mcommit 7f62dd5cb7a7b34cdd631e87441b4c8edf293069[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 15:02:53 2025 -0400
+
+    Added git credentials
+
+[33mcommit 487d99179be95edec0fcbc55a57a5645f9e287a4[m
+Author: Aceroph <aos92@proton.me>
+Date:   Wed Mar 19 14:59:15 2025 -0400
+
+    initial commit
