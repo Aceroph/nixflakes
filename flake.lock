@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1758742433,
-        "narHash": "sha256-OToPd2ie6yVuPTcD+c8hJvsNfmVlCBTpBJ/ZdaqlNhc=",
+        "lastModified": 1758919640,
+        "narHash": "sha256-utFb8W1NbOugpHrDBCJy65p5Vnc4ruEMaVnEvzlYCiM=",
         "owner": "Aceroph",
         "repo": "grub-theme",
-        "rev": "cb85411a0ede12e7cae815e7fbad1f9daf126567",
+        "rev": "9dac33721bed95bdb614ee441f7a78eee9e434c7",
         "type": "github"
       },
       "original": {
@@ -79,11 +79,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1756845905,
-        "narHash": "sha256-CRkufZ+i5y1PzU4jFMUzLpj8M38kuZihshpf2IUHGMc=",
+        "lastModified": 1758808127,
+        "narHash": "sha256-iJF+ZQ1+Ow/P7ph0GBaYRFFZhy0pTmoK7Lehb/xCMoU=",
         "owner": "Aceroph",
         "repo": "nixpkgs",
-        "rev": "9c742dbc790c3b6985adb2e6f1b6badfb727a525",
+        "rev": "72873f51d2d46716ee38bcc8bcc7c4de38207bb1",
         "type": "github"
       },
       "original": {
