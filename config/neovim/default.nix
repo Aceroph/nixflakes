@@ -50,9 +50,11 @@
         vue
       ])
       ++ (with pkgs.vimPlugins; [
-        nvim-lspconfig
+        actions-preview-nvim
         markdown-preview-nvim
         mini-nvim
+        neo-tree-nvim
+        nvim-lspconfig
         plantuml-syntax
         plenary-nvim
         which-key-nvim
