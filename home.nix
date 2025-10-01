@@ -77,6 +77,7 @@
   # Packages #
   ############
   home.packages = with pkgs; [
+    alsa-utils
     android-studio
     blockbench
     cava
@@ -96,6 +97,7 @@
     libsixel
     mangohud
     nerd-fonts.d2coding
+    openshot-qt
     piper
     postman
     postgresql_16

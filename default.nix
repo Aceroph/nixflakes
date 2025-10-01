@@ -6,7 +6,6 @@
 }:
 
 {
-  nixpkgs.config.allowUnfree = true;
   imports = [
     inputs.nixos-hardware.nixosModules.asus-fx504gd
     inputs.steelwm.nixosModules.steelwm
@@ -62,6 +61,13 @@
     wineWowPackages.stable
     zip
   ];
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "qtwebengine-5.15.19"
+    ];
+  };
 
   ##########
   # Flakes #
