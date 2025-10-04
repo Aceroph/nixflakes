@@ -73,7 +73,10 @@
   #########
   # Fonts #
   #########
-  fonts.packages = with pkgs; [ scientifica ];
+  fonts.packages = with pkgs; [
+    scientifica
+    (google-fonts.override { fonts = [ "sono" ]; })
+  ];
 
   ###############
   # Hibernation #
