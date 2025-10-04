@@ -10,10 +10,9 @@
     ./config/bash
     ./config/dunst
     ./config/fastfetch
-    ./config/flameshot
-    ./config/ghostty
+    ./config/foot
+    ./config/fuzzel
     ./config/niri
-    ./config/spotify-player
     ./config/television
     ./config/vesktop
   ];
