@@ -98,7 +98,6 @@
     libsixel
     mangohud
     nerd-fonts.d2coding
-    openshot-qt
     piper
     postman
     postgresql_16

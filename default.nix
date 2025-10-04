@@ -60,12 +60,7 @@
     zip
   ];
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "qtwebengine-5.15.19"
-    ];
-  };
+  nixpkgs.config.allowUnfree = true;
 
   ##########
   # Flakes #
