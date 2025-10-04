@@ -6,7 +6,7 @@ local servers = {
 	cssls = {},
 	html = {},
 	jsonls = {},
-	volar = {},
+	vue_ls = {},
 	nil_ls = {},
 	ts_ls = {},
 	nimls = {},
@@ -16,7 +16,7 @@ local servers = {
 local blink = require("blink.cmp")
 for server, config in pairs(servers) do
 	config.capabilities = blink.get_lsp_capabilities(config.capabilities)
-	vim.lsp.config[server].setup(config)
+	vim.lsp.enable(server, config)
 end
 
 blink.setup({
