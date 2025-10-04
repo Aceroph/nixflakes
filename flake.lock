@@ -99,28 +99,7 @@
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
-        "steelwm": "steelwm",
         "zen-browser": "zen-browser"
-      }
-    },
-    "steelwm": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1755182274,
-        "narHash": "sha256-oVDjhYR0FK+UjQwVZpwxYc8HOarGPy4KQuHjR+yw8oQ=",
-        "owner": "Aceroph",
-        "repo": "steelwm",
-        "rev": "5d5e17c656ea7d3ad5ea42a0989a0549b82ade08",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Aceroph",
-        "repo": "steelwm",
-        "type": "github"
       }
     },
     "zen-browser": {

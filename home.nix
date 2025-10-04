@@ -12,6 +12,7 @@
     ./config/fastfetch
     ./config/flameshot
     ./config/ghostty
+    ./config/niri
     ./config/spotify-player
     ./config/television
     ./config/vesktop

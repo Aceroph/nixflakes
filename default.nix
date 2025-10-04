@@ -8,14 +8,12 @@
 {
   imports = [
     inputs.nixos-hardware.nixosModules.asus-fx504gd
-    inputs.steelwm.nixosModules.steelwm
     ./config/bluetooth
     ./config/grub
     ./config/neovim
     ./config/nvidia
     ./config/obs
     ./config/sddm
-    ./config/steelwm
     ./config/tmux
     ./hardware-configuration.nix
   ];
@@ -113,6 +111,7 @@
   programs = {
     dconf.enable = true;
     gamemode.enable = true;
+    niri.enable = true;
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
