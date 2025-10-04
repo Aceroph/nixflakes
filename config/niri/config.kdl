@@ -69,7 +69,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Enter { spawn "ghostty"; }
+    Mod+Return { spawn "ghostty"; }
     Mod+D { spawn "dmenu"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
