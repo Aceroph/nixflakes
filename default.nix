@@ -75,7 +75,7 @@
   #########
   fonts.packages = with pkgs; [
     scientifica
-    (google-fonts.override { fonts = [ "sono" ]; })
+    (google-fonts.override { fonts = [ "Sono" ]; })
   ];
 
   ###############
