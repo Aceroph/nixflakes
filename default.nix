@@ -46,19 +46,22 @@
     };
   };
 
-  ##########################
-  # Environmental packages #
-  ##########################
-  environment.systemPackages = with pkgs; [
-    dmenu
-    gcc
-    gh
-    gnumake
-    htop
-    unzip
-    wineWowPackages.stable
-    zip
-  ];
+  #################
+  # Environmental #
+  #################
+  environment = {
+    sessionVariables.NIXOS_OZONE_WL = "1";
+    systemPackages = with pkgs; [
+      dmenu
+      gcc
+      gh
+      gnumake
+      htop
+      unzip
+      wineWowPackages.stable
+      zip
+    ];
+  };
 
   nixpkgs.config.allowUnfree = true;
 
