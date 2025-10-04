@@ -1,16 +1,17 @@
 local servers = {
 	angularls = {},
-	rust_analyzer = {},
-	pyright = {},
-	lua_ls = {},
-	cssls = {},
-	html = {},
-	jsonls = {},
-	vue_ls = {},
-	nil_ls = {},
-	ts_ls = {},
-	nimls = {},
 	clangd = {},
+	cssls = {},
+	jsonls = {},
+	lua_ls = {},
+	html = {},
+	nil_ls = {},
+	nimls = {},
+	pyright = {},
+	qmlls = {},
+	rust_analyzer = {},
+	ts_ls = {},
+	vue_ls = {},
 }
 
 local blink = require("blink.cmp")
