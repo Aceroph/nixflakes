@@ -104,6 +104,7 @@
     qemu
     rainfrog # TUI for SQL
     spotify
+    swaybg
     supabase-cli
     tmux
     wireshark
