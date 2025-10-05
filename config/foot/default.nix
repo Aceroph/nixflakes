@@ -26,6 +26,7 @@
         bright5 = colors.bright-purple;
         bright6 = colors.bright-aqua;
         bright7 = colors.bright-foreground;
+        alpha = 0.8;
       };
     };
   };
