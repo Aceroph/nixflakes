@@ -1,3 +1,5 @@
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/windows11lockscreen.jpg"
+
 input {
     keyboard {
         xkb {
@@ -19,6 +21,7 @@ input {
 
 layout {
     gaps 16
+    background-color "transparent"
 
     center-focused-column "never"
 
@@ -54,6 +57,11 @@ prefer-no-csd
 screenshot-path null
 
 animations {
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
 }
 
 window-rule {

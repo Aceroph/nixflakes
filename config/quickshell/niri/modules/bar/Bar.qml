@@ -2,6 +2,7 @@ import Quickshell
 import QtQuick.Layouts
 import QtQuick
 import QtQuick.Shapes
+import QtQuick.Effects
 
 import qs.services.config
 
@@ -12,39 +13,28 @@ PanelWindow {
         top: true
     }
 
-    implicitHeight: Config.config.bar.height
-    implicitWidth: modules.width + 50
-
+    margins.top: Config.config.bar.marginTop
+    implicitHeight: modules.height + Config.config.bar.padding * 2
+    implicitWidth: modules.width + Config.config.bar.padding * 2
+    exclusionMode: ExclusionMode.Ignore
     color: "transparent"
 
-    Shape {
-        width: modules.width + 50
-        height: Config.config.bar.height
-        anchors.centerIn: parent
-        ShapePath {
-            strokeWidth: 4
-            strokeColor: "red"
-            startX: 0
-            startY: 0
+    Rectangle {
+        id: background
+        radius: Config.config.bar.radius
+        anchors.fill: parent
+        color: Config.config.bar.background
 
-            PathLine {
-                x: modules.x
-                y: modules.height
-            }
-            PathLine {
-                x: modules.x + modules.width
-                y: modules.height
-            }
-            PathLine {
-                x: modules.x + modules.width + 25
-                y: 0
-            }
+        layer.enabled: true
+        layer.effect: MultiEffect {
+            blur: 0.4
+            blurEnabled: true
         }
     }
 
     RowLayout {
         id: modules
-        anchors.centerIn: parent
+        anchors.centerIn: background
 
         Clock {}
     }

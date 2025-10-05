@@ -101,10 +101,10 @@
     postman
     postgresql_16
     prismlauncher
-    qemu-user
-    quickshell
+    qemu
     rainfrog # TUI for SQL
     spotify
+    swaybg
     supabase-cli
     tmux
     wireshark
