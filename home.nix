@@ -101,8 +101,7 @@
     postman
     postgresql_16
     prismlauncher
-    qemu-user
-    quickshell
+    qemu
     rainfrog # TUI for SQL
     spotify
     supabase-cli
