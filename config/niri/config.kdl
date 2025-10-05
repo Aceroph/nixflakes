@@ -21,6 +21,7 @@ input {
 
 layout {
     gaps 16
+    background-color "transparent"
 
     center-focused-column "never"
 
@@ -45,10 +46,6 @@ layout {
         offset x=0 y=5
         color "#0007"
     }
-}
-
-overview {
-    backdrop-color "transparent"
 }
 
 hotkey-overlay {
