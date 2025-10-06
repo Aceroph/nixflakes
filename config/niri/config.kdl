@@ -65,6 +65,16 @@ layer-rule {
 }
 
 window-rule {
+    match app-id="^Ec$" title="Preferences"
+    open-floating true
+}
+
+window-rule {
+    match app-id="^Ec$" title="Preferences|ec"
+    open-floating true
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
