@@ -81,6 +81,7 @@
     android-studio
     blockbench
     cava
+    drawio
     (eiffel-studio-bin.overrideAttrs {
       libraries = [ eiffelPackages.game2 ];
     })
@@ -96,6 +97,7 @@
     libratbag
     libsixel
     mangohud
+    nerd-fonts.d2coding
     piper
     postman
     postgresql_16
