@@ -96,7 +96,6 @@
     libratbag
     libsixel
     mangohud
-    nerd-fonts.d2coding
     piper
     postman
     postgresql_16
@@ -105,11 +104,10 @@
     rainfrog # TUI for SQL
     spotify
     swaybg
-    supabase-cli
     tmux
     wireshark
     wl-clicker
-    xorg.xinit
+    xwayland-satellite
   ];
 
   ############
