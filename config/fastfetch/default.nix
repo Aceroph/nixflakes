@@ -6,7 +6,7 @@
     settings = {
       logo = {
         source = "~/Pictures/rigby.jpg";
-        type = "kitty";
+        type = "sixel";
       };
       display = {
         color.keys = "yellow";

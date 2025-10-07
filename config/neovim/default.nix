@@ -52,7 +52,6 @@
       ++ (with pkgs.vimPlugins; [
         actions-preview-nvim
         markdown-preview-nvim
-        mini-nvim
         neo-tree-nvim
         nvim-lspconfig
         plantuml-syntax
