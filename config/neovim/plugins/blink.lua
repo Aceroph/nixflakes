@@ -3,10 +3,17 @@ local servers = {
 	clangd = {},
 	cssls = {},
 	jsonls = {},
-	lua_ls = {},
+	lua_ls = {
+		settings = {
+			Lua = {
+				workspace = {
+					library = vim.api.nvim_list_runtime_paths(),
+				},
+			},
+		},
+	},
 	html = {},
 	nil_ls = {},
-	nimls = {},
 	pyright = {},
 	qmlls = {},
 	rust_analyzer = {},
@@ -17,7 +24,8 @@ local servers = {
 local blink = require("blink.cmp")
 for server, config in pairs(servers) do
 	config.capabilities = blink.get_lsp_capabilities(config.capabilities)
-	vim.lsp.enable(server, config)
+	vim.lsp.config(server, config)
+	vim.lsp.enable(server)
 end
 
 blink.setup({
@@ -29,9 +37,12 @@ blink.setup({
 		},
 		ghost_text = { enabled = true },
 		keyword = { range = "full" },
-		list = { selection = { preselect = false, auto_insert = true } },
+		trigger = { show_in_snippet = false },
+		list = { selection = { preselect = true, auto_insert = true } },
 	},
-	keymap = { preset = "enter" },
+	fuzzy = { implementation = "prefer_rust_with_warning" },
+	keymap = { preset = "super-tab" },
+	["<C-e>"] = { "hide" },
 	signature = { enabled = true },
 	sources = { default = { "lsp", "path", "snippets" } },
 })

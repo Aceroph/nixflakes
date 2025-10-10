@@ -10,7 +10,6 @@
     defaultEditor = true;
     withNodeJs = true;
     extraLuaConfig = builtins.readFile ./options.lua;
-    extraConfig = builtins.readFile ./options.vim;
     extraPackages = with pkgs; [
       # LSPs
       angular-language-server
@@ -56,10 +55,14 @@
         nvim-lspconfig
         plantuml-syntax
         plenary-nvim
-        which-key-nvim
         {
           plugin = nvim-dap;
           config = builtins.readFile ./plugins/dap.lua;
+          type = "lua";
+        }
+        {
+          plugin = lualine-nvim;
+          config = builtins.readFile ./plugins/lualine.lua;
           type = "lua";
         }
         {
