@@ -27,6 +27,7 @@
   # Boot #
   ########
   boot = {
+    blacklistedKernelModules = [ "nouveau" ];
     binfmt.emulatedSystems = [ "armv7l-linux" ];
     initrd = {
       systemd.enable = true;
