@@ -13,9 +13,34 @@ PanelWindow {
         right: true
     }
 
-    implicitHeight: Config.config.bar.height
+    exclusiveZone: Config.config.bar.height
 
-    color: Config.config.bar.background
+    mask: Region {
+        width: root.width
+        height: Config.config.bar.height
+        regions: [
+            Region {
+                item: startModules
+            },
+            Region {
+                item: centerModules
+            },
+            Region {
+                item: endModules
+            }
+        ]
+    }
+
+    Rectangle {
+        anchors {
+            top: root.top
+        }
+        implicitWidth: root.width
+        height: Config.config.bar.height
+        color: Config.config.bar.background
+    }
+
+    color: "transparent"
 
     RowLayout {
         id: modules
@@ -27,20 +52,22 @@ PanelWindow {
             id: startModules
 
             Layout.leftMargin: Config.config.bar.padding
-            Layout.alignment: Qt.AlignLeft
+            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+            Layout.topMargin: Config.config.bar.padding
 
             TopLevel {
-                Layout.alignment: Qt.AlignVCenter
+                Layout.alignment: Qt.AlignTop
             }
         }
 
         RowLayout {
             id: centerModules
 
-            Layout.alignment: Qt.AlignHCenter
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+            Layout.topMargin: Config.config.bar.padding
 
             Clock {
-                Layout.alignment: Qt.AlignVCenter
+                Layout.alignment: Qt.AlignTop
             }
         }
 
@@ -48,10 +75,15 @@ PanelWindow {
             id: endModules
 
             Layout.rightMargin: Config.config.bar.padding
-            Layout.alignment: Qt.AlignRight
+            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            Layout.topMargin: Config.config.bar.padding
 
             Battery {
-                Layout.alignment: Qt.AlignVCenter
+                Layout.alignment: Qt.AlignTop
+            }
+
+            Systray {
+                Layout.alignment: Qt.AlignTop
             }
         }
     }

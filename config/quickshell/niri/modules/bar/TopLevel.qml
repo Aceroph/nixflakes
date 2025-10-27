@@ -7,6 +7,6 @@ BarModule {
 
     Label {
         anchors.centerIn: parent
-        text: topLevel.title
+        text: topLevel?.title || "Desktop"
     }
 }
