@@ -1,8 +1,10 @@
 import QtQuick
 
+import qs.services.config
+
 Rectangle {
-    radius: 5
-    width: children[0].width + 20
-    height: children[0].height + 5
-    color: "#404040"
+    radius: Config.config.bar.modules.radius
+    implicitWidth: children[0].width + Config.config.bar.modules.padding * 2
+    implicitHeight: Config.config.bar.height - Config.config.bar.padding * 2
+    color: Config.config.bar.modules.background
 }

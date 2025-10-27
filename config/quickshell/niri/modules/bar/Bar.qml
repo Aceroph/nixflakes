@@ -1,8 +1,6 @@
 import Quickshell
 import QtQuick.Layouts
 import QtQuick
-import QtQuick.Shapes
-import QtQuick.Effects
 
 import qs.services.config
 
@@ -11,31 +9,50 @@ PanelWindow {
 
     anchors {
         top: true
+        left: true
+        right: true
     }
 
-    margins.top: Config.config.bar.marginTop
-    implicitHeight: modules.height + Config.config.bar.padding * 2
-    implicitWidth: modules.width + Config.config.bar.padding * 2
-    exclusionMode: ExclusionMode.Ignore
-    color: "transparent"
+    implicitHeight: Config.config.bar.height
 
-    Rectangle {
-        id: background
-        radius: Config.config.bar.radius
-        anchors.fill: parent
-        color: Config.config.bar.background
-
-        layer.enabled: true
-        layer.effect: MultiEffect {
-            blur: 0.4
-            blurEnabled: true
-        }
-    }
+    color: Config.config.bar.background
 
     RowLayout {
         id: modules
-        anchors.centerIn: background
 
-        Clock {}
+        anchors.fill: parent
+        uniformCellSizes: true
+
+        RowLayout {
+            id: startModules
+
+            Layout.leftMargin: Config.config.bar.padding
+            Layout.alignment: Qt.AlignLeft
+
+            TopLevel {
+                Layout.alignment: Qt.AlignVCenter
+            }
+        }
+
+        RowLayout {
+            id: centerModules
+
+            Layout.alignment: Qt.AlignHCenter
+
+            Clock {
+                Layout.alignment: Qt.AlignVCenter
+            }
+        }
+
+        RowLayout {
+            id: endModules
+
+            Layout.rightMargin: Config.config.bar.padding
+            Layout.alignment: Qt.AlignRight
+
+            Battery {
+                Layout.alignment: Qt.AlignVCenter
+            }
+        }
     }
 }

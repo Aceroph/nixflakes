@@ -19,13 +19,18 @@ Singleton {
             id: adapter
 
             property string font: "Sono"
+            property string accent: "green"
+            property string accentMuted: "darkgreen"
             property JsonObject bar: JsonObject {
                 property string foreground: "black"
                 property string background: "white"
                 property int height: 30
-                property int radius: 10
                 property int padding: 10
-                property int marginTop: 0
+                property JsonObject modules: JsonObject {
+                    property string background: "red"
+                    property int padding: 5
+                    property int radius: 10
+                }
             }
         }
     }

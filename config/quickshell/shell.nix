@@ -2,5 +2,8 @@ let
   pkgs = import <nixpkgs> { };
 in
 pkgs.mkShell {
-  packages = with pkgs; [ kdePackages.qtdeclarative ];
+  packages = with pkgs; [
+    kdePackages.qtdeclarative
+    quickshell
+  ];
 }

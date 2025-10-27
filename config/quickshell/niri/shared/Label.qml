@@ -3,6 +3,6 @@ import QtQuick
 import qs.services.config
 
 Text {
-    color: "#affefe"
-    font: "Sono"
+    color: Config.config.bar.foreground
+    font: Config.config.font
 }
