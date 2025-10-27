@@ -1,5 +1,4 @@
 spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/windows11lockscreen.jpg"
-spawn-sh-at-startup "qs -p ~/.config/qsbar"
 
 input {
     keyboard {

@@ -13,6 +13,7 @@
     ./config/foot
     ./config/fuzzel
     ./config/niri
+    ./config/quickshell
     ./config/television
     ./config/vesktop
   ];

@@ -5,5 +5,6 @@
     configs = {
       niri = ./niri;
     };
+    systemd.enable = true;
   };
 }
