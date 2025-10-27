@@ -18,41 +18,38 @@ PanelWindow {
     color: Config.config.bar.background
 
     RowLayout {
-        id: modules
+        id: startModules
 
-        anchors.fill: parent
-        uniformCellSizes: true
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.margins: Config.config.bar.padding
 
-        RowLayout {
-            id: startModules
-
-            Layout.leftMargin: Config.config.bar.padding
-            Layout.alignment: Qt.AlignLeft
-
-            TopLevel {
-                Layout.alignment: Qt.AlignVCenter
-            }
+        TopLevel {
+            Layout.alignment: Qt.AlignVCenter
         }
+    }
 
-        RowLayout {
-            id: centerModules
+    RowLayout {
+        id: centerModules
 
-            Layout.alignment: Qt.AlignHCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.margins: Config.config.bar.padding
 
-            Clock {
-                Layout.alignment: Qt.AlignVCenter
-            }
+        Clock {
+            Layout.alignment: Qt.AlignVCenter
         }
+    }
 
-        RowLayout {
-            id: endModules
+    RowLayout {
+        id: endModules
 
-            Layout.rightMargin: Config.config.bar.padding
-            Layout.alignment: Qt.AlignRight
+        anchors.right: parent.right
+        anchors.margins: Config.config.bar.padding
+        anchors.top: parent.top
 
-            Battery {
-                Layout.alignment: Qt.AlignVCenter
-            }
+        Battery {
+            Layout.alignment: Qt.AlignVCenter
         }
     }
 }
