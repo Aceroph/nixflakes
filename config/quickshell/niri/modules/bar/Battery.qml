@@ -9,7 +9,7 @@ import qs.shared
 BarModule {
     id: root
 
-    property var battery: UPower.displayDevice
+    property UPowerDevice battery: UPower.displayDevice
     property var padding: 5
 
     RowLayout {
@@ -17,7 +17,7 @@ BarModule {
         anchors.centerIn: parent
 
         Label {
-            text: battery.changeRate > 0 ? '' : battery.percentage * 100
+            text: battery.state == UPowerDeviceState.Charging ? '' : battery.percentage * 100
             Layout.alignment: Qt.AlignVCenter
         }
 
