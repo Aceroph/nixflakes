@@ -106,6 +106,15 @@
     networkmanager.enable = true;
   };
 
+  ##############
+  # Nix Helper #
+  ##############
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    flake = "/home/${username}/.config/nixos";
+  };
+
   ############
   # Programs #
   ############
