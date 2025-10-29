@@ -81,7 +81,6 @@
     alsa-utils
     android-studio
     blockbench
-    cava
     drawio
     (eiffel-studio-bin.overrideAttrs {
       libraries = [ eiffelPackages.game2 ];
@@ -89,7 +88,6 @@
     fd
     firefox
     gimp
-    graphviz-nox
     heroic
     jetbrains.datagrip
     jetbrains.idea-ultimate
