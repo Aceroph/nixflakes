@@ -6,6 +6,7 @@
 
 {
   imports = [
+    inputs.vicinae.homeManagerModules.default
     inputs.zen-browser.homeModules.beta
     ./config/bash
     ./config/dunst
@@ -16,6 +17,7 @@
     ./config/quickshell
     ./config/television
     ./config/vesktop
+    ./config/vicinae
   ];
 
   ##########
