@@ -9,7 +9,7 @@ BarModule {
     Label {
         id: label
         anchors.centerIn: parent
-        text: truncate(topLevel?.title, 40) || "Desktop"
+        text: topLevel?.activated ? truncate(topLevel.title, 40) : "Desktop"
     }
 
     function truncate(s: string, n: int): string {
