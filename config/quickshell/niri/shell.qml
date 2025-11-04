@@ -6,7 +6,5 @@ import qs.modules.lock
 
 ShellRoot {
     Bar {}
-    SessionLock {
-        locked: true
-    }
+    SessionLock {}
 }
