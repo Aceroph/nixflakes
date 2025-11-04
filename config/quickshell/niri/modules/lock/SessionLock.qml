@@ -11,107 +11,109 @@ import QtQuick
 
 import qs.services.config
 
-WlSessionLock {
+Item {
     id: root
 
-    WlSessionLockSurface {
-        id: surface
+    property alias locked: lock.locked
 
-        color: Config.config.bar.background
+    WlSessionLock {
+        id: lock
 
-        ScreencopyView {
-            captureSource: surface.screen
-            anchors.fill: parent
-
-            layer.enabled: true
-            layer.effect: MultiEffect {
-                blurEnabled: true
-                blur: 1
-                blurMax: 48
-            }
-        }
-
-        WrapperRectangle {
-            id: panel
+        WlSessionLockSurface {
+            id: surface
 
             color: Config.config.bar.background
-            margin: 15
-            radius: Config.config.bar.modules.radius
 
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            anchors.verticalCenter: parent.verticalCenter
+            ScreencopyView {
+                captureSource: surface.screen
+                anchors.fill: parent
 
-            ColumnLayout {
-                id: panelLayout
+                layer.enabled: true
+                layer.effect: MultiEffect {
+                    blurEnabled: true
+                    blur: 1
+                    blurMax: 48
+                }
+            }
 
-                width: 900
-                spacing: 15
+            WrapperRectangle {
+                id: panel
 
-                WrapperRectangle {
-                    margin: 40
-                    color: Config.config.bar.modules.background
-                    radius: Config.config.bar.modules.radius
+                color: Config.config.bar.background
+                margin: 15
+                radius: Config.config.bar.modules.radius
 
-                    Label {
-                        font.pixelSize: 96
+                anchors.left: parent.left
+                anchors.leftMargin: 50
+                anchors.verticalCenter: parent.verticalCenter
+
+                ColumnLayout {
+                    id: panelLayout
+
+                    width: 900
+                    spacing: 15
+
+                    WrapperRectangle {
+                        margin: 40
+                        color: Config.config.bar.modules.background
+                        radius: Config.config.bar.modules.radius
+
+                        Label {
+                            font.pixelSize: 96
+                            color: Config.config.bar.foreground
+                            text: Qt.formatDateTime(clock.date, "hh:mm")
+                            SystemClock {
+                                id: clock
+                                precision: SystemClock.Minutes
+                            }
+                        }
+                    }
+
+                    TextField {
+                        id: textField
+                        placeholderText: "Password"
+                        echoMode: TextInput.Password
                         color: Config.config.bar.foreground
-                        text: Qt.formatDateTime(clock.date, "hh:mm")
-                        SystemClock {
-                            id: clock
-                            precision: SystemClock.Minutes
+                        horizontalAlignment: Qt.AlignHCenter
+                        passwordMaskDelay: 250
+                        font.pixelSize: 24
+
+                        Layout.fillWidth: true
+
+                        onAccepted: pam.start()
+
+                        background: Rectangle {
+                            implicitHeight: 60
+                            radius: Config.config.bar.modules.radius
+                            color: Config.config.bar.modules.background
                         }
                     }
                 }
+            }
 
-                TextField {
-                    id: textField
-                    placeholderText: "Password"
-                    echoMode: TextInput.Password
-                    color: Config.config.bar.foreground
-                    horizontalAlignment: Qt.AlignHCenter
-                    passwordMaskDelay: 250
-                    font.pixelSize: 24
+            PamContext {
+                id: pam
 
-                    Layout.fillWidth: true
+                onPamMessage: {
+                    if (this.responseRequired) {
+                        this.respond(textField.text);
+                    }
+                }
 
-                    onAccepted: pam.start()
-
-                    background: Rectangle {
-                        implicitHeight: 60
-                        radius: Config.config.bar.modules.radius
-                        color: Config.config.bar.modules.background
+                onCompleted: result => {
+                    if (result == PamResult.Success) {
+                        locked = false;
                     }
                 }
             }
         }
+    }
 
-        IpcHandler {
-            target: "lock"
+    IpcHandler {
+        target: "session-lock"
 
-            function lock(): void {
-                locked = true;
-            }
-
-            function unlock(): void {
-                locked = false;
-            }
-        }
-
-        PamContext {
-            id: pam
-
-            onPamMessage: {
-                if (this.responseRequired) {
-                    this.respond(textField.text);
-                }
-            }
-
-            onCompleted: result => {
-                if (result == PamResult.Success) {
-                    locked = false;
-                }
-            }
+        function toggle(): void {
+            locked = !locked;
         }
     }
 }

@@ -98,7 +98,7 @@ binds {
 
     Mod+Return { spawn "foot"; }
     Mod+D { spawn-sh "vicinae toggle"; }
-    Mod+L { spawn-sh "qs ipc call lock lock"; }
+    Mod+L { spawn-sh "qs --config niri ipc call session-lock toggle"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
