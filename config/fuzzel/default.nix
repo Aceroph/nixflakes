@@ -1,6 +1,6 @@
 {
   programs.fuzzel = {
-    enable = true;
+    enable = false;
     settings = {
       main = {
         terminal = "foot -a '{cmd}' -T '{cmd}' {cmd}";
