@@ -104,6 +104,7 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+    firewall.checkReversePath = "loose";
   };
 
   ##############
@@ -202,6 +203,22 @@
       HibernateDelaySec=30m
       SuspendState=mem
     '';
+    services.snx-rs = {
+      enable = true;
+      path = [
+        pkgs.iproute2
+        pkgs.kmod
+        pkgs.networkmanager
+      ];
+      description = "SNX-RS VPN client for Linux";
+      after = [ "network-online.target" ];
+      wants = [ "network-online.target" ];
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.snx-rs}/bin/snx-rs -m command -l debug";
+        Type = "simple";
+      };
+    };
   };
 
   #########

@@ -105,6 +105,7 @@
     prismlauncher
     qemu
     rainfrog # TUI for SQL
+    snx-rs
     spotify
     swaybg
     tmux
