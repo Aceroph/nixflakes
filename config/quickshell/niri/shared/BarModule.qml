@@ -1,17 +1,10 @@
-import QtQuick
+import Quickshell.Widgets
 
 import qs.services.config
 
-Rectangle {
-    id: root
-
-    property int marginTop: Config.config.bar.padding
-    property int marginBottom: Config.config.bar.padding
-    property int marginLeft: Config.config.bar.padding
-    property int marginRight: Config.config.bar.padding
-
+WrapperRectangle {
+    leftMargin: Config.config.bar.modules.padding
+    rightMargin: Config.config.bar.modules.padding
     radius: Config.config.bar.modules.radius
-    implicitWidth: children[0].width + marginLeft + marginRight
-    implicitHeight: Config.config.bar.height - marginTop - marginBottom
     color: Config.config.bar.modules.background
 }

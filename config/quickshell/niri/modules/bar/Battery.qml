@@ -10,11 +10,9 @@ BarModule {
     id: root
 
     property UPowerDevice battery: UPower.displayDevice
-    property var padding: 5
+    property var padding: 8
 
     RowLayout {
-
-        anchors.centerIn: parent
 
         Label {
             text: battery.state == UPowerDeviceState.Charging ? '' : battery.percentage * 100
@@ -31,7 +29,7 @@ BarModule {
 
             background: Rectangle {
                 color: Config.config.accentMuted
-                radius: Config.config.bar.modules.radius - padding / 2
+                radius: Config.config.bar.modules.radius - 2
                 anchors.fill: parent
             }
 
@@ -40,7 +38,7 @@ BarModule {
 
                 Rectangle {
                     color: Config.config.accent
-                    radius: Config.config.bar.modules.radius - padding / 2
+                    radius: Config.config.bar.modules.radius - 2
                     width: progress.width * progress.visualPosition
                     height: parent.height
                 }

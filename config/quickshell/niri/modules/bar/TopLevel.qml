@@ -10,14 +10,14 @@ import qs.shared
 BarModule {
     id: root
 
-    marginLeft: 0
     property var topLevel: ToplevelManager.activeToplevel
     property DesktopEntry entry: DesktopEntries.byId(topLevel?.appId)
+    leftMargin: topLevel?.activated ? 0 : rightMargin
 
     RowLayout {
-        anchors.left: parent.left
 
         ClippingWrapperRectangle {
+            visible: topLevel?.activated || false
             radius: Config.config.bar.modules.radius
             color: "transparent"
 

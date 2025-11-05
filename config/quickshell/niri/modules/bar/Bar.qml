@@ -1,3 +1,4 @@
+import Quickshell.Widgets
 import Quickshell
 import QtQuick.Layouts
 import QtQuick
@@ -15,41 +16,48 @@ PanelWindow {
 
     implicitHeight: Config.config.bar.height
 
-    color: Config.config.bar.background
+    WrapperRectangle {
+        color: Config.config.bar.background
+        anchors.fill: parent
+        margin: Config.config.bar.padding
 
-    RowLayout {
-        id: startModules
+        Item {
+            anchors.fill: parent
+            anchors.margins: Config.config.bar.padding
+            anchors.top: parent.top
 
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.margins: Config.config.bar.padding
+            RowLayout {
+                id: startModules
 
-        TopLevel {
-            Layout.alignment: Qt.AlignVCenter
-        }
-    }
+                height: parent.height
+                anchors.left: parent.left
 
-    RowLayout {
-        id: centerModules
+                TopLevel {
+                    Layout.fillHeight: true
+                }
+            }
 
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
-        anchors.margins: Config.config.bar.padding
+            RowLayout {
+                id: centerModules
 
-        Clock {
-            Layout.alignment: Qt.AlignVCenter
-        }
-    }
+                height: parent.height
+                anchors.horizontalCenter: parent.horizontalCenter
 
-    RowLayout {
-        id: endModules
+                Clock {
+                    Layout.fillHeight: true
+                }
+            }
 
-        anchors.right: parent.right
-        anchors.margins: Config.config.bar.padding
-        anchors.top: parent.top
+            RowLayout {
+                id: endModules
 
-        Battery {
-            Layout.alignment: Qt.AlignVCenter
+                height: parent.height
+                anchors.right: parent.right
+
+                Battery {
+                    Layout.fillHeight: true
+                }
+            }
         }
     }
 }

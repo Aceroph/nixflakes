@@ -4,6 +4,8 @@ import Quickshell
 import qs.shared
 
 BarModule {
+    margin: leftMargin
+
     Label {
         anchors.centerIn: parent
         text: Qt.formatDateTime(clock.date, "dddd MMM d - hh:mm").replace('-', 'at')
