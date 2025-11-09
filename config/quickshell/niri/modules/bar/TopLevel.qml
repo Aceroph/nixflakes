@@ -16,15 +16,15 @@ BarModule {
 
     RowLayout {
 
-        ClippingWrapperRectangle {
-            visible: topLevel?.activated || false
-            radius: Config.config.bar.modules.radius
+        ClippingRectangle {
+            implicitHeight: root.height
+            implicitWidth: root.height
             color: "transparent"
+            radius: Config.config.bar.modules.radius + 6
 
             IconImage {
                 source: Quickshell.iconPath(entry?.icon)
                 anchors.fill: parent
-                implicitSize: root.height
             }
         }
 
