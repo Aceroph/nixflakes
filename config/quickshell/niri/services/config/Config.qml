@@ -21,6 +21,7 @@ Singleton {
             property string font: "Sono"
             property string accent: "green"
             property string accentMuted: "darkgreen"
+            property string wallpaper: ""
             property JsonObject bar: JsonObject {
                 property string foreground: "black"
                 property string background: "white"
