@@ -5,10 +5,12 @@
     enable = true;
     autoStart = true;
     themes.custom-dark = {
-      version = 1;
-      name = "Custom theme";
-      description = "A custom theme generated from colors.nix";
-      variant = "dark";
+      meta = {
+        version = 1;
+        name = "Custom theme";
+        description = "A custom theme generated from colors.nix";
+        variant = "dark";
+      };
       colors.core = {
         background = colors.prefixed.background;
         foreground = colors.prefixed.foreground;

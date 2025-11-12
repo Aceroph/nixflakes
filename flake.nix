@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     vicinae = {
-      url = "github:vicinaehq/vicinae";
+      url = "github:Aceroph/vicinae";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
