@@ -6,6 +6,7 @@
 
 {
   imports = [
+    inputs.niri.homeModules.niri
     inputs.vicinae.homeManagerModules.default
     inputs.zen-browser.homeModules.beta
     ./config/bash

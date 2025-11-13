@@ -63,7 +63,10 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [ inputs.niri.overlays.niri ];
+  };
 
   ##########
   # Flakes #
@@ -122,7 +125,6 @@
   programs = {
     dconf.enable = true;
     gamemode.enable = true;
-    niri.enable = true;
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
