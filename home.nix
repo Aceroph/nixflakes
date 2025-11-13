@@ -100,6 +100,7 @@
     mangohud
     nerd-fonts.d2coding
     piper
+    playerctl
     postman
     postgresql_16
     prismlauncher
