@@ -46,12 +46,15 @@
   programs = {
     git = {
       enable = true;
-      userName = "Aceroph";
-      userEmail = "aos92@proton.me";
-      extraConfig = {
+      settings = {
+      user = {
+        name = "Aceroph";
+        email = "aos92@proton.me";};
+        extraConfig = {
         push = {
           autoSetupRemote = true;
         };
+      };
       };
     };
     java = {
