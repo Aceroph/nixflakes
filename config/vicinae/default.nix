@@ -1,10 +1,10 @@
 { colors, ... }:
 
 {
-  services.vicinae = {
+  programs.vicinae = {
     enable = true;
-    autoStart = true;
-    themes.custom-dark = {
+    systemd.enable = true;
+    themes.custom = {
       meta = {
         version = 1;
         name = "Custom theme";
@@ -30,7 +30,7 @@
       };
       popToRootOnClose = false;
       rootSearch.searchFiles = false;
-      theme.name = "custom-dark";
+      theme.name = "vicinae-custom-theme";
       window = {
         csd = false;
         opacity = 0.8;
