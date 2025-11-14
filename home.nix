@@ -59,16 +59,6 @@
       enable = true;
       package = pkgs.jetbrains.jdk;
     };
-    lsd = {
-      enable = true;
-      settings = {
-        layout = "tree";
-        recursion = {
-          enabled = true;
-          depth = 2;
-        };
-      };
-    };
     niri = {
       enable = true;
       package = pkgs.niri-unstable;
