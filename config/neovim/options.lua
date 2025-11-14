@@ -39,4 +39,6 @@ vim.cmd([[
   highlight NonText guibg=none ctermbg=none
   highlight VertSplit guibg=none ctermbg=none
   highlight Pmenu guibg=none ctermbg=none
+
+  clipboard=unnamedplus
 ]])
