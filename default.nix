@@ -195,15 +195,6 @@
     ratbagd.enable = true;
     tailscale.enable = true;
     upower.enable = true;
-    xserver = {
-      enable = true;
-      enableTearFree = true;
-      xkb = {
-        layout = "us,ca";
-        variant = ",multix";
-        options = "grp:alt_shift_toggle";
-      };
-    };
   };
 
   ###########
