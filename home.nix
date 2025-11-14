@@ -59,10 +59,6 @@
       enable = true;
       package = pkgs.jetbrains.jdk;
     };
-    niri = {
-      enable = true;
-      package = pkgs.niri-unstable;
-    };
     nix-index = {
       enable = true;
       enableBashIntegration = true;

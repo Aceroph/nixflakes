@@ -125,6 +125,10 @@
   programs = {
     dconf.enable = true;
     gamemode.enable = true;
+    niri = {
+      enable = true;
+      package = pkgs.niri-unstable;
+    };
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
