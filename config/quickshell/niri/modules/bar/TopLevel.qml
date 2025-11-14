@@ -21,7 +21,7 @@ BarModule {
             implicitWidth: root.height
             color: "transparent"
             radius: Config.config.bar.modules.radius + 6
-            visible: topLevel?.activated
+            visible: topLevel?.activated && entry?.icon
 
             IconImage {
                 source: Quickshell.iconPath(entry?.icon)
