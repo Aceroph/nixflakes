@@ -58,7 +58,7 @@
     };
     java = {
       enable = true;
-      package = (pkgs.jdk23.override { enableJavaFX = true; });
+      package = pkgs.jetbrains.jdk;
     };
     lsd = {
       enable = true;
