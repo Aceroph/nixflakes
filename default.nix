@@ -7,6 +7,7 @@
 
 {
   imports = [
+    inputs.niri.nixosModules.niri
     inputs.nixos-hardware.nixosModules.asus-fx504gd
     ./config/bluetooth
     ./config/grub

@@ -6,7 +6,6 @@
 
 {
   imports = [
-    inputs.niri.homeModules.niri
     inputs.zen-browser.homeModules.beta
     ./config/bash
     ./config/dunst
