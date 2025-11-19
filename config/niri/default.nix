@@ -89,6 +89,10 @@
         action = close-window;
         repeat = false;
       };
+      # Screenshotting
+      "Print".action.screenshot = [ ];
+      "Shift+Print".action.screenshot-screen = [ ];
+      "Mod+Print".action.screenshot-window = [ ];
       # Function keys & other exotic things
       "XF86AudioRaiseVolume" = {
         action = spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
