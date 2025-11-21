@@ -126,6 +126,7 @@
   programs = {
     dconf.enable = true;
     gamemode.enable = true;
+    kdeconnect.enable = true;
     niri = {
       enable = true;
       package = pkgs.niri-unstable;

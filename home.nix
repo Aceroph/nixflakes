@@ -47,14 +47,15 @@
     git = {
       enable = true;
       settings = {
-      user = {
-        name = "Aceroph";
-        email = "aos92@proton.me";};
-        extraConfig = {
-        push = {
-          autoSetupRemote = true;
+        user = {
+          name = "Aceroph";
+          email = "aos92@proton.me";
         };
-      };
+        extraConfig = {
+          push = {
+            autoSetupRemote = true;
+          };
+        };
       };
     };
     java = {
