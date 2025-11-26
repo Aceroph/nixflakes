@@ -244,6 +244,16 @@
   ######################
   xdg.portal = {
     enable = true;
+    wlr = {
+      enable = true;
+      settings = {
+        screencast = {
+          max_fps = 60;
+          chooser_type = "simple";
+          chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
+        };
+      };
+    };
     config.common.default = "gtk";
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk

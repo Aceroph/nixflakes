@@ -99,6 +99,7 @@
     prismlauncher
     qemu
     rainfrog # TUI for SQL
+    slurp
     snx-rs
     spotify
     swaybg

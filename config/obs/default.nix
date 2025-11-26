@@ -1,11 +1,11 @@
 {
   pkgs,
-  username,
   ...
 }:
 {
-  home-manager.users.${username}.programs.obs-studio = {
+  programs.obs-studio = {
     enable = true;
+    enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
       obs-pipewire-audio-capture
