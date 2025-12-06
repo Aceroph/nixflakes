@@ -75,6 +75,7 @@
   home.packages = with pkgs; [
     alsa-utils
     android-studio
+    audacity
     blockbench
     drawio
     (eiffel-studio-bin.overrideAttrs {
