@@ -107,6 +107,7 @@
     tmux
     wireshark
     wl-clicker
+    wl-mirror
     xwayland-satellite
   ];
 
