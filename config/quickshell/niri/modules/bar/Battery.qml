@@ -15,7 +15,7 @@ BarModule {
     RowLayout {
 
         Label {
-            text: battery.state == UPowerDeviceState.Charging ? '' : battery.percentage * 100
+            text: battery.state == UPowerDeviceState.Charging ? '' : Math.round(battery.percentage * 100)
             Layout.alignment: Qt.AlignVCenter
         }
 
