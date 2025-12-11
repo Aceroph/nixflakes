@@ -35,10 +35,5 @@ vim.keymap.set("n", "<leader>sy", "<cmd>Neotree document_symbols<CR>", { desc = 
 vim.cmd([[ 
   colorscheme retrobox
 
-  highlight Normal guibg=none ctermbg=none
-  highlight NonText guibg=none ctermbg=none
-  highlight VertSplit guibg=none ctermbg=none
-  highlight Pmenu guibg=none ctermbg=none
-
   set clipboard=unnamedplus
 ]])
