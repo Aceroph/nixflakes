@@ -1,12 +1,10 @@
 {
-  inputs,
   pkgs,
   ...
 }:
 
 {
   imports = [
-    inputs.zen-browser.homeModules.beta
     ./config/bash
     ./config/dunst
     ./config/fastfetch
@@ -66,7 +64,6 @@
       enable = true;
       enableBashIntegration = true;
     };
-    zen-browser.enable = true;
   };
 
   ############
