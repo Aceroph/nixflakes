@@ -8,6 +8,7 @@
         font = "Sono:size=12";
         pad = "5x5 center";
       };
+      scrollback.lines = 10000;
       bell.system = false;
       colors = {
         regular0 = colors.background;
