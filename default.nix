@@ -106,6 +106,7 @@
   # Networking #
   ##############
   networking = {
+    resolvconf.dnsExtensionMechanism = false;
     hostName = "nixos";
     networkmanager.enable = true;
     firewall.checkReversePath = "loose";
