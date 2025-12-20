@@ -2,7 +2,7 @@
 
 {
   services.dunst = {
-    enable = true;
+    enable = false;
     settings = {
       global = {
         origin = "top-center";
