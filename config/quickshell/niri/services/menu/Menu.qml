@@ -4,6 +4,7 @@ import Quickshell
 import QtQuick
 
 import qs.shared
+import qs.modules.bar
 
 Singleton {
     id: root

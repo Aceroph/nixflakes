@@ -12,7 +12,7 @@ BarModule {
 
     property var topLevel: ToplevelManager.activeToplevel
     property DesktopEntry entry: DesktopEntries.byId(topLevel?.appId)
-    leftMargin: topLevel?.activated ? 0 : rightMargin
+    leftMargin: topLevel?.activated && entry?.icon != null ? 0 : rightMargin
 
     RowLayout {
 
@@ -21,7 +21,7 @@ BarModule {
             implicitWidth: root.height
             color: "transparent"
             radius: Config.config.bar.modules.radius + 6
-            visible: topLevel?.activated && entry?.icon
+            visible: topLevel?.activated != null && entry?.icon != null
 
             IconImage {
                 source: Quickshell.iconPath(entry?.icon)

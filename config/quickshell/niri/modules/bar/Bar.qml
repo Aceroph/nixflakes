@@ -106,11 +106,9 @@ PanelWindow {
             menu: Menu.centerMenu
         }
 
-        BarMenu {
+        NotificationList {
             id: rightMenu
             anchors.right: parent.right
-            isRight: true
-            menu: Menu.rightMenu
         }
     }
 }
