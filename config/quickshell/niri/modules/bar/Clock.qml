@@ -2,7 +2,6 @@ import QtQuick
 import Quickshell
 
 import qs.shared
-import qs.services.config
 
 BarModule {
     Label {

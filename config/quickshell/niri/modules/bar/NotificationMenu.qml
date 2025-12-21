@@ -11,6 +11,8 @@ Item {
     Shape {
         id: shape
 
+        visible: notifList.width > 10 && notifList.height > 10
+
         anchors.fill: parent
         preferredRendererType: Shape.CurveRenderer
 
