@@ -1,11 +1,8 @@
-import Quickshell.Widgets
 import Quickshell
 import QtQuick.Layouts
 import QtQuick
 
 import qs.services.config
-import qs.services.menu
-import qs.shared
 
 PanelWindow {
     id: root
@@ -29,12 +26,6 @@ PanelWindow {
         }
         Region {
             item: endModules
-        }
-        Region {
-            item: leftMenu
-        }
-        Region {
-            item: centerMenu
         }
         Region {
             item: rightMenu
@@ -91,22 +82,9 @@ PanelWindow {
 
         anchors.top: modules.bottom
         width: parent.width
-        height: Math.max(leftMenu.height, centerMenu.height, rightMenu.height)
+        height: rightMenu.height
 
-        BarMenu {
-            id: leftMenu
-            anchors.left: parent.left
-            isLeft: true
-            menu: Menu.leftMenu
-        }
-
-        BarMenu {
-            id: centerMenu
-            anchors.horizontalCenter: parent.horizontalCenter
-            menu: Menu.centerMenu
-        }
-
-        NotificationList {
+        NotificationMenu {
             id: rightMenu
             anchors.right: parent.right
         }
