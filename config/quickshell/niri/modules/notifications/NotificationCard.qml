@@ -19,7 +19,7 @@ ClippingWrapperRectangle {
     radius: Config.config.bar.modules.radius
 
     Item {
-        implicitWidth: 180
+        implicitWidth: 300
         implicitHeight: notificationRow.height + 8
 
         RowLayout {
