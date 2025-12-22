@@ -1,38 +1,36 @@
-import Quickshell.Wayland
+import Quickshell.Services.Mpris
 import Quickshell.Widgets
-import Quickshell
 import QtQuick.Layouts
 import QtQuick
 
-import qs.services.config
 import qs.shared
+import qs.services.config
 
 BarModule {
     id: root
 
-    property var topLevel: ToplevelManager.activeToplevel
-    property DesktopEntry entry: DesktopEntries.byId(topLevel?.appId)
-    leftMargin: topLevel?.activated && entry?.icon != null ? 0 : rightMargin
+    property MprisPlayer player: Mpris.players.values[0]
+
+    leftMargin: player?.trackArtUrl ? 0 : rightMargin
+    visible: Mpris.players.values.length > 0
 
     RowLayout {
-
         ClippingRectangle {
             implicitHeight: root.height
             implicitWidth: root.height
             color: "transparent"
             radius: Config.config.bar.modules.radius
-            visible: topLevel?.activated && entry?.icon != null
+            visible: player?.trackArtUrl != ""
 
             IconImage {
-                source: Quickshell.iconPath(entry?.icon)
+                source: player?.trackArtUrl
                 anchors.fill: parent
             }
         }
 
         Label {
-            id: label
             Layout.alignment: Qt.AlignVCenter
-            text: topLevel?.activated ? truncate(topLevel.title, 40) : "Desktop"
+            text: truncate(player?.trackTitle + " - " + player?.trackArtist, 40)
             function truncate(s: string, n: int): string {
                 return s.length > n ? s.substring(0, n - 1) + "..." : s;
             }

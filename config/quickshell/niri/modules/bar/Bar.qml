@@ -50,6 +50,10 @@ PanelWindow {
             TopLevel {
                 Layout.fillHeight: true
             }
+
+            Media {
+                Layout.fillHeight: true
+            }
         }
 
         RowLayout {
